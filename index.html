@@ -1,14 +1,19 @@
 <script>
 window.onload=function(){
 var data = {
-    "data": {
-        "x": "1",
-        "y": "1",
-        "url": "http://url.com"
+    "personalInfo": {
+        "firstName": "Nikhil",
+        "lastName": "Mehta"
     },
-    "event": "start",
-    "show": 1,
-    "id": 50
+    "contactInfo": {
+        "gmail":"nikhil.001mehta@gmail.com",
+        "skypeId":"nikhil.001mehta",
+        "stackoverFlow": "https://stackoverflow.com/users/2503826"
+        "linkedIn": "https://www.linkedin.com/in/nikhil001mehta/",
+        "github": "https://github.com/nikhil-001mehta",
+    },
+    "technicalInterests": ['javascript', 'nodejs', 'webRTC', 'algorithms', 'C', 'C++', 'linux', 'graphics', 'maths', 'AI', 'machine learning'],
+    "interests": ['music', 'football', 'biking', 'trekking', 'drums']
 }
 document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
 }
