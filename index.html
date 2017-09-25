@@ -1,19 +1,19 @@
 <script>
 window.onload=function(){
 var data = {
-    "personalInfo": {
-        "firstName": "Nikhil",
-        "lastName": "Mehta"
+    'personalInfo': {
+        'firstName': 'Nikhil',
+        'lastName': 'Mehta'
     },
-    "contactInfo": {
-        "gmail":"nikhil.001mehta@gmail.com",
-        "skypeId":"nikhil.001mehta",
-        "stackoverflow": "https://stackoverflow.com/users/2503826",
-        "linkedin": "https://www.linkedin.com/in/nikhil001mehta/",
-        "github": "https://github.com/nikhil-001mehta",
+    'contactInfo': {
+        'gmail':'<a href="mailto:nikhil.001mehta@gmail.com">mail me</a>',
+        'skypeId':'nikhil.001mehta',
+        'stackoverflow': '<a href="https://stackoverflow.com/users/2503826">https://stackoverflow.com/users/2503826</a>',
+        'linkedin': '<a href="https://www.linkedin.com/in/nikhil001mehta/">https://www.linkedin.com/in/nikhil001mehta/</a>',
+        'github': '<a href="https://github.com/nikhil-001mehta">https://github.com/nikhil-001mehta</a>',
     },
-    "technicalInterests": ['javascript', 'nodejs', 'webRTC', 'algorithms', 'C', 'C++', 'linux', 'graphics', 'maths', 'AI', 'machine learning'],
-    "interests": ['music', 'football', 'biking', 'trekking', 'drums']
+    'technicalInterests': ['javascript', 'nodejs', 'webRTC', 'algorithms', 'C', 'C++', 'linux', 'graphics', 'maths', 'AI', 'machine learning'],
+    'interests': ['music', 'football', 'biking', 'trekking', 'drums']
 }
 document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
 }
