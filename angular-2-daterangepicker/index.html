@@ -6,15 +6,24 @@
     <base href=".">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/nikhil-001mehta/angular-2-daterangepicker/f6e44cf9/daterangepicker-component.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/nikhil-001mehta/angular-2-daterangepicker/f6e44cf9/daterangepicker-component.css" /> -->
     <!-- Polyfill(s) for older browsers -->
-    <script src="http://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
-    <script src="http://unpkg.com/zone.js/dist/zone.js"></script>
-    <script src="http://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
-    <script src="http://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
-    <script src="http://unpkg.com/moment/moment.js"></script>
-    <script src="http://unpkg.com/moment-range@2.2.0/dist/moment-range.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111630127-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111630127-1');
+    </script>
+    <script src="https://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
+    <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="https://unpkg.com/moment/moment.js"></script>
+    <script src="https://unpkg.com/moment-range@2.2.0/dist/moment-range.js"></script>
     <script src="./systemjs.config.js"></script>
     <script>
         System.import('app-main.js').catch(function(err) {
@@ -24,7 +33,7 @@
 </head>
 
 <body>
-    <!-- <style>
+    <style>
         .daterangepicker {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
             font-size: 14px;
@@ -183,7 +192,7 @@
             margin: 0 !important;
             padding: 0 !important;
         }
-    </style> -->
+    </style>
     <my-datepicker-demo>Loading AppComponent content here ...</my-datepicker-demo>
 </body>
 
