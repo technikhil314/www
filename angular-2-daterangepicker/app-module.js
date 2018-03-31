@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var app_component_1 = require('./app-component');
 var platform_browser_1 = require('@angular/platform-browser');
-var daterangepicker_module_1 = require('./daterangepicker-module');
+var daterangepicker_module_1 = require('angular-2-daterangepicker');
 var AppModule = (function () {
     function AppModule() {
     }

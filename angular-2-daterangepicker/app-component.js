@@ -12,24 +12,7 @@ var core_1 = require('@angular/core');
 var moment = require('moment');
 var AppComponent = (function () {
     function AppComponent() {
-        this.daterangepickerOptions = {
-            startDate: null,
-            endDate: null,
-            format: "DD.MM.YYYY",
-            minDate: "01.01.2017",
-            maxDate: "17.05.2017",
-            inactiveBeforeStart: true,
-            autoApply: false,
-            showRanges: true,
-            preDefinedRanges: [{
-                    name: 'Day After tomorrow',
-                    value: {
-                        start: moment().add(2, 'days'),
-                        end: moment().add(2, 'days'),
-                    }
-                }],
-            singleCalendar: true
-        };
+        this.daterangepickerOptions = {};
     }
     AppComponent.prototype.rangeSelected = function (data) {
         debugger;

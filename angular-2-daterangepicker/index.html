@@ -6,15 +6,15 @@
     <base href=".">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
     <!-- <link rel="stylesheet" type="text/css" href="daterangepicker-component.css" /> -->
     <!-- Polyfill(s) for older browsers -->
-    <script src="https://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
-    <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
-    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
-    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
-    <script src="https://unpkg.com/moment/moment.js"></script>
-    <script src="https://unpkg.com/moment-range@2.2.0/dist/moment-range.js"></script>
+    <script src="http://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
+    <script src="http://unpkg.com/zone.js/dist/zone.js"></script>
+    <script src="http://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="http://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="http://unpkg.com/moment/moment.js"></script>
+    <script src="http://unpkg.com/moment-range@2.2.0/dist/moment-range.js"></script>
     <script src="./systemjs.config.js"></script>
     <script>
         System.import('app-main.js').catch(function(err) {
@@ -44,6 +44,9 @@
         @media (min-width: 450px) {
             .daterangepicker {
                 min-width: 450px;
+            }
+            .daterangepicker.singledatepicker {
+                min-width: 220px;
             }
         }
         
@@ -137,10 +140,6 @@
             padding: 1px !important;
         }
         
-        .daterangepicker .off {
-            color: #A2A2A2;
-        }
-        
         .daterangepicker table {
             border-spacing: 0;
             border-collapse: collapse;
@@ -161,7 +160,12 @@
         
         .daterangepicker .clickable.disabled {
             pointer-events: none;
-            color: #A2A2A2;
+            color: #AAA;
+            cursor: not-allowed;
+        }
+        
+        .daterangepicker .off {
+            color: #666;
         }
         
         .daterangepicker label {
@@ -173,6 +177,11 @@
         
         .daterangepicker .btn-link {
             padding: 1px 6px 1px 6px !important;
+        }
+
+        .bootstrap-flush{
+            margin: 0 !important;
+            padding: 0 !important;
         }
     </style>
     <my-datepicker-demo>Loading AppComponent content here ...</my-datepicker-demo>

@@ -21,8 +21,9 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
-	  'moment': 'npm:moment/moment.js',
-	  'moment-range': 'npm:moment-range@2.2.0/dist/moment-range.js'
+      'moment': 'npm:moment/moment.js',
+      'moment-range': 'npm:moment-range@2.2.0/dist/moment-range.js',
+      'angular-2-daterangepicker': 'npm:angular-2-daterangepicker/index.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
