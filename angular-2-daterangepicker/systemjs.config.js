@@ -20,7 +20,7 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       // other libraries
-      'rxjs':                      'npm:rxjs',
+      'rxjs':                      'npm:rxjs@5.0.0',
       'moment': 'npm:moment/moment.js',
       'moment-range': 'npm:moment-range@2.2.0/dist/moment-range.js',
       'angular-2-daterangepicker': 'npm:angular-2-daterangepicker/index.js'
