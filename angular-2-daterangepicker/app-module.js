@@ -12,12 +12,13 @@ var core_1 = require('@angular/core');
 var app_component_1 = require('./app-component');
 var platform_browser_1 = require('@angular/platform-browser');
 var daterangepicker_module_1 = require('angular-2-daterangepicker');
+var forms_1 = require('@angular/forms');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, daterangepicker_module_1.DaterangepickerModule],
+            imports: [platform_browser_1.BrowserModule, daterangepicker_module_1.DaterangepickerModule, forms_1.FormsModule],
             declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

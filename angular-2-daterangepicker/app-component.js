@@ -47,7 +47,8 @@ var AppComponent = (function () {
                     }
                 }],
             singleCalendar: false,
-            displayFormat: 'DD.MMM'
+            displayFormat: 'DD.MMM',
+            position: 'left'
         };
     }
     AppComponent.prototype.rangeSelected = function (data) {
@@ -65,13 +66,15 @@ var AppComponent = (function () {
     AppComponent.prototype.showRanges = function (event) {
         this.daterangepickerOptions.showRanges = event.target.checked;
     };
+    AppComponent.prototype.setPosition = function () {
+    };
     AppComponent.prototype.prettyPrintJSON = function (object) {
         return JSON.stringify(object, null, '  ');
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: "my-datepicker-demo",
-            template: "\n\t\t<div class=\"col-md-7 separator-right\">\n\t\t\t<h3>Configuration Options Tester</h3>\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<input type=\"checkbox\" checked={{daterangepickerOptions.singleCalendar}} id=\"singleCalendar\" (click)=\"singleCalendar($event)\">\n\t\t\t\t<label class=\"label\" for=\"singleCalendar\">singleCalendar</label>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<input type=\"checkbox\" checked={{daterangepickerOptions.autoApply}} id=\"autoApply\" (click)=\"autoApply($event)\">\n\t\t\t\t<label class=\"label\" for=\"autoApply\">autoApply</label>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<input type=\"checkbox\" checked={{daterangepickerOptions.inactiveBeforeStart}} id=\"inactiveBeforeStart\" (click)=\"inactiveBeforeStart($event)\">\n\t\t\t\t<label class=\"label\" for=\"inactiveBeforeStart\">inactiveBeforeStart</label>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<input type=\"checkbox\" checked={{daterangepickerOptions.showRanges}} id=\"showRanges\" (click)=\"showRanges($event)\">\n\t\t\t\t<label class=\"label\" for=\"showRanges\">showRanges</label>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<h4>Configuration</h4>\n\t\t\t\t<pre>{{prettyPrintJSON(daterangepickerOptions)}}</pre>\n\t\t\t</div>\n\t\t</div> \n\t\t<div class=\"col-md-5\">\n\t\t\t<h3>Live Demo</h3>\t\n\t\t\t<div class=\"col-md-6 flush\">\n\t\t\t\t<date-range-picker [class]=\"'col-md-12 form-control'\" [options]=\"daterangepickerOptions\" (rangeSelected)=\"rangeSelected($event)\">\n\t\t\t\t</date-range-picker>\n\t\t\t</div>\n\t\t</div>\n\t"
+            template: "\n\t\t<div class=\"col-md-7 separator-right\">\n\t\t\t<h3>Configuration Options Tester</h3>\n\t\t\t<form>\n\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t<input type=\"checkbox\" name=\"singleCalendar\" [(ngModel)]=daterangepickerOptions.singleCalendar id=\"singleCalendar\">\n\t\t\t\t\t<label class=\"label\" for=\"singleCalendar\">Single Calendar</label>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t<input type=\"checkbox\" name=\"autoApply\" [(ngModel)]=daterangepickerOptions.autoApply id=\"autoApply\">\n\t\t\t\t\t<label class=\"label\" for=\"autoApply\">Auto Apply</label>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t<input type=\"checkbox\" name=\"inactiveBeforeStart\" [(ngModel)]=daterangepickerOptions.inactiveBeforeStart id=\"inactiveBeforeStart\">\n\t\t\t\t\t<label class=\"label\" for=\"inactiveBeforeStart\">Inactive Before Start</label>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t<input type=\"checkbox\" name=\"showRanges\" [(ngModel)]=\"daterangepickerOptions.showRanges\" id=\"showRanges\">\n\t\t\t\t\t<label class=\"label\" for=\"showRanges\">Show Ranges</label>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t<label class=\"label\">Position</label>\n\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t<label class=\"label\" for=\"position-left\">Left</label>\n\t\t\t\t\t\t<input type=\"radio\" name=\"position\" value=\"left\" [(ngModel)]=\"daterangepickerOptions.position\" id=\"position-left\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t<label class=\"label\" for=\"position-right\">Right</label>\n\t\t\t\t\t\t<input type=\"radio\" name=\"position\" value=\"right\" [(ngModel)]=\"daterangepickerOptions.position\" id=\"position-right\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t<label class=\"label\" for=\"position-left\">Center</label>\n\t\t\t\t\t\t<input type=\"radio\" name=\"position\" value=\"center\" [(ngModel)]=\"daterangepickerOptions.position\" id=\"position-center\">\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<h4>Configuration</h4>\n\t\t\t\t<pre>{{prettyPrintJSON(daterangepickerOptions)}}</pre>\n\t\t\t</div>\n\t\t</div> \n\t\t<div class=\"col-md-5\">\n\t\t\t<h3>Live Demo</h3>\t\n\t\t\t<div class=\"col-md-6 flush\">\n\t\t\t\t<date-range-picker [class]=\"'col-md-12 form-control'\" [options]=\"daterangepickerOptions\" (rangeSelected)=\"rangeSelected($event)\">\n\t\t\t\t</date-range-picker>\n\t\t\t</div>\n\t\t</div>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

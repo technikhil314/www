@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="daterangepicker-component.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/nikhil-001mehta/angular-2-daterangepicker/master/daterangepicker-component.css" /> -->
     <!-- Polyfill(s) for older browsers -->
     <script src="https://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
     <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
@@ -65,10 +65,73 @@
 
 <body>
     <style>
+         .daterangepicker-wrapper{
+            position: relative;
+            border: none;
+        }
+
         .daterangepicker {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
             font-size: 14px;
-            overflow: hidden
+            position: absolute;
+            top: 44px;
+            background: #fff;
+        }
+
+        .daterangepicker.open-right{
+            right: 0;
+        }
+
+        .daterangepicker.open-left{
+            left: 0;
+        }
+
+        .daterangepicker.open-center{
+            right: -50%;
+        }
+
+        .daterangepicker.tooltip-chevron:before{
+            content: '';
+            height: 0px;
+            width: 0px;
+            border: 10px solid transparent;
+            position: absolute;
+            border-bottom-color: #aaa; 
+            top: -20px;
+        }
+
+         .daterangepicker.tooltip-chevron:after{
+            content: '';
+            height: 0px;
+            width: 0px;
+            border: 9px solid transparent;
+            position: absolute;
+            border-bottom-color: #fff;
+            top: -18px;
+        }
+        
+        .daterangepicker.open-left.tooltip-chevron:before{
+            left: 10px;
+        }
+
+        .daterangepicker.open-left.tooltip-chevron:after{
+            left: 11px;
+        }
+
+        .daterangepicker.open-right.tooltip-chevron:before{
+            right: 10px;
+        }
+
+        .daterangepicker.open-right.tooltip-chevron:after{
+            right: 11px;
+        }
+
+         .daterangepicker.open-center.tooltip-chevron:before{
+            left: 50%
+        }
+
+        .daterangepicker.open-center.tooltip-chevron:after{
+            left: 50%;
         }
 
         @media (min-width: 550px) {
@@ -109,7 +172,7 @@
 
         .daterangepicker div[class*="col-md-"],
         .daterangepicker span[class*="col-md-"] {
-            padding: 0 5px 0 5px;
+            padding: 0 15px 0 5px;
         }
 
         .hidden {
@@ -223,6 +286,10 @@
             max-width: 100%;
             margin-bottom: 5px;
             font-weight: bold;
+        }
+
+        .daterangepicker .form-control{
+            margin: 5px;
         }
 
         .daterangepicker .btn-link {
