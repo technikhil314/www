@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/nikhil-001mehta/angular-2-daterangepicker/master/daterangepicker-component.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="daterangepicker-component.css" /> -->
     <!-- Polyfill(s) for older browsers -->
     <script src="https://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
     <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
@@ -20,6 +20,7 @@
         body{
             display: table-cell;
             width: 100%;
+            position: relative;
         }
         html, body, .main,  {
             height: 100%;
@@ -30,6 +31,7 @@
             padding: 25px;
             float: left;
             width: 100%;
+            margin-top: 65px;
         }
         .footer{
             position: fixed;
@@ -37,15 +39,28 @@
             text-align: center;
             width: 100%;
             margin-top: 50px;
+            background-color: white;
+            height: 20px;
+            border-top: 1px solid #ddd; 
         }
-
         .separator-right {
-            border-right: 1px solid #666;
+            border-right: 1px solid #ddd;
             height: 100%;
         }
 
-        header {
-            padding: 10px
+        .header {
+            position: fixed;
+            height: 65px;
+            border-bottom: 1px solid black;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 0 5px 5px #ddd;
+            padding: 0 20px;
+        }
+        .header a {
+            line-height: 65px;
+            margin-right: 130px;
         }
         .flush {
             padding: 0 !important;
@@ -53,6 +68,21 @@
         }
         .label{
             color: black;
+        }
+        .float-right{
+            float: right;
+        }
+        .github-ribbon{
+            position: absolute;
+            top: 60px;
+            transform: rotate(45deg);
+            background: black;
+            color: white;
+            padding: 5px 91px;
+            right: -100px;
+            font-weight: bolder;
+            font-size: 16px;
+            line-height: 30px;
         }
     </style>
     <script src="systemjs.config.js"></script>
@@ -65,7 +95,7 @@
 
 <body>
     <style>
-         .daterangepicker-wrapper{
+        .daterangepicker-wrapper{
             position: relative;
             border: none;
         }
@@ -301,10 +331,20 @@
             padding: 0 !important;
         }
     </style>
-    <header>
-        <h1>
+    <header class="col-md-12 header">
+        <h1 class="col-md-6">
             Angular Date Range Picker
         </h1>
+        <div class="text-right col-md-6 header-right">
+            <a class="col-md-2 float-right" href="https://www.npmjs.com/package/angular-2-daterangepicker?activeTab=readme">
+                <img src="https://img.shields.io/badge/dynamic/json.svg?label=npm&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v" width:"100%">
+            </a>
+            <a href="https://github.com/nikhil-001mehta/angular-2-daterangepicker">
+                <span class="github-ribbon">
+                    Fork on GitHub
+                </span>
+            </a>
+        </div>
     </header>
     <div class="main">
         <my-datepicker-demo>Loading AppComponent content here ...</my-datepicker-demo>
