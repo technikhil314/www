@@ -13,27 +13,34 @@
     <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
     <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
     <style>
-        html{
+        html {
             display: table;
             width: 100%;
         }
-        body{
+
+        body {
             display: table-cell;
             width: 100%;
             position: relative;
         }
-        html, body, .main,  {
+
+        html,
+        body,
+        .main,
+            {
             height: 100%;
             width: 100%;
             overflow-x: hidden;
         }
-        .main{
+
+        .main {
             padding: 25px;
             float: left;
             width: 100%;
             margin-top: 65px;
         }
-        .footer{
+
+        .footer {
             position: fixed;
             bottom: 0;
             text-align: center;
@@ -41,10 +48,21 @@
             margin-top: 50px;
             background-color: white;
             height: 20px;
-            border-top: 1px solid #ddd; 
+            border-top: 1px solid #ddd;
         }
+
         .separator-right {
             border-right: 1px solid #ddd;
+            height: 100%;
+        }
+
+        .separator-right--dark {
+            border-right: 1px solid #444;
+            height: 100%;
+        }
+
+        .separator-left--dark {
+            border-left: 1px solid #444;
             height: 100%;
         }
 
@@ -58,21 +76,26 @@
             box-shadow: 0 0 5px 5px #ddd;
             padding: 0 20px;
         }
+
         .header a {
             line-height: 65px;
             margin-right: 130px;
         }
+
         .flush {
             padding: 0 !important;
             margin: 0 !important;
         }
-        .label{
+
+        .label {
             color: black;
         }
-        .float-right{
+
+        .float-right {
             float: right;
         }
-        .github-ribbon{
+
+        .github-ribbon {
             position: absolute;
             top: 60px;
             transform: rotate(45deg);
@@ -87,7 +110,7 @@
     </style>
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app-main.js').catch(function(err) {
+        System.import('app-main.js').catch(function (err) {
             console.error(err);
         });
     </script>
@@ -95,7 +118,7 @@
 
 <body>
     <style>
-        .daterangepicker-wrapper{
+        .daterangepicker-wrapper {
             position: relative;
             border: none;
         }
@@ -108,29 +131,29 @@
             background: #fff;
         }
 
-        .daterangepicker.open-right{
+        .daterangepicker.open-right {
             right: 0;
         }
 
-        .daterangepicker.open-left{
+        .daterangepicker.open-left {
             left: 0;
         }
 
-        .daterangepicker.open-center{
+        .daterangepicker.open-center {
             right: -50%;
         }
 
-        .daterangepicker.tooltip-chevron:before{
+        .daterangepicker.tooltip-chevron:before {
             content: '';
             height: 0px;
             width: 0px;
             border: 10px solid transparent;
             position: absolute;
-            border-bottom-color: #aaa; 
+            border-bottom-color: #aaa;
             top: -20px;
         }
 
-         .daterangepicker.tooltip-chevron:after{
+        .daterangepicker.tooltip-chevron:after {
             content: '';
             height: 0px;
             width: 0px;
@@ -139,28 +162,28 @@
             border-bottom-color: #fff;
             top: -18px;
         }
-        
-        .daterangepicker.open-left.tooltip-chevron:before{
+
+        .daterangepicker.open-left.tooltip-chevron:before {
             left: 10px;
         }
 
-        .daterangepicker.open-left.tooltip-chevron:after{
+        .daterangepicker.open-left.tooltip-chevron:after {
             left: 11px;
         }
 
-        .daterangepicker.open-right.tooltip-chevron:before{
+        .daterangepicker.open-right.tooltip-chevron:before {
             right: 10px;
         }
 
-        .daterangepicker.open-right.tooltip-chevron:after{
+        .daterangepicker.open-right.tooltip-chevron:after {
             right: 11px;
         }
 
-         .daterangepicker.open-center.tooltip-chevron:before{
+        .daterangepicker.open-center.tooltip-chevron:before {
             left: 50%
         }
 
-        .daterangepicker.open-center.tooltip-chevron:after{
+        .daterangepicker.open-center.tooltip-chevron:after {
             left: 50%;
         }
 
@@ -183,7 +206,7 @@
             .col-md-10 {
                 width: 100% !important;
             }
-            .ranges > div {
+            .ranges>div {
                 display: none;
             }
         }
@@ -258,6 +281,10 @@
             margin-bottom: 10px;
         }
 
+        .daterangepicker .push--threeUnits-left {
+            margin-left: 3px;
+        }
+
         .daterangepicker th {
             margin: 1px !important;
             padding: 1px !important;
@@ -286,6 +313,7 @@
 
         .daterangepicker .off {
             color: #666;
+            opacity: 0.8;
         }
 
         .daterangepicker table {
@@ -313,6 +341,10 @@
             cursor: not-allowed;
         }
 
+        .ranges {
+            padding: 5px 0;
+        }
+
         .ranges .clickable {
             margin-top: 8px !important;
         }
@@ -324,7 +356,7 @@
             font-weight: bold;
         }
 
-        .daterangepicker .form-control{
+        .daterangepicker .form-control {
             margin: 5px;
         }
 
@@ -332,17 +364,17 @@
             padding: 1px 6px 1px 6px !important;
         }
 
-        .daterangepicker .bootstrap-flush{
+        .daterangepicker .bootstrap-flush {
             margin: 0 !important;
             padding: 0 !important;
         }
 
-        .daterangepicker .time-picker span{
+        .daterangepicker .time-picker span {
             padding-left: 4px;
             padding-right: 4px;
         }
 
-        .daterangepicker .time-picker .time-breadcrumb{
+        .daterangepicker .time-picker .time-breadcrumb {
             position: relative;
             top: 22px;
             font-weight: bolder;
@@ -423,7 +455,8 @@
         </h1>
         <div class="text-right col-md-6 header-right">
             <a class="col-md-2 float-right" href="https://www.npmjs.com/package/angular-2-daterangepicker?activeTab=readme">
-                <img src="https://img.shields.io/badge/dynamic/json.svg?label=npm&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v" width:"100%">
+                <img src="https://img.shields.io/badge/dynamic/json.svg?label=npm&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v"
+                    width: "100%">
             </a>
             <a href="https://github.com/nikhil-001mehta/angular-2-daterangepicker">
                 <span class="github-ribbon">
