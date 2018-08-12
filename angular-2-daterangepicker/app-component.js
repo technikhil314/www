@@ -79,7 +79,7 @@ var AppComponent = (function () {
         this.isTimePickerEnabled = event.target.checked;
         this.daterangepickerOptions.timePicker = event.target.checked ? {
             minuteInterval: 5,
-            twentyFourHourFormat: this.daterangepickerOptions.timePicker && !!this.daterangepickerOptions.timePicker.twentyFourHourFormat
+            twentyFourHourFormat: true
         } : null;
     };
     AppComponent.prototype.setPosition = function () {
