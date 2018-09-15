@@ -9,6 +9,18 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
     <!-- <link rel="stylesheet" type="text/css" href="daterangepicker-component.css" /> -->
     <!-- Polyfill(s) for older browsers -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125781207-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125781207-1');
+    </script>
     <script src="https://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
     <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
     <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
@@ -17,29 +29,29 @@
             display: table;
             width: 100%;
         }
-        
+
         body {
             display: table-cell;
             width: 100%;
             position: relative;
         }
-        
+
         html,
         body,
         .main,
-        {
+            {
             height: 100%;
             width: 100%;
             overflow-x: hidden;
         }
-        
+
         .main {
             padding: 25px;
             float: left;
             width: 100%;
             margin-top: 65px;
         }
-        
+
         .footer {
             position: fixed;
             bottom: 0;
@@ -50,22 +62,22 @@
             height: 20px;
             border-top: 1px solid #ddd;
         }
-        
+
         .separator-right {
             border-right: 1px solid #ddd;
             height: 100%;
         }
-        
+
         .separator-right--dark {
             border-right: 1px solid #444;
             height: 100%;
         }
-        
+
         .separator-left--dark {
             border-left: 1px solid #444;
             height: 100%;
         }
-        
+
         .header {
             position: fixed;
             height: 65px;
@@ -76,25 +88,25 @@
             box-shadow: 0 0 5px 5px #ddd;
             padding: 0 20px;
         }
-        
+
         .header a {
             line-height: 65px;
             margin-right: 130px;
         }
-        
+
         .flush {
             padding: 0 !important;
             margin: 0 !important;
         }
-        
+
         .label {
             color: black;
         }
-        
+
         .float-right {
             float: right;
         }
-        
+
         .github-ribbon {
             position: absolute;
             top: 60px;
@@ -110,7 +122,7 @@
     </style>
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app-main.js').catch(function(err) {
+        System.import('app-main.js').catch(function (err) {
             console.error(err);
         });
     </script>
@@ -122,7 +134,7 @@
             position: relative;
             border: none;
         }
-        
+
         .daterangepicker {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
             font-size: 14px;
@@ -130,7 +142,7 @@
             top: 44px;
             background: #fff;
         }
-        
+
         .daterangepicker.always-open {
             top: 0;
             box-shadow: none;
@@ -139,15 +151,15 @@
         .daterangepicker.open-right {
             right: 0;
         }
-        
+
         .daterangepicker.open-left {
             left: 0;
         }
-        
+
         .daterangepicker.open-center {
             right: -50%;
         }
-        
+
         .daterangepicker.tooltip-chevron:before {
             content: '';
             height: 0px;
@@ -157,7 +169,7 @@
             border-bottom-color: #aaa;
             top: -20px;
         }
-        
+
         .daterangepicker.tooltip-chevron:after {
             content: '';
             height: 0px;
@@ -167,59 +179,63 @@
             border-bottom-color: #fff;
             top: -18px;
         }
-        
+
         .daterangepicker.open-left.tooltip-chevron:before {
             left: 10px;
         }
-        
+
         .daterangepicker.open-left.tooltip-chevron:after {
             left: 11px;
         }
-        
+
         .daterangepicker.open-right.tooltip-chevron:before {
             right: 10px;
         }
-        
+
         .daterangepicker.open-right.tooltip-chevron:after {
             right: 11px;
         }
-        
+
         .daterangepicker.open-center.tooltip-chevron:before {
             left: 50%
         }
-        
+
         .daterangepicker.open-center.tooltip-chevron:after {
             left: 50%;
         }
-        
+
         @media (min-width: 550px) {
             .daterangepicker {
                 width: 550px;
             }
         }
-        
+
         @media (max-width: 550px) {
             .daterangepicker {
                 width: 270px;
             }
+
             .text-center .pull-right {
                 float: none !important;
             }
+
             .col-md-6 {
                 width: 100% !important;
             }
+
             .col-md-10 {
                 width: 100% !important;
             }
+
             .ranges>div {
                 display: none;
             }
         }
-        
+
         .singledatepicker {
             width: 225px;
         }
-        
+
         .daterangepicker {
             z-index: 3000;
             border-radius: 4px;
@@ -227,76 +243,76 @@
             border: 1px solid #aaa;
             padding: 10px;
         }
-        
+
         .daterangepicker div[class*="col-md-"],
         .daterangepicker span[class*="col-md-"] {
             padding: 0 15px 0 5px;
         }
-        
+
         .hidden {
             display: none !important;
             visibility: false !important;
         }
-        
+
         .daterangepicker .calendar {
             margin: 4px;
             float: left;
             border-radius: 4px !important;
             padding: 0 5px 0 5px;
         }
-        
+
         .applyBtn {
             margin: 4px;
         }
-        
+
         .daterangepicker .flush {
             padding: 0 !important;
             margin: 0 !important;
         }
-        
+
         .daterangepicker .flussh {
             padding: 0 !important;
         }
-        
+
         .daterangepicker .flush-bottom {
             padding-bottom: 0 !important;
         }
-        
+
         .daterangepicker .flush-left {
             padding-left: 0 !important;
         }
-        
+
         .daterangepicker .flush-right {
             padding-right: 0 !important;
         }
-        
+
         .daterangepicker .nudge-half--left {
             padding-left: 4px !important;
         }
-        
+
         .daterangepicker .nudge-half--right {
             padding-right: 4px !important;
         }
-        
+
         .daterangepicker .nudge-top {
             top: 5px;
         }
-        
+
         .daterangepicker .push-bottom {
             margin-bottom: 10px;
         }
-        
+
         .daterangepicker .push--threeUnits-left {
             margin-left: 3px;
         }
-        
+
         .daterangepicker th {
             margin: 1px !important;
             padding: 1px !important;
             text-align: center;
             border-radius: 4px !important;
         }
-        
+
         .daterangepicker td {
             font-size: 14px;
             height: 20px;
@@ -308,84 +324,84 @@
             white-space: nowrap;
             text-align: center;
         }
-        
+
         .daterangepicker .btn.btn-flat {
             border: none;
             background: transparent;
             margin: 3px !important;
             padding: 1px !important;
         }
-        
+
         .daterangepicker .off {
             color: #666;
             opacity: 0.8;
         }
-        
+
         .daterangepicker table {
             border-spacing: 0;
             border-collapse: collapse;
         }
-        
+
         .daterangepicker td,
         .daterangepicker th {
             padding: 0;
         }
-        
+
         .daterangepicker .clickable {
             cursor: pointer;
         }
-        
+
         .daterangepicker .clickable-link {
             color: #337ab7;
         }
-        
+
         .daterangepicker .clickable.disabled {
             pointer-events: none;
             color: #AAA;
             opacity: 0.5;
             cursor: not-allowed;
         }
-        
+
         .ranges {
             padding: 5px 0;
         }
-        
+
         .ranges .clickable {
             margin-top: 8px !important;
         }
-        
+
         .daterangepicker label {
             display: inline-block;
             max-width: 100%;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        
+
         .daterangepicker .form-control {
             margin: 5px;
         }
-        
+
         .daterangepicker .btn-link {
             padding: 1px 6px 1px 6px !important;
         }
-        
+
         .daterangepicker .bootstrap-flush {
             margin: 0 !important;
             padding: 0 !important;
         }
-        
+
         .daterangepicker .time-picker span {
             padding-left: 4px;
             padding-right: 4px;
         }
-        
+
         .daterangepicker .time-picker .time-breadcrumb {
             position: relative;
             top: 22px;
             font-weight: bolder;
             font-size: 0.8em;
         }
-        
+
         .daterangepicker .col-md-1,
         .daterangepicker .col-md-2,
         .daterangepicker .col-md-3,
@@ -401,55 +417,55 @@
             position: relative;
             float: left;
         }
-        
+
         .daterangepicker .col-md-12 {
             width: 100%;
         }
-        
+
         .daterangepicker .col-md-11 {
             width: 91.66666667%;
         }
-        
+
         .daterangepicker .col-md-10 {
             width: 83.33333333%;
         }
-        
+
         .daterangepicker .col-md-9 {
             width: 75%;
         }
-        
+
         .daterangepicker .col-md-8 {
             width: 66.66666667%;
         }
-        
+
         .daterangepicker .col-md-7 {
             width: 58.33333333%;
         }
-        
+
         .daterangepicker .col-md-6 {
             width: 50%;
         }
-        
+
         .daterangepicker .col-md-5 {
             width: 41.66666667%;
         }
-        
+
         .daterangepicker .col-md-4 {
             width: 33.33333333%;
         }
-        
+
         .daterangepicker .col-md-3 {
             width: 25%;
         }
-        
+
         .daterangepicker .col-md-2 {
             width: 16.66666667%;
         }
-        
+
         .daterangepicker .col-md-1 {
             width: 8.33333333%;
         }
-        
+
         .daterangepicker .col-md-offset-4 {
             margin-left: 33.333333333%;
         }
@@ -460,7 +476,8 @@
         </h1>
         <div class="text-right col-md-6 header-right">
             <a class="col-md-2 float-right" href="https://www.npmjs.com/package/angular-2-daterangepicker?activeTab=readme">
-                <img src="https://img.shields.io/badge/dynamic/json.svg?label=npm&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v" width: "100%">
+                <img src="https://img.shields.io/badge/dynamic/json.svg?label=npm&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v"
+                    width: "100%">
             </a>
             <a href="https://github.com/nikhil-001mehta/angular-2-daterangepicker">
                 <span class="github-ribbon">
