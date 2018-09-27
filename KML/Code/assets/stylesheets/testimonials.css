@@ -1,0 +1,28 @@
+.testimonial-card {
+    box-shadow: 0 0 1px 1px #dfdfdf;
+    webkit-box-flex: 0;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    max-width: 48%;
+    min-height: 180px;
+    margin: 10px;
+    position: relative;
+    padding: 15px;
+}
+
+.testimonial-card.card--withGradientBorder:before {
+    content: ' ';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #ff9e2a, #fe2f87);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #acacac;
+}

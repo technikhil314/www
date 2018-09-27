@@ -1,0 +1,231 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  display: table;
+}
+
+body {
+  min-height: 100%;
+  background: #efefef;
+  display: table-cell;
+  margin-bottom: 50px;
+}
+
+span[class*="col-"] {
+  display: inline-block;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 0.92rem;
+}
+
+.inline-title {
+  color: #8b8b8b;
+  font-size: 1rem;
+}
+
+.inline-text {
+  color: #464646;
+  font-size: 1rem;
+}
+
+.card {
+  box-shadow: 0 0 2px 2px #dedede;
+  background: white;
+  padding: 15px;
+  min-height: 310px;
+}
+
+.card-fluid {
+  box-shadow: 0 0 2px 2px #dedede;
+  background: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-container > .row{
+  margin: 40px 0;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.separator-right {
+  border-right: 2px solid #ddd;
+}
+
+.dropdown .btn:hover {
+  color: white;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 1.9rem;
+}
+
+.section-label {
+  color: #303344;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.label {
+  text-transform: uppercase;
+  color: #b2b2b2;
+  display: inline-block;
+}
+
+.gradient-background {
+  background: linear-gradient(to right, #ff9e2a, #fe2f87);
+  color: white;
+  padding: 10px;
+}
+
+.gradient-background a {
+  color: white;
+}
+
+.add-on-container>.form-control~.breadcrumb-in-input {
+  position: relative;
+  top: -30px;
+  left: 5px;
+  padding: 5px;
+  background: #eee;
+}
+
+.add-on-container>.form-control~.breadcrumb-in-input--withDelete {
+  position: relative;
+  top: -30px;
+  left: 5px;
+  padding: 5px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.add-on-container>.form-control~.breadcrumb-in-input--withDelete::after {
+  content: url("../images/icn_close.png");
+  height: 14px;
+  width: 14px;
+  padding-left: 2px;
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.text-brand-primary {
+  color: #5c5c5c;
+}
+
+.navbar-brand {
+  margin-right: 5rem;
+}
+
+.bg-white {
+  background: white;
+}
+
+.well {
+  border-radius: 1px;
+}
+
+@media screen and (min-width: 1220px) {
+  .text,
+  .description {
+    padding: 2px;
+    border: none;
+  }
+}
+
+.text-pink-bg{
+  background: #00A056;
+  color: white;
+  padding: 5px 10px;
+}
+
+.text-yellow-bg{
+  background: #FF506E;
+  color: white;
+  padding: 5px 10px;
+}
+
+.text-green-bg{
+  background: #E5A800;
+  color: white;
+  padding: 5px 10px;
+}
+
+.text-grey-bg{
+  background: #B6B6B6;
+  color: white;
+  padding: 5px 10px;
+}
+
+.hero-container{
+  background: #2E2E41;
+  height: 400px;
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-container .dropdown{
+  flex: 1;
+  align-self: center;
+  padding-top: 60px;
+}
+
+.hero-container .dropdown .btn{
+  background: linear-gradient(to right, #FF9910, #FF007C)
+}
+
+.hero-container .dropdown-menu{
+  padding: 5px;
+}
+
+.tags{
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.tag-item{
+  flex: 1 1 100;
+  border: 1px solid #666;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.divider{
+  height: 60px;
+  width: 0;
+  border: 1px solid #ddd;
+}
+
+//bootstrap-overrides
+.row {
+  margin: 0 !important;
+}
+
+.bg-grey{
+  background: #ECECEC;
+}

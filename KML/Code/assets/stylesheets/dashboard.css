@@ -1,0 +1,31 @@
+.dashboard .dropdown button{
+    width: 100%;
+    background: #6F8EB2;
+    color: white;
+    line-height: 45px;
+    vertical-align: middle;
+    height: 50px;
+    padding-top: 0;
+}
+
+.dashboard .dropdown button .dropdown-text{
+    display: inline-block;
+    bottom: 10px;
+}
+
+.dashboard .dropdown .dropdown-menu{
+    width: 100%;
+    padding: 10px;
+}
+
+.dashboard .stats-wrapper{
+    padding-left: 50px;
+}
+
+.dashboard td[rowspan]{
+    vertical-align: middle;
+}
+
+.dashboard thead{
+    background: #B6B6B6;
+}

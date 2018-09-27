@@ -1,0 +1,154 @@
+.main-header.navbar {
+    height: 80px;
+    background: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 1001;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-header .navbar-collapse {
+    padding-top: 10px;
+}
+
+.navbar-default .navbar-nav>li a,
+.navbar-default .navbar-nav>li a:hover,
+.navbar-default .navbar-nav>li.active a,
+.navbar-default .navbar-nav>li.active a:hover {
+    color: white;
+    background: #fff;
+}
+
+.header-search-box {
+    margin-left: 10%;
+    width: 400px;
+}
+
+.header-search-box>.add-on-container {
+    height: 40px;
+}
+
+.header-search-box>.add-on-container>.search-button {
+    width: 80px;
+}
+
+.navbar-nav>li.separator {
+    padding: 0px 15px 5px;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+}
+
+.navbar-nav>li.separator-left {
+    padding: 0 5px 5px 15px;
+    border-left: 1px solid #666;
+}
+
+.navbar-nav>li.separator-right {
+    padding: 0 15px 5px 5px;
+    border-right: 1px solid #666;
+}
+
+.navbar-nav .text-center {
+    font-size: 0.95rem;
+}
+
+.main-header {
+    color: white;
+}
+
+.navbar .btn-link,
+.navbar .btn-link:hover {
+    background: #fff !important;
+    color: #352C48 !important;
+}
+
+@media screen and (max-width: 1280px) {
+    .navbar-nav>li.separator,
+    .navbar-nav>li.separator-left,
+    .navbar-nav>li.separator-right,
+    .text,
+    .description {
+        padding: 5px;
+    }
+}
+
+.notification {
+    background: white;
+    min-height: 80px;
+}
+
+.notification-dropdown-menu,
+.notification {
+    min-width: 350px;
+    padding: 5px;
+    text-align: justify;
+    border-radius: 10px;
+}
+
+.notification-dropdown-menu {
+    max-height: 400px;
+}
+
+.notification:hover {
+    background: #f8f8f8;
+}
+
+.notification-container {
+    list-style: none;
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.announcements:hover ul {
+    list-style: none;
+    display: block;
+}
+
+.announcements ul {
+    display: none;
+}
+
+.announcements:hover ul li:before,
+.notification-container li:before {
+    content: " ";
+    border-radius: 50%;
+    background: blue;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    margin-bottom: auto;
+}
+
+.announcements:hover {
+    transition: all 500ms;
+    max-width: 400px;
+    max-height: 350px;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #aaa;
+    padding: 10px;
+}
+
+.announcements {
+    transition: all 500ms;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 175px;
+    max-height: 40px;
+    border: 1px solid #aaa;
+    z-index: 10000;
+    background: white;
+}
+
+.main-header.navbar .nav-item a {
+    line-height: 4;
+    vertical-align: middle;
+    color: #352C48 !important;
+}

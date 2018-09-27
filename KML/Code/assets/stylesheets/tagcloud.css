@@ -1,0 +1,53 @@
+.tagCloud {
+    width: 100%;
+    background: #fafafa;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.tagCloud div {
+    float: left;
+    font-size: 2.2rem color: #F9692F;
+}
+
+.tagCloud div:nth-child(4n+5) {
+    font-size: 1.88rem;
+    color: #FFD45D;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.tagCloud div:nth-child(7n+3) {
+    font-size: 2.5rem;
+    color: #FF4890;
+    padding: 5px 15px;
+}
+
+.tagCloud div:nth-child(9n+5) {
+    width: 47%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 3px 25px;
+    color: #00B7F7;
+}
+
+.tagCloud div:nth-child(11n+2) {
+    width: 30%;
+    font-size: 2.2rem;
+    padding: 15px 22px;
+    color: #00AF59;
+}
+
+.tagCloud div:nth-child(13n+9) {
+    font-size: 2.8rem;
+    padding: 14px 28px;
+    color: #01878c;
+}
+
+.tagCloud div:nth-child(5n+7) {
+    width: 55%;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #00AF59
+}
