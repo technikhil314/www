@@ -492,6 +492,726 @@
         </h3>
         <my-datepicker-demo>Loading AppComponent content here ...</my-datepicker-demo>
     </div>
+    <div class="col-md-12 col-lg-12">
+        <h1 id="angular-2-daterangepicker">angular-2-daterangepicker</h1>
+        <div>
+            <a href="https://www.npmjs.com/package/angular-2-daterangepicker?activeTab=readme">
+                <img src="https://img.shields.io/badge/dynamic/json.svg?label=npm&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v"
+                    width:"100%">
+            </a>
+            <a href="https://unpkg.com/angular-2-daterangepicker/index.js">
+                <img src="https://img.shields.io/badge/dynamic/json.svg?label=unpkg&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fnikhil-001mehta%2Fangular-2-daterangepicker%2Fmaster%2Fpackage.json&query=%24.version&prefix=v"
+                    width:"100%">
+            </a>
+            <!-- <iframe src="https://ghbtns.com/github-btn.html?user=nikhil-001mehta&repo=angular-2-daterangepicker&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+    <iframe src="https://ghbtns.com/github-btn.html?user=nikhil-001mehta&repo=angular-2-daterangepicker&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe> -->
+
+        </div>
+
+        <h1 id="about-this-package">About this package</h1>
+        <p>
+            Daterangepicker for Angular vX.X. Although the name of package is angular 2 it is compatible with angular
+            v4
+            and v5
+        </p>
+        <p>
+            It is a fully responsive daterangepicker with or without bootstrap.css. See <a href="#responsive-css">responsive
+                section </a> below for more details.
+        </p>
+        <p>
+            This module is strictly intended to work on browsers only and not in node/browserless environments
+        </p>
+        <p>
+            This is a work in progress and you are always welcome to help me going forward with this project.
+        </p>
+
+        <h1 id="announcements">Announcements</h1>
+        <div>
+            <ul>
+                <li>
+                    Date: 12 Aug 2018
+                    <ul>
+                        <li>Added option alwaysOpen to keep the flyout open always 1.1.47</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 19 May 2018
+                    <ul>
+                        <li>Added option timepicker to enable/disable timepicker in version 1.1.38</li>
+                        <li>Added option disableBeforeStart to enable/disable dates in right calendar that are before
+                            selected from date in version 1.1.39</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 5 May 2018
+                    <ul>
+                        <li>Added option disabled to enable/disable input box in version 1.1.35</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 29 Apr 2018
+                    <ul>
+                        <li>Added option position to open flyout on left right or center in version 1.1.30</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 28 Apr 2018
+                    <ul>
+                        <li>Fixing a small CSS issue in version 1.1.28</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 31 Mar 2018
+                    <ul>
+                        <li>New option for singleCalendar added in version 1.1.27</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 25 Mar 2018
+                    <ul>
+                        <li>Made some changes in CSS and responsiveness in version v1.1.26</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 23 Mar 2018
+                    <ul>
+                        <li>New option for DisplayFormat added in version v1.1.25</li>
+                    </ul>
+                </li>
+                <li>
+                    Date: 20 Jan 2018
+                    <ul>
+                        <li>Module less than version v1.0.10 is no longer supported</li>
+                    </ul>
+                </li>
+        </div>
+
+        <h1 id="getting-started">Getting Started</h1>
+        <h2 id="install">Install</h2>
+        <pre><code class="lang-bash">$ npm <span class="hljs-keyword">install</span> angular-<span class="hljs-number">2</span>-daterangepicker
+</code></pre>
+        <p>or</p>
+        <pre><code class="lang-bash">$ <span class="hljs-keyword">bower </span><span class="hljs-keyword">install </span>angular-2-daterangepicker
+</code></pre>
+        <h2 id="demo">Demo</h2>
+        <p>see <a href="https://nikhil-001mehta.github.io/angular-2-daterangepicker/">Demo</a>
+            or <a href="https://run.plnkr.co/plunks/BtKrOwY8nNLMIdAikubM/">Plunker</a> to how to consume this module or
+            You
+            can play around with the code on stackblitz <a href="https://stackblitz.com/edit/angular-daterangepicker">here</a></p>
+        <h1 id="usage">Usage</h1>
+        <h2 id="how-to-make-it-work-for-you">How to make it work for you</h2>
+        <p>Import DaterangepickerModule into your module as following</p>
+        <pre><code class="lang-ts"><span class="hljs-keyword">import</span> { NgModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { AppComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'./app.component'</span>;
+<span class="hljs-keyword">import</span> { BrowserModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;
+<span class="hljs-keyword">import</span> { DaterangepickerModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'angular-2-daterangepicker'</span>;
+@NgModule({
+    imports: [BrowserModule, DaterangepickerModule],
+    declarations: [ AppComponent ],
+    bootstrap: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> {</span>
+
+}
+</code></pre>
+        <h2 id="options">Options</h2>
+        <p>Currently, very minimum number of options are available but I will keep on developing and adding more and
+            more
+            options</p>
+        <table class="table table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Option Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Default Value</th>
+                    <th>Possible Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>format</td>
+                    <td>string</td>
+                    <td>format that this daterangepicker will use to communicate with your code</td>
+                    <td>&quot;YYYY-MM-DD&quot;</td>
+                    <td>As per <a href="https://momentjs.com/"> momentjs </a> standard formats</td>
+                </tr>
+                <tr>
+                    <td>displayFormat</td>
+                    <td>string</td>
+                    <td>format that will be displayed to end user</td>
+                    <td>Same as format</td>
+                    <td>As per <a href="https://momentjs.com/"> momentjs </a> standard formats</td>
+                </tr>
+                <tr>
+                    <td>startDate</td>
+                    <td>string</td>
+                    <td>Default start date when this components is rendered for first time. Format of this date should
+                        be
+                        in line with format option&#39;s value above</td>
+                    <td>Current Systetm Date</td>
+                    <td>date string in line with format option&#39;s value above</td>
+                </tr>
+                <tr>
+                    <td>endDate</td>
+                    <td>string</td>
+                    <td>Default end date when this components is rendered for first time. Format of this date should be
+                        in
+                        line with format option&#39;s value above</td>
+                    <td>Current Systetm Date</td>
+                    <td>date string in line with format option&#39;s value above</td>
+                </tr>
+                <tr>
+                    <td>minDate</td>
+                    <td>string</td>
+                    <td>Default minimum date not including this date. End user will not be able select all dates before
+                        this date. Format of this date should be in line with format option&#39;s value above</td>
+                    <td>null</td>
+                    <td>date string in line with format option&#39;s value above</td>
+                </tr>
+                <tr>
+                    <td>maxDate</td>
+                    <td>string</td>
+                    <td>Default maximum date not including this date. End user will not be able select all dates after
+                        this
+                        date. Format of this date should be in line with format option&#39;s value above</td>
+                    <td>null</td>
+                    <td>date string in line with format option&#39;s value above</td>
+                </tr>
+                <tr>
+                    <td>inactiveBeforeStart</td>
+                    <td>boolean</td>
+                    <td>Blurs all dates before selected start date. So end user can not select toDate to be before
+                        fromDate.</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>autoApply</td>
+                    <td>boolean</td>
+                    <td>Removes apply and cancel buttons and applies as soon as user selects end date</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>showRanges</td>
+                    <td>boolean</td>
+                    <td>Predefined ranges to show to end user. So end user has ready options instead of navingating
+                        through
+                        calendars.</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>preDefinedRanges</td>
+                    <td> Array of object shown as <a href="#custom-range">below</a>.</td>
+                    <td>Custom ranges if you want to define your own ranges. This is useful only if showRanges option
+                        is
+                        set to true.</td>
+                    <td>see <a href="#custom-range">below</a> for more details</td>
+                    <td>see <a href="#custom-range">below</a> for more details</td>
+                </tr>
+                <tr>
+                    <td>noDefaultRangeSelected</td>
+                    <td>boolean</td>
+                    <td>This option set the startDate and endDate options to blank on first render.This date range
+                        picker
+                        sets startDate and endDate to be current system date by dafault if no value is passed to
+                        startDate
+                        and endDate.</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>singleCalendar</td>
+                    <td>boolean</td>
+                    <td>Use only one calendar. So you do not need another datepicker for single month.</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>position</td>
+                    <td>string</td>
+                    <td>position of the flyout which will open. By default it opens on left edge of input box</td>
+                    <td>&#39;left&#39;</td>
+                    <td>&#39;left&#39;,&#39;right&#39;,&#39;center&#39;</td>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td>boolean</td>
+                    <td>Whether to disable the main input control</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>timePicker</td>
+                    <td>object</td>
+                    <td>Whether to show timepicker</td>
+                    <td>null</td>
+                    <td>Object explained as <a href="#time-picker">below</a></td>
+                </tr>
+                <tr>
+                    <td>disableBeforeStart</td>
+                    <td>boolean</td>
+                    <td>Whether to disable dates that ar before selected start date in right calendar. This option
+                        applies
+                        to right calendar only</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+                <tr>
+                    <td>alwaysOpen</td>
+                    <td>boolean</td>
+                    <td>Whether to keep the calendars always open. This option removes the main input box where range
+                        is
+                        shown</td>
+                    <td>false</td>
+                    <td>true,false</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="custom-range">Custom Range</h3>
+        <p>For custom range, Pass options as below. For this you need to pass <a href="https://momentjs.com/">momentjs</a>
+            objects.</p>
+        <pre><code class="lang-js">        <span class="hljs-attribute">preDefinedRanges</span>: [{
+            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Day After tomorrow'</span>,
+                <span class="hljs-attribute">value</span>: {
+                    <span class="hljs-attribute">start</span>: moment().add(<span class="hljs-number">2</span>, <span class="hljs-string">'days'</span>),
+                    <span class="hljs-attribute">end</span>: moment().add(<span class="hljs-number">2</span>, <span class="hljs-string">'days'</span>),
+                }
+            },{
+            <span class="hljs-attribute">name</span>: <span class="hljs-string">'This week'</span>,
+            <span class="hljs-attribute">value</span>: {
+                <span class="hljs-attribute">start</span>: moment(),
+                <span class="hljs-attribute">end</span>: moment().add(<span class="hljs-number">7</span>, <span class="hljs-string">'days'</span>),
+            }
+        }]
+</code></pre>
+        <p>All dates are supposed to be string and in format as you are passing.
+            You can also </p>
+        <pre><code class="lang-ts"><span class="hljs-keyword">import</span> { <span class="hljs-keyword">Options</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'angular-2-daterangepicker'</span>;
+</code></pre>
+        <p>class for passing options to the component.</p>
+        <h3 id="time-picker">Time Picker</h3>
+        <p>Timepicker options expects an object containing following keys as timepicker options</p>
+        <table class="table table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Option Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Default Value</th>
+                    <th>Possible Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>minuteInterval</td>
+                    <td>(integer)number</td>
+                    <td>The interval by which minutes will increase/decrease when user changes minutes in timepicker</td>
+                    <td>1</td>
+                    <td>anything between 1 to 59. If you supply value greater or equal 60 then that value mod 60 is
+                        taken
+                        as actual value</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="events">Events</h2>
+        <p>Subscribe to rangeSelected event as </p>
+        <pre><code class="lang-html">&lt;<span class="hljs-built_in">date</span>-range-picker [<span class="hljs-built_in">class</span>]=<span class="hljs-string">"'col-md-12 form-control'"</span> [options]=<span class="hljs-string">"daterangepickerOptions"</span> (rangeSelected)=<span class="hljs-string">"rangeSelected($event)"</span>&gt;&lt;/<span class="hljs-built_in">date</span>-range-picker&gt;
+</code></pre>
+        <p>the event listener will receive a javascript object conaining </p>
+        <pre><code class="lang-js">{
+    start: 'moment object representing start <span class="hljs-built_in">date</span> selected <span class="hljs-keyword">by</span> user'
+    <span class="hljs-keyword">end</span>: 'moment object representing <span class="hljs-keyword">end</span> <span class="hljs-built_in">date</span> selected <span class="hljs-keyword">by</span> user'
+}
+</code></pre>
+        <p>and if you have set singleCalendar to true then the event listener will receive following</p>
+        <pre><code class="lang-js">{
+    <span class="hljs-attribute">start</span>: <span class="hljs-string">'moment object representing date selected by user'</span>
+}
+</code></pre>
+        <h2 id="how-pass-options-to-the-component">How pass options to the component</h2>
+        <p>The input box automatically takes class of the date-range-picker tag</p>
+        <pre><code class="lang-ts">import { Component } from <span class="hljs-string">'@angular/core'</span>;
+
+@Component({
+    selector: <span class="hljs-string">"my-datepicker-demo"</span>,
+    template: `<span class="javascript">
+        &lt;date-range-picker <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"col-md-4"</span> [options]=<span class="hljs-string">"daterangepickerOptions"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"col-md-4"</span>&gt;
+        <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">date-range-picker</span>&gt;</span>
+    </span></span>`
+})
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppComponent</span>{</span>
+    daterangepickerOptions = {
+        startDate: <span class="hljs-string">'09/01/2017'</span>,
+        endDate: <span class="hljs-string">'09/02/2017'</span>,
+        format: <span class="hljs-string">'DD/MM/YYYY'</span>
+    }
+}
+</code></pre>
+        <h1 id="dependencies">Dependencies</h1>
+        <p><a href="http://momentjs.com/">moment.js</a> version greater than 2.17.1<br />
+            <a href="https://github.com/gf3/moment-range">moment-range.js</a> version 2.2.0 <br />
+            also you should have installed @types/node or <a href="http://stackoverflow.com/questions/36700693/typescript-error-in-angular2-code-cannot-find-name-module">see
+                here</a> for more information.
+            I suggest installing all the dependencies before this module</p>
+        <h1 id="responsive-css">Responsive CSS</h1>
+        <p>If you are using bootstrap.css then just include the following styling in your code
+            if you do not want to include whole bootstrap.css then include <a href="https://raw.githubusercontent.com/nikhil-001mehta/angular-2-daterangepicker/master/daterangepicker-component.css">this
+                css</a> in your code.</p>
+        <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-class">.daterangepicker-wrapper</span>{
+            <span class="hljs-attribute">position</span>: relative;
+            <span class="hljs-attribute">border</span>: none;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> {
+            <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+            <span class="hljs-attribute">position</span>: absolute;
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">44px</span>;
+            <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.always-open</span>{
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">box-shadow</span>: none;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-right</span>{
+            <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-left</span>{
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-center</span>{
+            <span class="hljs-attribute">right</span>: -<span class="hljs-number">50%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:before</span>{
+            <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">0px</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">0px</span>;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">10px</span> solid transparent;
+            <span class="hljs-attribute">position</span>: absolute;
+            <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#aaa</span>; 
+            <span class="hljs-attribute">top</span>: -<span class="hljs-number">20px</span>;
+        }
+
+         <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:after</span>{
+            <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">0px</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">0px</span>;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">9px</span> solid transparent;
+            <span class="hljs-attribute">position</span>: absolute;
+            <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#fff</span>;
+            <span class="hljs-attribute">top</span>: -<span class="hljs-number">18px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-left</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:before</span>{
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">10px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-left</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:after</span>{
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">11px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-right</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:before</span>{
+            <span class="hljs-attribute">right</span>: <span class="hljs-number">10px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-right</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:after</span>{
+            <span class="hljs-attribute">right</span>: <span class="hljs-number">11px</span>;
+        }
+
+         <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-center</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:before</span>{
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span><span class="hljs-selector-class">.open-center</span><span class="hljs-selector-class">.tooltip-chevron</span><span class="hljs-selector-pseudo">:after</span>{
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+        }
+
+        @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">550px</span>) {
+            <span class="hljs-selector-class">.daterangepicker</span> {
+                <span class="hljs-attribute">width</span>: <span class="hljs-number">550px</span>;
+            }
+        }
+
+        @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">550px</span>) {
+            <span class="hljs-selector-class">.daterangepicker</span> {
+                <span class="hljs-attribute">width</span>: <span class="hljs-number">270px</span>;
+            }
+            <span class="hljs-selector-class">.text-center</span> <span class="hljs-selector-class">.pull-right</span> {
+                <span class="hljs-attribute">float</span>: none <span class="hljs-meta">!important</span>;
+            }
+            <span class="hljs-selector-class">.col-md-6</span> {
+                <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span> <span class="hljs-meta">!important</span>;
+            }
+            <span class="hljs-selector-class">.col-md-10</span> {
+                <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span> <span class="hljs-meta">!important</span>;
+            }
+            <span class="hljs-selector-class">.ranges</span> &gt; <span class="hljs-selector-tag">div</span> {
+                <span class="hljs-attribute">display</span>: none;
+            }
+        }
+
+        <span class="hljs-selector-class">.singledatepicker</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">225px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> {
+            <span class="hljs-attribute">z-index</span>: <span class="hljs-number">3000</span>;
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span>;
+            <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0px</span> <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#ddd</span>;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#aaa</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[class*="col-md-"]</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-attr">[class*="col-md-"]</span> {
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">15px</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span>;
+        }
+
+        <span class="hljs-selector-class">.hidden</span> {
+            <span class="hljs-attribute">display</span>: none <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">visibility</span>: false <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.calendar</span> {
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">4px</span>;
+            <span class="hljs-attribute">float</span>: left;
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span>;
+        }
+
+        <span class="hljs-selector-class">.applyBtn</span> {
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">4px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.flush</span> {
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.flussh</span> {
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.flush-bottom</span> {
+            <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.flush-left</span> {
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.flush-right</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.nudge-half--left</span> {
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">4px</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.nudge-half--right</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">4px</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.nudge-top</span> {
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">5px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.push-bottom</span> {
+            <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">th</span> {
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">1px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">1px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">text-align</span>: center;
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">td</span> {
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;
+            <span class="hljs-attribute">text-align</span>: center;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">1px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">3px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">white-space</span>: nowrap;
+            <span class="hljs-attribute">text-align</span>: center;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.btn</span><span class="hljs-selector-class">.btn-flat</span> {
+            <span class="hljs-attribute">border</span>: none;
+            <span class="hljs-attribute">background</span>: transparent;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">3px</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">1px</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.off</span> {
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">table</span> {
+            <span class="hljs-attribute">border-spacing</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">border-collapse</span>: collapse;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">td</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">th</span> {
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.clickable</span> {
+            <span class="hljs-attribute">cursor</span>: pointer;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.clickable-link</span> {
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#337ab7</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.clickable</span><span class="hljs-selector-class">.disabled</span> {
+            <span class="hljs-attribute">pointer-events</span>: none;
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#AAA</span>;
+            <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.5</span>;
+            <span class="hljs-attribute">cursor</span>: not-allowed;
+        }
+
+        <span class="hljs-selector-class">.ranges</span>{
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span> <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-selector-class">.ranges</span> <span class="hljs-selector-class">.clickable</span> {
+            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">8px</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-tag">label</span> {
+            <span class="hljs-attribute">display</span>: inline-block;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">5px</span>;
+            <span class="hljs-attribute">font-weight</span>: bold;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.form-control</span>{
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.btn-link</span> {
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">1px</span> <span class="hljs-number">6px</span> <span class="hljs-number">1px</span> <span class="hljs-number">6px</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.bootstrap-flush</span>{
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.time-picker</span> <span class="hljs-selector-tag">span</span>{
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">4px</span>;
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">4px</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.time-picker</span> <span class="hljs-selector-class">.time-breadcrumb</span>{
+            <span class="hljs-attribute">position</span>: relative;
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">22px</span>;
+            <span class="hljs-attribute">font-weight</span>: bolder;
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.8em</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-1</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-2</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-3</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-4</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-5</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-6</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-7</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-8</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-9</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-10</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-11</span>,
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-12</span> {
+            <span class="hljs-attribute">position</span>: relative;
+            <span class="hljs-attribute">float</span>: left;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-12</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-11</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">91.66666667%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-10</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">83.33333333%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-9</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">75%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-8</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">66.66666667%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-7</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">58.33333333%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-6</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-5</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">41.66666667%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-4</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">33.33333333%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-3</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">25%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-2</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">16.66666667%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-1</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">8.33333333%</span>;
+        }
+
+        <span class="hljs-selector-class">.daterangepicker</span> <span class="hljs-selector-class">.col-md-offset-4</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.333333333%</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+        <h1 id="issues-problems">Issues/Problems</h1>
+        <p>Please let me know if you are facing any issues <a href="https://github.com/nikhil-001mehta/angular-2-daterangepicker/issues">here</a></p>
+        <h1 id="want-to-contribute-you-are-welcome-">Want to contribute. You are welcome!!! :)</h1>
+        <ol>
+            <li>Fork this repo</li>
+            <li>npm install</li>
+            <li>Copy all files from <a href="https://gist.github.com/nikhil-001mehta/7a43a4da53ed9809fd6682a340ede618"
+                    target="_blank">this gist</a> to your local folder. And do not add them to git index otherwise they
+                will appear in your pull requests.</li>
+            <li> run &quot;npm install -g typescript typescript-formatter lite-server concurrently rimraf&quot;</li>
+            <li>run &quot;npm start&quot;</li>
+            <li>open browser at <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a></li>
+            <li>You are all set.</li>
+            <li>Add features. Fix issues. Open Pull requests.</li>
+            <li>Remember not to include files from gist in your pull requests</li>
+        </ol>
+    </div>
     <div class="footer"> &copy; Nikhil Mehta</div>
 </body>
 
