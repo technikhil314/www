@@ -1,0 +1,16 @@
+.filter-type {
+  width: 100%;
+  height: 40px;
+  color: #5c5c5c;
+  text-align: left;
+  font-weight: 900;
+  background-color: #dddddd;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-options {
+  padding-left: 26px;
+}

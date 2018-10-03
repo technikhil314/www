@@ -1,0 +1,69 @@
+.icn_policy {
+  display: inline-block;
+  background: url("../images/icn_polyci.png") no-repeat center;
+  height: 36px;
+  width: 40px;
+}
+
+.icn_notifications {
+  display: inline-block;
+  background: url("../images/icn_notification.png") no-repeat center;
+  height: 36px;
+  width: 40px;
+}
+
+.icn_contactUs {
+  display: inline-block;
+  background: url("../images/icn_contact.png") no-repeat center;
+  height: 36px;
+  width: 40px;
+}
+
+.icn_plus {
+  display: inline-block;
+  background: url("../images/img_add.png") no-repeat center;
+  height: 15px;
+  width: 20px;
+}
+
+.icn_fuel{
+  display: inline-block;
+  background: url("../images/img_fuel.png") no-repeat center;
+  height: 40px;
+  width: 30px;
+}
+
+.icn_car{
+  display: inline-block;
+  background: url("../images/img_car.png") no-repeat center;
+  height: 40px;
+  width: 30px;
+}
+
+.icn_detailedAllowance{
+  display: inline-block;
+  background: url("../images/img_detailsalloance.png") no-repeat center;
+  height: 40px;
+  width: 40px;
+}
+
+.icn_detailedConsumption{
+  display: inline-block;
+  background: url("../images/img_detailconsumtion.png") no-repeat center;
+  height: 40px;
+  width: 40px;
+}
+
+.icn_homeAndOfficeAddr{
+  display: inline-block;
+  background: url("../images/img_home.png") no-repeat center;
+  height: 40px;
+  width: 30px;
+}
+
+.icn_bonus{
+  display: inline-block;
+  background: url("../images/img_Fuel\ Efficient.png") no-repeat center;
+  height: 20px;
+  width: 30px;
+}
