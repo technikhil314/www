@@ -1,12 +1,8 @@
 module.exports = {
-  firstSidebar: {
-    'Category A': ['carousel/doc11'],
+  casousel: {
+    'Carousel': ['carousel/introduction', 'carousel/installation', 'carousel/how-to-use', 'carousel/examples'],
   },
-  secondSidebar: {
-    'Category A': ['carousel/doc3'],
-    'Category B': ['carousel/doc2'],
-  },
-  thirdSidebar: {
-    'Category Z': ['carousel/mdx'],
+  dateranvepicker: {
+    'Date range picker': ['daterangepicker/introduction', 'daterangepicker/installation', 'daterangepicker/how-to-use', 'daterangepicker/examples'],
   },
 };

@@ -59,20 +59,20 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Home`}
-      description="I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.">
+      title="Carousel Component"
+      description="A framework agnostic, Next Gen, light weight, touch friendly carousel compoent">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Nikhil Mehta aka Technikhil314</h1>
-          <p className="hero__subtitle">I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.</p>
+          <h1 className="hero__title">Carousel Component</h1>
+          <p className="hero__subtitle">A framework agnostic, Next Gen, light weight, touch friendly carousel compoent</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/')}>
-              Contact Me
+              to={useBaseUrl('docs/carousel/introduction')}>
+              Get Started
             </Link>
           </div>
         </div>

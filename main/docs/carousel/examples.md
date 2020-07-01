@@ -1,6 +1,6 @@
 ---
-id: doc11
-title: Style Guide
+id: examples
+title: examples
 sidebar_label: Style Guide
 ---
 

@@ -1,26 +1,31 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: "Nikhil Mehta aka Technikhil314",
+  tagline: "I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
+  url: 'https://technikhil314.surge.sh',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'TechNikhil314',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       links: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'My Open Source Work',
           position: 'left',
+          items: [{
+            to: "carousel",
+            label: "Carousel Component",
+          }, {
+            to: "daterangepicker",
+            label: "Date Range Picker",
+          }]
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
