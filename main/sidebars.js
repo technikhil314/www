@@ -1,12 +1,12 @@
 module.exports = {
   firstSidebar: {
-    'Category A': ['doc1'],
+    'Category A': ['carousel/doc11'],
   },
   secondSidebar: {
-    'Category A': ['doc2'],
-    'Category B': ['doc3'],
+    'Category A': ['carousel/doc3'],
+    'Category B': ['carousel/doc2'],
   },
   thirdSidebar: {
-    'Category Z': ['doc11'],
+    'Category Z': ['carousel/mdx'],
   },
 };
