@@ -54,17 +54,17 @@ function Feature({ imageUrl, title, description }) {
   );
 }
 
-export default function() {
+export default function () {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title="Carousel Component"
-      description="A framework agnostic, Next Gen, light weight, touch friendly carousel compoent">
+      title="Date Range Picker"
+      description="A light weight date range picker without jquery dependancy. And it uses all advanced internationalisation features from latest browsers.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Carousel Component</h1>
-          <p className="hero__subtitle">A framework agnostic, Next Gen, light weight, touch friendly carousel compoent</p>
+          <h1 className="hero__title">Date Range Picker</h1>
+          <p className="hero__subtitle">A light weight date range picker without jquery dependancy. And it uses all advanced internationalisation features from latest browsers.</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
