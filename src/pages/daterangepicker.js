@@ -71,7 +71,7 @@ export default function () {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/carousel/introduction')}>
+              to={useBaseUrl('docs/daterangepicker/introduction')}>
               Go to Documentation
             </Link>
           </div>
