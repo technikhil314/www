@@ -3,10 +3,11 @@ module.exports = {
   tagline: "I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
   url: 'https://technikhil314.surge.sh',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/avatar.jpeg',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
+    image: 'img/avatar.jpeg',
     googleAnalytics: {
       trackingID: 'UA-171436787-1',
     },
@@ -14,12 +15,13 @@ module.exports = {
       trackingID: 'UA-171436787-1',
     },
     defaultDarkMode: true,
+    sidebarCollapsible: false,
     navbar: {
       hideOnScroll: true,
       title: 'TechNikhil314',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'My avatar',
+        src: 'img/avatar.jpeg',
       },
       links: [
         {
