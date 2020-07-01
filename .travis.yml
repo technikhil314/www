@@ -19,7 +19,7 @@ deploy:
   - provider: surge
     skip_cleanup: true
     project: ./build/
-    domain: https://technikhil314.surge.sh
+    domain: https://staging-www.meraklis.in
     on:
       branch: master
       tags: false
