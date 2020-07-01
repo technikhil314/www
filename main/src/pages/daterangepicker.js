@@ -39,7 +39,7 @@ const features = [
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx('col col--4', styles.feature)}>
@@ -54,24 +54,24 @@ function Feature({imageUrl, title, description}) {
   );
 }
 
-function Home() {
+export default function() {
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="Carousel Component"
+      description="A framework agnostic, Next Gen, light weight, touch friendly carousel compoent">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className="hero__title">Carousel Component</h1>
+          <p className="hero__subtitle">A framework agnostic, Next Gen, light weight, touch friendly carousel compoent</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/daterangepicker/introduction')}>
+              to={useBaseUrl('docs/carousel/introduction')}>
               Go to Documentation
             </Link>
           </div>
@@ -93,5 +93,3 @@ function Home() {
     </Layout>
   );
 }
-
-export default Home;

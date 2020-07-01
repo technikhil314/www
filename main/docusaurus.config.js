@@ -27,7 +27,8 @@ module.exports = {
             label: "Date Range Picker",
           }]
         },
-        { to: 'blog', label: 'Blog', position: 'left' }
+        { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'portfolio', label: 'My Portfolio', position: 'right' }
       ],
     },
     footer: {
