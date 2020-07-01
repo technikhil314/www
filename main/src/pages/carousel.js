@@ -72,7 +72,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/carousel/introduction')}>
-              Get Started
+              Go to Documentation
             </Link>
           </div>
         </div>

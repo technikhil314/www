@@ -72,7 +72,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/daterangepicker/introduction')}>
-              Get Started
+              Go to Documentation
             </Link>
           </div>
         </div>
