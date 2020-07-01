@@ -7,6 +7,12 @@ module.exports = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
+    googleAnalytics: {
+      trackingID: 'UA-171436787-1',
+    },
+    gtag: {
+      trackingID: 'UA-171436787-1',
+    },
     defaultDarkMode: true,
     navbar: {
       hideOnScroll: true,
@@ -85,7 +91,7 @@ module.exports = {
             },
             {
               label: 'My Portfolio',
-              to: '/portfolio',
+              to: 'portfolio',
             }
           ],
         },
