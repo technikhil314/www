@@ -17,7 +17,6 @@ module.exports = {
     defaultDarkMode: true,
     sidebarCollapsible: false,
     navbar: {
-      hideOnScroll: true,
       title: 'TechNikhil314',
       logo: {
         alt: 'My avatar',

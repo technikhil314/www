@@ -54,7 +54,7 @@ function Feature({ imageUrl, title, description }) {
   );
 }
 
-export default function() {
+export default function () {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
