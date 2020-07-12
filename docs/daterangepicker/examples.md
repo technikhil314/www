@@ -3,7 +3,7 @@ id: examples
 title: examples
 ---
 
-import { SubHeader } from "../subheader";
+import { SubHeader } from "./subheader";
 
 <SubHeader/>
 

@@ -3,7 +3,7 @@ id: introduction
 title: introduction
 ---
 
-import { SubHeader } from "../subheader";
+import { SubHeader } from "./subheader";
 
 <SubHeader/>
 

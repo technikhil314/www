@@ -3,7 +3,7 @@ id: how-to-use
 title: how-to-use
 ---
 
-import { SubHeader } from "../subheader";
+import { SubHeader } from "./subheader";
 
 <SubHeader/>
 
