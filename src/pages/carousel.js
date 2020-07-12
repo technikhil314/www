@@ -9,31 +9,25 @@ import styles from './styles.module.css';
 const features = [
   {
     title: <>Easy to Use</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        It as good as using plain HTML tags. It has attributes to define its behaviour.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: <>Light Weight</>,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        It is very light weight it adds just 1.2 kb of load on to your javascript bundle. Also it does not use any third party utility library like jquery or lodash
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: <>Framework agnostic</>,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Since its a web component it does not depend on any javascript framework or library. It works as far as you want it to be statically rendered
       </>
     ),
   },
@@ -54,17 +48,16 @@ function Feature({ imageUrl, title, description }) {
   );
 }
 
-export default function() {
+export default function () {
   const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
   return (
     <Layout
       title="Carousel Component"
       description="A framework agnostic, Next Gen, light weight, touch friendly carousel compoent">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Carousel Component</h1>
-          <p className="hero__subtitle">A framework agnostic, Next Gen, light weight, touch friendly carousel compoent</p>
+          <h1 className="hero__title">Carousel Web Component</h1>
+          <p className="hero__subtitle">A tiny(1.2Kb), framework agnostic, light weight, zero dependancy, touch friendly carousel components</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(

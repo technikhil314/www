@@ -1,10 +1,25 @@
 ---
 id: installation
-title: installation
+title: Installation
 ---
 
-import { SubHeader } from "../subheader";
+import { SubHeader } from "./subheader";
 
 <SubHeader/>
 
-This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com/)
+### How to install
+
+Using NPM
+```
+npm i @technikhil/carousel-webcomponent
+```
+
+Using yarn
+```
+yarn install @technikhil/carousel-webcomponent
+```
+
+### Disclaimers
+
+- It is a web component please include polyfill from [here](https://www.webcomponents.org/polyfills) if you intend to use it in some browser that do not support customelements registry
+- It is not tested on SSR and SSG yet so feel free to raise [issues here](https://github.com/technikhil314/carousel-web-component/issues) if you find any

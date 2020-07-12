@@ -106,7 +106,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nikhil Mehta. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`,
     },
   },
   presets: [

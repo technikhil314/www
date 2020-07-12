@@ -28,4 +28,14 @@
   position: sticky;
   top: 50px;
   z-index: 10;
+  height: 70px;
+}
+
+.sub-navbar > .navbar__inner {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+body {
+  scroll-padding-top: 88px !important;
 }

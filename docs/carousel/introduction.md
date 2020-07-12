@@ -1,21 +1,17 @@
 ---
 id: introduction
-title: introduction
+title: Introduction
 ---
 
-import { SubHeader } from "../subheader";
+import { SubHeader } from "./subheader";
 
 <SubHeader/>
 
-You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/)
+#### This is a  tiny(1.2Kb), framework agnostic, light weight, zero dependancy, touch friendly carousel component
 
-export const Highlight = ({children, color}) => ( <span style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>{children}</span> );
+## Why should I use it while there is slick-carousel and others out there
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+Most of the carousel components out there depends on jquery and other third party libraries that is no longer useful in latest browsers. additionally they do not leverage latest css and javascript features like css scroll snap, flex order, webcomponents/custom elements etc.  Using these latest  features makes carousel much more eligent, reliable, light weight and framework agnostic
 
-I can write **Markdown** alongside my _JSX_!
+### You want to try? 
+You like the idea? want to try it or see the [examples](examples.md) or go to [next section](installation.md) see how easy it is to use.
