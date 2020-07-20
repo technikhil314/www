@@ -15,7 +15,7 @@ module.exports = {
       trackingID: 'UA-171436787-1',
     },
     defaultDarkMode: true,
-    sidebarCollapsible: false,
+    sidebarCollapsible: true,
     navbar: {
       title: 'TechNikhil314',
       logo: {
