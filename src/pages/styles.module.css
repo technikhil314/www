@@ -5,6 +5,10 @@
  * and scoped locally.
  */
 
+:global html[data-theme="dark"] .navbar__logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 .heroBanner {
   padding: 4rem 0.5rem;
   text-align: center;

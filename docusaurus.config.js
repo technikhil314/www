@@ -3,11 +3,11 @@ module.exports = {
   tagline: "A self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
   url: 'https://technikhil314.surge.sh',
   baseUrl: '/',
-  favicon: 'img/avatar.jpeg',
+  favicon: 'img/logo.png',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
   themeConfig: {
-    image: 'img/avatar.jpeg',
+    image: 'img/logo.png',
     googleAnalytics: {
       trackingID: 'UA-171436787-1',
     },
@@ -19,8 +19,8 @@ module.exports = {
     navbar: {
       title: 'TechNikhil314',
       logo: {
-        alt: 'My avatar',
-        src: 'img/avatar.jpeg',
+        alt: 'TechNikhil314',
+        src: 'img/logo.png',
       },
       links: [
         {
