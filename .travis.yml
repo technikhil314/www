@@ -1,19 +1,24 @@
-cache: 
+cache:
   - npm
   - directories:
       - ./node_modules/
-      
+
+matrix:
+  include:
+    - dist: bionic
+    - dist: xenial
+
 install:
   - yarn --frozen-lockfile
 
 jobs:
   include:
-  - language: node_js
-    node_js:
-       - 12.16.1
-    stage: build
-    script: 
-      - npm run build
+    - language: node_js
+      node_js:
+        - 12.16.1
+      stage: build
+      script:
+        - npm run build
 
 deploy:
   - provider: surge
