@@ -1,0 +1,31 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    name: Deploy to technikhil314.surge.sh
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Build
+        run: |
+          yarn --frozen-lockfile
+          npm run build
+
+      - name: Install Surge
+        run: npm install -g surge
+
+      - name: Deploy to Surge
+        run: |
+          cd ./build
+          surge . https://technikhil314.surge.sh --token ${{secrets.SURGE_TOKEN}}
