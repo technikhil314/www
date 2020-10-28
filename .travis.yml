@@ -15,7 +15,7 @@ jobs:
   include:
     - language: node_js
       node_js:
-        - 12.16.1
+        - 14.9.0
       stage: build
       script:
         - npm run build
