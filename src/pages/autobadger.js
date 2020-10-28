@@ -1,32 +1,10 @@
-import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import React from 'react';
 import clsx from 'clsx';
-import React, { useRef } from 'react';
-import pageStyles from './index.module.css';
-import basicStyles from './styles.module.css';
-import { useAnimatingTitle } from '../hooks/animatingTitle';
-
-const keywords = [
-  "Software&nbsp;engineer",
-  "Web&nbsp;developer",
-  "Javascript&nbsp;developer",
-  "Nodejs&nbsp;developer",
-  "Freelancer",
-  "Performance&nbsp;engineer",
-  "Open&nbsp;source&nbsp;contributor",
-  "CSS&nbsp;enthusiast",
-  "Devops&nbsp;person",
-  "Blockchain&nbsp;learner",
-  "Command&nbsp;Line&nbsp;Lover",
-  "Lefty",
-  "Drummer",
-  "Mathematician",
-  "Worst&nbsp;singer",
-  "Free&nbsp;education&nbsp;believer",
-  "All&nbsp;time&nbsp;learner",
-];
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.css';
 
 const features = [
   {
@@ -64,10 +42,10 @@ const features = [
 function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx('col col--4', basicStyles.feature)}>
+    <div className={clsx('col col--4', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={basicStyles.featureImage} src={imgUrl} alt={title} />
+          <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
       <h3>{title}</h3>
@@ -76,30 +54,24 @@ function Feature({ imageUrl, title, description }) {
   );
 }
 
-export default function () {
+export default function() {
   const context = useDocusaurusContext();
-  const animatingTitleRef = useRef();
-  useAnimatingTitle(animatingTitleRef, keywords);
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Home`}
+      title={`Auto badger`}
       description={siteConfig.tagline}>
-      <header className={clsx('hero hero--primary', basicStyles.heroBanner)}>
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Hi! I am NIkhil Mehta</h1>
-          <div className="hero__subtitle">
-            <p className={pageStyles.animatingTitleWrapper}>
-              I am a {" "}
-              <span className={pageStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}></span></p>
-          </div>
-          <div className={basicStyles.buttons}>
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className={styles.buttons}>
             <Link
               className={clsx(
                 'button button--outline button--secondary button--lg',
-                basicStyles.getStarted,
+                styles.getStarted,
               )}
-              to={useBaseUrl('contactme/')}>
+              to={useBaseUrl('docs/')}>
               Contact Me
             </Link>
           </div>
@@ -107,7 +79,7 @@ export default function () {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className={basicStyles.features}>
+          <section className={styles.features}>
             <div className="container">
               <div className="row">
                 {features.map((props, idx) => (

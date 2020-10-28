@@ -1,11 +1,11 @@
 module.exports = {
-  title: "Nikhil Mehta aka technikhil314",
-  tagline: "I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
+  title: "technikhil314",
+  tagline: "A self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
   url: 'https://technikhil314.surge.sh',
   baseUrl: '/',
   favicon: 'img/avatar.jpeg',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'technikhil314', // Usually your GitHub org/user name.
+  projectName: 'Portfolio for technikhil314', // Usually your repo name.
   themeConfig: {
     image: 'img/avatar.jpeg',
     googleAnalytics: {
@@ -24,18 +24,21 @@ module.exports = {
       },
       links: [
         {
-          label: 'My Open Source Work',
+          label: 'My Work',
           position: 'left',
           items: [{
             to: "carousel",
             label: "Carousel Component",
           }, {
             to: "daterangepicker",
-            label: "Date Range Picker",
+            label: "Angular Date Range Picker",
+          }, {
+            to: "autobadger",
+            label: "Auto Badger",
           }]
         },
         { to: 'blog', label: 'Blog', position: 'left' },
-        { to: 'portfolio', label: 'My Portfolio', position: 'right' }
+        { to: 'contactme', label: 'Contact me', position: 'right' }
       ],
     },
     footer: {
@@ -106,7 +109,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`,
+      copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`,
     },
   },
   presets: [
