@@ -26,13 +26,13 @@ You can write JSX and use React components within your Markdown thanks to [MDX](
 ## About this package
 
 Date and time range picker for Angular v6 and above.
-<br/>
+
 This is a successor of this package located here [angular-2-daterangepicker](https://www.npmjs.com/package/angular-2-daterangepicker)
-<br/>
+
 It is a fully responsive date and time range picker with or without bootstrap.css.
-<br/>
+
 The purpose of this project is to remove dependencies on bootstrap, jquery etc.
-<br/>
+
 No offence here. These are good libraries but with modern frameworks they add more footprint hampering the performance
 
 <br/>
@@ -45,7 +45,7 @@ No offence here. These are good libraries but with modern frameworks they add mo
   1. This is a successor of this package located here [angular-2-daterangepicker](https://www.npmjs.com/package/angular-2-daterangepicker)
   1. Published next major version. v1.0.0
   1. Fixed issue [#45](https://github.com/technikhil314/angular-components/issues/45)
-  1. If you want to use this module with angular < v6. Then install v1.1.52 of [this package]([https://www.npmjs.com/package/angular-2-daterangepicker])
+  1. If you want to use this module with angular < v6. Then install v1.1.52 of [this package](https://www.npmjs.com/package/angular-2-daterangepicker)
   1. This package uses angular version 6 or above
 
 <br/>

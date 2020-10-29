@@ -1,12 +1,12 @@
 const myopenSourceWork = [{
-  to: "carousel",
-  label: "Carousel Component",
+  to: "autobadger",
+  label: "Auto Badger",
 }, {
   to: "daterangepicker",
   label: "Angular Date Range Picker",
 }, {
-  to: "autobadger",
-  label: "Auto Badger",
+  to: "carousel",
+  label: "Carousel Component",
 }]
 
 module.exports = {
@@ -17,6 +17,7 @@ module.exports = {
   favicon: 'img/logo.png',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
+  onBrokenLinks: 'warn',
   themeConfig: {
     image: 'img/logo.png',
     googleAnalytics: {
@@ -25,7 +26,9 @@ module.exports = {
     gtag: {
       trackingID: 'UA-171436787-1',
     },
-    defaultDarkMode: true,
+    colorMode: {
+      defaultMode: 'dark'
+    },
     sidebarCollapsible: true,
     navbar: {
       title: 'TechNikhil314',
@@ -33,7 +36,7 @@ module.exports = {
         alt: 'TechNikhil314',
         src: 'img/logo.png',
       },
-      links: [
+      items: [
         {
           label: 'My Work',
           position: 'left',
@@ -124,7 +127,6 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
           sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
