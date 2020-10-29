@@ -30,8 +30,9 @@ module.exports = {
       defaultMode: 'dark'
     },
     sidebarCollapsible: true,
+    hideableSidebar: true,
     navbar: {
-      title: 'TechNikhil314',
+      title: 'TechNikhil',
       logo: {
         alt: 'TechNikhil314',
         src: 'img/logo.png',
@@ -53,6 +54,11 @@ module.exports = {
       ],
     },
     footer: {
+      logo: {
+        alt: 'technikhil314 logo',
+        src: 'img/brand.png',
+        href: '/',
+      },
       links: [
         {
           title: 'My Open Source Work',
@@ -76,14 +82,6 @@ module.exports = {
             {
               label: 'Linkedin',
               href: 'https://www.linkedin.com/in/technikhil314/',
-            },
-            {
-              label: 'Dev.to',
-              href: 'https://dev.to/technikhil314',
-            },
-            {
-              label: 'Medium',
-              href: 'https://medium.com/@nikhil.001mehta',
             }
           ],
         },

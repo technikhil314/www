@@ -42,3 +42,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.footer__logo {
+  max-width: 6rem;
+  opacity: 0.8;
+}

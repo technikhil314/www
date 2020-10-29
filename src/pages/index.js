@@ -79,6 +79,7 @@ export default function () {
       description={siteConfig.tagline}>
       <header className={clsx('hero hero--primary', basicStyles.heroBanner)}>
         <div className="container">
+          <img src="/img/avatar-sketch.png" height={200}></img>
           <h1 className="hero__title">Hi! I am NIkhil Mehta</h1>
           <div className="hero__subtitle">
             <p className={animatingTitleStyles.animatingTitleWrapper}>

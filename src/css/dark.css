@@ -1,3 +1,5 @@
-html[data-theme="dark"] .navbar__logo {
+html[data-theme="dark"] .navbar__logo,
+html[data-theme="dark"] .footer__logo {
   filter: invert(1) hue-rotate(180deg);
+  opacity: 0.7;
 }
