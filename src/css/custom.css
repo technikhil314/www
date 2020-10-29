@@ -6,6 +6,12 @@
  */
 
 /* You can override the default Infima variables here. */
+@import "dark.css";
+
+body {
+  scroll-padding-top: 88px !important;
+}
+
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -36,6 +42,9 @@
   width: auto;
 }
 
-body {
-  scroll-padding-top: 88px !important;
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

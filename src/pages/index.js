@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React, { useRef } from 'react';
-import pageStyles from './index.module.css';
+import animatingTitleStyles from './animatingTitle.module.css';
 import basicStyles from './styles.module.css';
 import { useAnimatingTitle } from '../hooks/animatingTitle';
 
@@ -89,9 +89,9 @@ export default function () {
         <div className="container">
           <h1 className="hero__title">Hi! I am NIkhil Mehta</h1>
           <div className="hero__subtitle">
-            <p className={pageStyles.animatingTitleWrapper}>
+            <p className={animatingTitleStyles.animatingTitleWrapper}>
               I am a {" "}
-              <span className={pageStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}></span></p>
+              <span className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}></span></p>
           </div>
           <div className={basicStyles.buttons}>
             <Link

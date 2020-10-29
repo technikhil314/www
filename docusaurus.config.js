@@ -1,3 +1,14 @@
+const myopenSourceWork = [{
+  to: "carousel",
+  label: "Carousel Component",
+}, {
+  to: "daterangepicker",
+  label: "Angular Date Range Picker",
+}, {
+  to: "autobadger",
+  label: "Auto Badger",
+}]
+
 module.exports = {
   title: "technikhil314",
   tagline: "A self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
@@ -26,16 +37,7 @@ module.exports = {
         {
           label: 'My Work',
           position: 'left',
-          items: [{
-            to: "carousel",
-            label: "Carousel Component",
-          }, {
-            to: "daterangepicker",
-            label: "Angular Date Range Picker",
-          }, {
-            to: "autobadger",
-            label: "Auto Badger",
-          }]
+          items: myopenSourceWork
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         { to: 'contactme', label: 'Contact me', position: 'right' }
@@ -45,13 +47,7 @@ module.exports = {
       links: [
         {
           title: 'My Open Source Work',
-          items: [{
-            to: "carousel",
-            label: "Carousel Component",
-          }, {
-            to: "daterangepicker",
-            label: "Date Range Picker",
-          }]
+          items: myopenSourceWork
         },
         {
           title: 'Follow me',
@@ -96,6 +92,10 @@ module.exports = {
             {
               label: 'My Portfolio',
               to: 'portfolio',
+            },
+            {
+              label: 'Download my resume',
+              to: 'portfolio',
             }
           ],
         },
@@ -109,7 +109,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`,
+      copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`
     },
   },
   presets: [
@@ -123,6 +123,10 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta.`
+          }
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

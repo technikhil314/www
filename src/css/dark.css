@@ -1,0 +1,3 @@
+html[data-theme="dark"] .navbar__logo {
+  filter: invert(1) hue-rotate(180deg);
+}
