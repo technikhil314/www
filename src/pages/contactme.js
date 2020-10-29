@@ -1,7 +1,7 @@
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React, { useEffect, useRef } from 'react';
-import basicStyles from './styles.module.css';
+import basicStyles from './commonStyles.module.css';
 import animatingTitleStyles from './animatingTitle.module.css';
 import { useAnimatingTitle } from '../hooks/animatingTitle';
 

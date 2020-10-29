@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React, { useRef } from 'react';
 import animatingTitleStyles from './animatingTitle.module.css';
-import basicStyles from './styles.module.css';
+import basicStyles from './commonStyles.module.css';
 import { useAnimatingTitle } from '../hooks/animatingTitle';
 
 const keywords = [

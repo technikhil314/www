@@ -40,6 +40,7 @@ module.exports = {
           items: myopenSourceWork
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'resume', label: 'My resume', position: 'right' },
         { to: 'contactme', label: 'Contact me', position: 'right' }
       ],
     },
@@ -66,7 +67,7 @@ module.exports = {
             },
             {
               label: 'Linkedin',
-              href: 'https://www.linkedin.com/in/nikhil001mehta/',
+              href: 'https://www.linkedin.com/in/technikhil314/',
             },
             {
               label: 'Dev.to',
@@ -95,7 +96,7 @@ module.exports = {
             },
             {
               label: 'Download my resume',
-              to: 'portfolio',
+              to: 'resume',
             }
           ],
         },
