@@ -33,7 +33,6 @@ const keywords = [
 const features = [
   {
     title: <>A keen learner</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
         I am a programmer and software engineer at heart. Always trying to keep my knowledege up to date. I love solving complex mathematical problems using technology.
@@ -43,7 +42,6 @@ const features = [
   },
   {
     title: <>A strong believer</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
         The reason I choose call myself a web developer despite of the fact that I hugely like the capabilities C brings to a programmers life is the open nature of web.
@@ -53,7 +51,6 @@ const features = [
   },
   {
     title: <>Always ready to help</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
         I like to keep myself always open for help/collaborate that makes me learn and share my knowledege. And I am never afraid of trying out or creating new things even if it will not give desired output in first go. But it will evolve.
@@ -62,16 +59,10 @@ const features = [
   },
 ];
 
-function Feature({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl);
+function Feature({ title, description }) {
   return (
     <div className={clsx('col col--4', basicStyles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={basicStyles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3 className="text--center">{title}</h3>
+      <h3>{title}</h3>
       <p>{description}</p>
     </div>
   );
