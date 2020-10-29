@@ -37,12 +37,6 @@ body {
   height: 70px;
 }
 
-.sub-navbar > .navbar__inner {
-  flex: 0 0 auto;
-  width: auto;
-}
-
-
 .buttons {
   display: flex;
   align-items: center;

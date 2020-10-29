@@ -40,6 +40,11 @@ module.exports = {
           items: myopenSourceWork
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://www.buymeacoffee.com/technikhil314',
+          label: 'Buy me a coffee',
+          position: 'right'
+        },
         { to: 'resume', label: 'My resume', position: 'right' },
         { to: 'contactme', label: 'Contact me', position: 'right' }
       ],

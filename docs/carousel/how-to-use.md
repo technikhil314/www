@@ -3,10 +3,6 @@ id: how-to-use
 title: How to Use
 ---
 
-import { SubHeader } from "./subheader";
-
-<SubHeader/>  
-
 You can use it with any framework of your choice. Just make sure that all your carousel items have class `carouselItem`
 
 Put the HTML in following manner

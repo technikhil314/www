@@ -54,25 +54,25 @@ function Feature({ imageUrl, title, description }) {
   );
 }
 
-export default function() {
+export default function () {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Auto badger`}
-      description={siteConfig.tagline}>
+      title="Git auto badger"
+      description="A node cli tool to add badges to your markdown in 2 seconds">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className="hero__title">Git auto badger</h1>
+          <p className="hero__subtitle">A node cli tool to add badges to your markdown in 2 seconds</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/')}>
-              Contact Me
+              to={useBaseUrl('docs/autobadger/introduction')}>
+              Go to Documentation
             </Link>
           </div>
         </div>

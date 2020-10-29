@@ -1,18 +1,80 @@
 ---
+
 id: how-to-use
-title: how-to-use
+title: How to Use
+
 ---
 
-import { SubHeader } from "./subheader";
+```ts
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { DatetimerangepickerModule } from "angular-datetimerangepicker"; <--- Add this line
+import { AppComponent } from "./app.component";
+import { FormsModule } from "@angular/forms";
 
-<SubHeader/>
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    DatetimerangepickerModule, <---Add this line
+    FormsModule],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<br/>
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+## Styling
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+Styling is fully optional. You can override as per your choice
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+### Styling the input
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+The input box automatically takes class of the daterangepicker tag
+
+### Using Unpkg
+
+If you are already using bootstrap.css then just include the following css in your code
+This has minimal set of rules that inherits styles from bootstrap.css <br/>
+[https://unpkg.com/angular-datetimerangepicker/styles/with-bootstrap.css](https://unpkg.com/angular-datetimerangepicker/styles/with-bootstrap.css)
+
+if you do not want to include whole bootstrap.css then include following css in your code. <br/>
+[https://unpkg.com/angular-datetimerangepicker/styles/without-bootstrap.css](https://unpkg.com/angular-datetimerangepicker/styles/without-bootstrap.css)
+
+### from node_modules
+
+add following path to `angular.json`'s style section if you are already using bootstrap <br/>
+`./node_modules/angular-datetimerangepicker/styles/with-bootstrap.css`
+
+or add following path to `angular.json`'s style section if you dont want bootstrap <br/>
+`./node_modules/angular-datetimerangepicker/styles/without-bootstrap.css`
+
+<br/>
+
+## How to configure
+
+The input box automatically takes class of the daterangepicker tag
+
+```ts
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "my-datepicker-demo",
+  template: `
+    <daterangepicker
+      [class]="'col-md-12 col-lg-12 form-control'"
+      [options]="daterangepickerOptions"
+      (rangeSelected)="rangeSelected($event)"
+    >
+    </daterangepicker>
+  `,
+})
+export class AppComponent {
+  daterangepickerOptions = {
+    startDate: "09/01/2017",
+    endDate: "09/02/2017",
+    format: "DD/MM/YYYY",
+  };
+}
+```

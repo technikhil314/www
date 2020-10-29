@@ -1,51 +1,28 @@
 import React from "react";
-export const SubHeader = () => {
+export const SubHeader = (props) => {
   return (
     <>
       <nav className="navbar sub-navbar navbar--light navbar--fixed-top">
         <div className="navbar__inner">
           <div className="navbar__items">
-            <a className="navbar__brand">Infima</a>
-            <div className="navbar__item dropdown dropdown--hoverable">
-              <a className="navbar__item navbar__link" href="#url">
-                v2.0
-              </a>
-              <ul className="dropdown__menu">
-                <li>
-                  <a className="dropdown__link" href="#url">
-                    v1.8.0
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown__link" href="#url">
-                    v1.7.0
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown__link" href="#url">
-                    v1.6.0
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown__link" href="#url">
-                    All Versions
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <a href="https://www.buymeacoffee.com/technikhil314">
+              <img
+                src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
+                alt="Buy Me A Coffee"
+                style={{ maxWidth: "90%" }}
+                width={180}
+              />
+            </a>
           </div>
           <div className="navbar__items navbar__items--right">
-            <a className="navbar__item navbar__link" href="#url">
-              Docs
+            <a href="https://paypal.me/technikhil314">
+              <img
+                src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png"
+                alt="PayPal Logo"
+                style={{ maxWidth: "90%" }}
+                width={180}
+              />
             </a>
-            <a className="navbar__item navbar__link" href="#url">
-              Tutorial
-            </a>
-            <form>
-              <div className="navbar__search">
-                <input className="navbar__search-input" placeholder="Search" />
-              </div>
-            </form>
           </div>
         </div>
       </nav>

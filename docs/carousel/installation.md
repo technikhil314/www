@@ -3,12 +3,6 @@ id: installation
 title: Installation
 ---
 
-import { SubHeader } from "./subheader";
-
-<SubHeader/>
-
-### How to install
-
 Using NPM
 ```
 npm i @technikhil/carousel-webcomponent

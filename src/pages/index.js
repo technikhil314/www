@@ -9,53 +9,54 @@ import basicStyles from './commonStyles.module.css';
 import { useAnimatingTitle } from '../hooks/animatingTitle';
 
 const keywords = [
-  "Software&nbsp;engineer",
-  "Web&nbsp;developer",
-  "Javascript&nbsp;developer",
-  "Nodejs&nbsp;developer",
-  "Freelancer",
-  "Performance&nbsp;engineer",
-  "Open&nbsp;source&nbsp;contributor",
+  "software&nbsp;engineer",
+  "web&nbsp;developer",
+  "javascript&nbsp;developer",
+  "nodejs&nbsp;developer",
+  "freelancer",
+  "performance&nbsp;engineer",
+  "open&nbsp;source&nbsp;contributor",
   "CSS&nbsp;enthusiast",
-  "Devops&nbsp;person",
-  "Blockchain&nbsp;learner",
-  "Command&nbsp;Line&nbsp;Lover",
-  "Lefty",
-  "Drummer",
-  "Mathematician",
-  "Worst&nbsp;singer",
-  "Free&nbsp;education&nbsp;believer",
-  "All&nbsp;time&nbsp;learner",
+  "devops&nbsp;person",
+  "blockchain&nbsp;learner",
+  "linux&nbsp;fan",
+  "command&nbsp;line&nbsp;lover",
+  "lefty",
+  "drummer",
+  "helper",
+  "mathematics&nbsp;student",
+  "worst&nbsp;singer",
+  "free&nbsp;education&nbsp;believer",
+  "all&nbsp;time&nbsp;learner",
 ];
 
 const features = [
   {
-    title: <>Easy to Use</>,
+    title: <>A keen learner</>,
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        I am a programmer and software engineer at heart. Always trying to keep my knowledege up to date. I love solving complex mathematical problems using technology.
+        I suffer from multiple passion disorder. But I settle to call my self a web developer.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>A strong believer</>,
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The reason I choose call myself a web developer despite of the fact that I hugely like the capabilities C brings to a programmers life is the open nature of web.
+        And I believe that this open nature will make web technologies a great place to work, explore & make impact on peoples lives.
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>Always ready to help</>,
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        I like to keep myself always open for help/collaborate that makes me learn and share my knowledege. And I am never afraid of trying out or creating new things even if it will not give desired output in first go. But it will evolve.
       </>
     ),
   },
@@ -70,7 +71,7 @@ function Feature({ imageUrl, title, description }) {
           <img className={basicStyles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
-      <h3>{title}</h3>
+      <h3 className="text--center">{title}</h3>
       <p>{description}</p>
     </div>
   );
