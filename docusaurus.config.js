@@ -61,7 +61,7 @@ module.exports = {
       },
       links: [
         {
-          title: 'My Open Source Work',
+          title: 'My Work',
           items: myopenSourceWork
         },
         {

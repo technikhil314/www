@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React, { useRef } from 'react';
-import animatingTitleStyles from './animatingTitle.module.css';
+import animatingTitleStyles from '../css/animatingTitle.module.css';
 import basicStyles from './commonStyles.module.css';
 import { useAnimatingTitle } from '../hooks/animatingTitle';
 
@@ -61,7 +61,7 @@ const features = [
 
 function Feature({ title, description }) {
   return (
-    <div className={clsx('col col--4', basicStyles.feature)}>
+    <div className={clsx('col col--4', "feature")}>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
@@ -77,7 +77,7 @@ export default function () {
     <Layout
       title={`Home`}
       description={siteConfig.tagline}>
-      <header className={clsx('hero hero--primary', basicStyles.heroBanner)}>
+      <header className={clsx('hero hero--primary', "heroBanner")}>
         <div className="container">
           <h1 className="hero__title">Hi! I am NIkhil Mehta</h1>
           <div className="hero__subtitle">
@@ -85,11 +85,10 @@ export default function () {
               I am a {" "}
               <span className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}></span></p>
           </div>
-          <div className={basicStyles.buttons}>
+          <div className={"buttons"}>
             <Link
               className={clsx(
-                'button button--outline button--secondary button--lg',
-                basicStyles.getStarted,
+                'button button--outline button--secondary button--lg'
               )}
               to={useBaseUrl('contactme/')}>
               Contact Me
@@ -99,7 +98,7 @@ export default function () {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className={basicStyles.features}>
+          <section className="features">
             <div className="container">
               <div className="row">
                 {features.map((props, idx) => (

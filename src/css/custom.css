@@ -1,16 +1,5 @@
 /* stylelint-disable docusaurus/copyright-header */
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 @import "dark.css";
-
-body {
-  scroll-padding-top: 88px !important;
-}
 
 :root {
   --ifm-color-primary: #25c2a0;
@@ -21,6 +10,31 @@ body {
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+}
+
+body,
+html {
+  scrollbar-width: 5px;
+}
+
+body {
+  scroll-padding-top: 88px !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .docusaurus-highlight-code-line {
@@ -46,4 +60,33 @@ body {
 .footer__logo {
   max-width: 6rem;
   opacity: 0.8;
+}
+
+.heroBanner {
+  padding: 4rem 0.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+}
+
+.button.button--secondary.button--outline:not(.button--active):not(:hover) {
+  color: var(--ifm-color-gray-900);
 }

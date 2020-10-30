@@ -2,7 +2,7 @@ import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import React, { useEffect, useRef } from 'react';
 import basicStyles from './commonStyles.module.css';
-import animatingTitleStyles from './animatingTitle.module.css';
+import animatingTitleStyles from '../css/animatingTitle.module.css';
 import { useAnimatingTitle } from '../hooks/animatingTitle';
 
 const keywords = [
@@ -24,7 +24,7 @@ export default function () {
     <Layout
       title={`Contact me`}
       description={"technikhil314 contact information"}>
-      <header className={clsx('hero hero--primary', basicStyles.heroBanner)}>
+      <header className={clsx('hero hero--primary', "heroBanner")}>
         <div className="container">
           <h2 className={animatingTitleStyles.animatingTitleWrapper}>
             Get in touch with me for {" "}
