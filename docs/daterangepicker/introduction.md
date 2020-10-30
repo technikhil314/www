@@ -35,21 +35,17 @@ The purpose of this project is to remove dependencies on bootstrap, jquery etc.
 
 No offence here. These are good libraries but with modern frameworks they add more footprint hampering the performance
 
-<br/>
+## Todos
 
-## Announcements
+1. Get rid of moment to minimise the package [:heavy_check_mark:]
+1. Make style more robust. Use latest CSS features.
+1. Add theme support 
+1. Make touch friendly UI for touch devices
 
-- Date: 25 Oct 2020
-  1. Removed momentjs now using [dayjs](https://day.js.org/)
-- Date: 17 Oct 2020
-  1. This is a successor of this package located here [angular-2-daterangepicker](https://www.npmjs.com/package/angular-2-daterangepicker)
-  1. Published next major version. v1.0.0
-  1. Fixed issue [#45](https://github.com/technikhil314/angular-components/issues/45)
-  1. If you want to use this module with angular < v6. Then install v1.1.52 of [this package](https://www.npmjs.com/package/angular-2-daterangepicker)
-  1. This package uses angular version 6 or above
+## Playground / configuration generator
 
-<br/>
+You can play around with all options [here](https://angular-datetimerangepicker.surge.sh)
 
 ## Demo
 
-Check the demo [here](https://angular-datetimerangepicker.surge.sh)
+Check the demo [here](https://angular-datetimerangepicker-demo.stackblitz.io)
