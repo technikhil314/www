@@ -1,0 +1,30 @@
+name: deploy_netlify
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    name: Deploy to technikhil314.netlify.app
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Build
+        run: |
+          echo HOST_NAME=https://technikhil314.netlify.app > .env
+          yarn --frozen-lockfile
+          npm run build
+
+      - name: Install netlify-cli
+        run: npm install netlify-cli -g
+
+      - name: Deploy to netlify
+        run: npx netlify deploy --site 7628ad04-7b0f-4192-9c5a-5a822153f976 --dir build --auth ${{secrets.NETLIFY_AUTH_TOKEN}} --prod
