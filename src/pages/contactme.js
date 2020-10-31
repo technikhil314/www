@@ -28,7 +28,7 @@ export default function () {
         <div className="container">
           <h2 className={animatingTitleStyles.animatingTitleWrapper}>
             Get in touch with me for {" "}
-            <span className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}>
+            <span aria-label={keywords[0]} className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef}>
             </span>
           </h2>
         </div>

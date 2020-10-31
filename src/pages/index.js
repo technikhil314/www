@@ -86,7 +86,7 @@ export default function () {
             <div className="hero__subtitle">
               <p className={animatingTitleStyles.animatingTitleWrapper}>
                 I am a {" "}
-                <span className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}></span></p>
+                <span className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef} aria-label={keywords[0]}></span></p>
             </div>
             <div className={"buttons"}>
               <Link

@@ -9,6 +9,17 @@ const animationParameters = {
 export const useAnimatingTitle = (ref, keywords) => {
     let count = 0;
     useEffect(() => {
+        ref.current.innerHTML = keywords[count % keywords.length];
+        requestAnimationFrame(() => {
+            ref.current.animate(
+                [
+                    {
+                        maxWidth: "100%"
+                    },
+                ],
+                animationParameters
+            );
+        });
         const intervalId =
             ref.current.animate &&
             setInterval(async () => {
@@ -33,7 +44,7 @@ export const useAnimatingTitle = (ref, keywords) => {
                         animationParameters
                     );
                 });
-            }, 3000);
+            }, 2000);
         return () => {
             clearInterval(intervalId);
         };
