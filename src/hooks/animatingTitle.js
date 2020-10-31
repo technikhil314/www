@@ -44,7 +44,7 @@ export const useAnimatingTitle = (ref, keywords) => {
                         animationParameters
                     );
                 });
-            }, 2000);
+            }, 3000);
         return () => {
             clearInterval(intervalId);
         };

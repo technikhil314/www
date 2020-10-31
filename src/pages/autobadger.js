@@ -5,32 +5,30 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './commonStyles.module.css';
+import Features from '../components/feature';
 
 const features = [
   {
     title: <>Easy to Use</>,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        It is just like another command line tool. All traditional things work with it. Use the old conventional <code>--help</code> option with it to see help
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>Don't do robotic work</>,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Adding usual badges (liscense, version, build status etc) to your mark down is a robotic job don't waste time in it.
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>Same badges in just one command</>,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        All you need to do is <code>cd</code> into directory that has your README.md file and run <code><nobr>auto-badger</nobr></code> command. And done. Commit and push the markdown.
       </>
     ),
   },
@@ -70,15 +68,7 @@ export default function () {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
+          <Features features={features} />
         )}
       </main>
     </Layout>

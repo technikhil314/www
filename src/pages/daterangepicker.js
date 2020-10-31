@@ -5,32 +5,30 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './commonStyles.module.css';
+import Features from '../components/feature';
 
 const features = [
   {
     title: <>Easy to Use</>,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        This takes idea from <a href="https://github.com/dangrossman">dangrossman's</a> created <a href="https://www.daterangepicker.com/">daterangepicker</a> So some of the options from there will work here. Making it easy to compare and migrate too. But web has came a long way. Consider using alternative to <a href="https://www.daterangepicker.com/">daterangepicker</a>.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>Uses modern libraries</>,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        This packages uses all modern javascript libraries under it like <a href="https://day.js.org/">dayjs</a> and <a href="https://www.npmjs.com/package/calendarize">calendarise</a> and delivers the functionality in just 12kb of javascript footprint. Check here more <a href="http://youmightnotneedjquery.com/">about whether you need jquery or not</a> also moment authors <a href="https://momentjs.com/docs/#/-project-status/">ask to use other modern libraries</a>
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>Comes with timepicker and touch friendly UI</>,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        This package give additional functionality of timepicker that is easy to use and configure. Plus it give nice touch friendly UI for touch devices.
       </>
     ),
   },
@@ -70,15 +68,7 @@ export default function () {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
+          <Features features={features} />
         )}
       </main>
     </Layout>

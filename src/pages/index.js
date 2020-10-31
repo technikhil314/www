@@ -7,6 +7,7 @@ import React, { useRef } from 'react';
 import animatingTitleStyles from '../css/animatingTitle.module.css';
 import pageStyles from "./index.module.css";
 import { useAnimatingTitle } from '../hooks/animatingTitle';
+import Features from '../components/feature';
 
 const keywords = [
   "software&nbsp;engineer",
@@ -59,15 +60,6 @@ const features = [
   },
 ];
 
-function Feature({ title, description }) {
-  return (
-    <div className={clsx('col col--4', "feature")}>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
-}
-
 export default function () {
   const context = useDocusaurusContext();
   const animatingTitleRef = useRef();
@@ -102,15 +94,7 @@ export default function () {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className="features">
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
+          <Features features={features} />
         )}
       </main>
     </Layout>
