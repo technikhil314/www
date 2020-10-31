@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 const animationParameters = {
     duration: 1000,
@@ -8,7 +8,7 @@ const animationParameters = {
 
 export const useAnimatingTitle = (ref, keywords) => {
     let count = 0;
-    useEffect(() => {
+    useLayoutEffect(() => {
         ref.current.innerHTML = keywords[count % keywords.length];
         requestAnimationFrame(() => {
             ref.current.animate(
