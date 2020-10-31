@@ -32,6 +32,7 @@ module.exports = {
     sidebarCollapsible: true,
     hideableSidebar: true,
     navbar: {
+      hideOnScroll: true,
       title: 'TechNikhil',
       logo: {
         alt: 'TechNikhil314',
@@ -119,6 +120,9 @@ module.exports = {
       copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`
     },
   },
+  plugins: [
+    'docusaurus2-dotenv'
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
