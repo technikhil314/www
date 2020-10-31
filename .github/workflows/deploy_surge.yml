@@ -19,10 +19,9 @@ jobs:
 
       - name: Build
         run: |
+          echo HOST_NAME=https://technikhil314.surge.sh > .env
           yarn --frozen-lockfile
           npm run build
-        env:
-          HOST_NAME: ${{ secrets.HOST_NAME }}
 
       - name: Install Surge
         run: npm install -g surge
