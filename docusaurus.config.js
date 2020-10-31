@@ -49,7 +49,7 @@ module.exports = {
           label: 'Buy me a coffee',
           position: 'right'
         },
-        { to: 'resume', label: 'My resume', position: 'right' },
+        { href: '/Nikhil%20Mehta.pdf', label: 'My resume', position: 'right' },
         { to: 'contactme', label: 'Contact me', position: 'right' }
       ],
     },
@@ -102,7 +102,7 @@ module.exports = {
             },
             {
               label: 'Download my resume',
-              to: 'resume',
+              href: '/Nikhil%20Mehta.pdf',
             }
           ],
         },
