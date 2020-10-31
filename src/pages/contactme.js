@@ -29,7 +29,7 @@ export default function () {
     }
   }
   useEffect(() => {
-    if (location.search.includes('thanks')) {
+    if (location.hash.includes('thanks')) {
       setFormSubmitted(true);
     }
   })
@@ -49,7 +49,7 @@ export default function () {
               formSubmitted ? <h3 className="text--normal">Thank you. I will reply you shortly.</h3> : null
             }
             <form action="https://formsubmit.co/b875dd73db519b913d3066f7fb041415" method="POST" className={clsx(pageStyles.contactForm)} encType="multipart/form-data">
-              <input type="hidden" name="_next" value={`${process.env.HOST_NAME}/contactme?thanks`} />
+              <input type="hidden" name="_next" value={`${process.env.HOST_NAME}/contactme#thanks`} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="text" name="_honey" style={{ display: 'none' }} />
               <div className={clsx(pageStyles.formGroup)}>
