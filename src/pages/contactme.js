@@ -48,30 +48,30 @@ export default function () {
             {
               formSubmitted ? <h3 className="text--normal">Thank you. I will reply you shortly.</h3> : null
             }
-            <form action="https://formsubmit.co/nikhil.001mehta@gmail.com" method="POST" className={clsx(pageStyles.contactForm)} encType="multipart/form-data">
+            <form action="https://formsubmit.co/b875dd73db519b913d3066f7fb041415" method="POST" className={clsx(pageStyles.contactForm)} encType="multipart/form-data">
               <input type="hidden" name="_next" value={`${process.env.HOST_NAME}/contactme?thanks`} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="text" name="_honey" style={{ display: 'none' }} />
               <div className={clsx(pageStyles.formGroup)}>
-                <label>Your Full Name</label>
                 <input type="text" name="name" placeholder="John Doe" required id="name" />
+                <label htmlFor="name">Your Full Name</label>
               </div>
               <div className={clsx(pageStyles.formGroup)}>
-                <label>Your Email</label>
-                <input type="email" name="email" placeholder="john.doe@example.com" />
+                <input type="email" name="email" placeholder="john.doe@example.com" required id="email" />
+                <label htmlFor="email">Your Email</label>
               </div>
               <div className={clsx(pageStyles.formGroup)}>
-                <label>Contact Number</label>
                 <input type="tel" name="contactNumber" placeholder="Contact number" required id="contactNumber" />
+                <label htmlFor="contactNumber">Contact Number</label>
               </div>
               <div className={clsx(pageStyles.formGroup)}>
-                <label>Message</label>
                 <textarea rows="5" name="message" placeholder="Message" id="message" />
+                <label htmlFor="message">Message</label>
               </div>
               <div className={clsx(pageStyles.formGroup)}>
-                <label>Attachment</label>
                 <input type="file" name="attachment" className="hidden" ref={fileInputRef} onChange={handleFileChange} />
                 <input type="text" placeholder="Attach a document" onClick={() => fileInputRef.current.click()} onChange={() => { }} value={fileName} id="attachment" />
+                <label htmlFor="attachment">Attachment</label>
               </div>
               <button type="submit" className="button button--info button--md">Submit</button>
             </form>

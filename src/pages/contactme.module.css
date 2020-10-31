@@ -6,7 +6,7 @@
 
 .formGroup {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin: 5px 0;
   min-width: 100%;
 }
@@ -26,6 +26,10 @@
   border-radius: 6px;
   border: 1px solid var(--ifm-color-primary-dark);
   background: #ededed;
+}
+
+.formGroup input:required ~ label::after {
+  content: "*";
 }
 
 .formGroup textarea:focus,
@@ -48,7 +52,7 @@
 @media only screen and (min-width: 700px) {
   .formGroup {
     width: 100%;
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 
   .formGroup label {
