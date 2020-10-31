@@ -37,6 +37,11 @@ body {
   background: #555;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
