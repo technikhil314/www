@@ -21,6 +21,8 @@ jobs:
         run: |
           yarn --frozen-lockfile
           npm run build
+        env:
+          HOST_NAME: ${{ secrets.HOST_NAME }}
 
       - name: Install Surge
         run: npm install -g surge
