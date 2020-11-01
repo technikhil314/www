@@ -14,7 +14,7 @@ module.exports = {
   tagline: "I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
   url: 'https://technikhil314.netlify.app',
   baseUrl: '/',
-  favicon: 'img/logo.png',
+  favicon: 'img/192x192.png',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
   onBrokenLinks: 'warn',
