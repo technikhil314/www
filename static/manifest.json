@@ -4,22 +4,12 @@
     "description": "Nikhil Mehta's personal website",
     "icons": [
         {
-            "src": "img/32x32.png",
-            "type": "image/png",
-            "sizes": "32x32"
-        },
-        {
             "src": "img/192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "img/logo.png",
-            "type": "image/png",
-            "sizes": "389x413"
-        },
-        {
-            "src": "img/512x512.png",
+            "src": "img/512x512_white.png",
             "type": "image/png",
             "sizes": "512x512"
         }

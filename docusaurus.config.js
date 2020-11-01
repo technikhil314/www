@@ -14,7 +14,7 @@ module.exports = {
   tagline: "I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
   url: 'https://technikhil314.netlify.app',
   baseUrl: '/',
-  favicon: 'img/32x32.png',
+  favicon: 'img/logo.png',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
   onBrokenLinks: 'warn',
@@ -118,7 +118,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta. Built with  <big><b>&#9825;</b></big>  using Docusaurus.`
+      copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta.`
     },
   },
   plugins: [
@@ -131,19 +131,34 @@ module.exports = {
         pwaHead: [
           {
             tagName: 'link',
-            rel: 'icon',
-            href: '/img/192x192.png',
-          },
-          {
-            tagName: 'link',
             rel: 'manifest',
-            href: '/manifest.json', // your PWA manifest
+            href: '/manifest.json'
           },
           {
             tagName: 'meta',
             name: 'theme-color',
-            content: 'rgb(37, 194, 160)',
+            content: '#58C3A0'
           },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes'
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#58C3A0'
+          },
+          {
+            tagName: 'link',
+            rel: 'apple-touch-icon',
+            href: '/img/180x180.png'
+          },
+          {
+            tagName: 'link',
+            rel: 'mask-icon',
+            href: '/img/180x180.png'
+          }
         ],
       },
     ]
@@ -153,7 +168,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
           sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
@@ -164,9 +178,9 @@ module.exports = {
           }
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      }
+    ]
+  ]
 };
