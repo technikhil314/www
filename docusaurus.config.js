@@ -121,7 +121,31 @@ module.exports = {
     },
   },
   plugins: [
-    'docusaurus2-dotenv'
+    'docusaurus2-dotenv',
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: ['appInstalled', 'queryString'],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/192x192.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json', // your PWA manifest
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(37, 194, 160)',
+          },
+        ],
+      },
+    ]
   ],
   presets: [
     [

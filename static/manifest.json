@@ -1,0 +1,48 @@
+{
+    "short_name": "Technikhil",
+    "name": "Technikhil",
+    "description": "Nikhil Mehta's personal website",
+    "icons": [
+        {
+            "src": "img/192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#58C3A0",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#58C3A0",
+    "shortcuts": [
+        {
+            "name": "Blog",
+            "short_name": "Blog",
+            "description": "Blog by technikhil",
+            "url": "/blog",
+            "icons": [
+                {
+                    "src": "img/192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Contact me",
+            "short_name": "Contact me",
+            "description": "Contact nikhil for work",
+            "url": "/contactme",
+            "icons": [
+                {
+                    "src": "img/192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
