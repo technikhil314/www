@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "rimraf build && docusaurus start",
+    "build": "rimraf build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve"
@@ -18,6 +18,7 @@
     "docusaurus2-dotenv": "^1.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
+    "rimraf": "^3.0.2"
   },
   "browserslist": {
     "production": [
