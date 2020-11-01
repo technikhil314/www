@@ -12,14 +12,14 @@ const myopenSourceWork = [{
 module.exports = {
   title: "technikhil314",
   tagline: "A self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
-  url: 'https://technikhil314.surge.sh',
+  url: 'https://technikhil314.netlify.app',
   baseUrl: '/',
   favicon: 'img/logo.png',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
   onBrokenLinks: 'warn',
+  onDuplicateRoutes: 'error',
   themeConfig: {
-    image: 'img/logo.png',
     googleAnalytics: {
       trackingID: 'UA-171436787-1',
     },
