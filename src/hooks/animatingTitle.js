@@ -9,17 +9,6 @@ const animationParameters = {
 export const useAnimatingTitle = (ref, keywords) => {
     let count = 0;
     useLayoutEffect(() => {
-        ref.current.innerHTML = keywords[count % keywords.length];
-        requestAnimationFrame(() => {
-            ref.current.animate(
-                [
-                    {
-                        maxWidth: "100%"
-                    },
-                ],
-                animationParameters
-            );
-        });
         const intervalId =
             ref.current.animate &&
             setInterval(async () => {

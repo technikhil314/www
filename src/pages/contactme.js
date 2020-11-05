@@ -39,11 +39,13 @@ export default function () {
       description={"technikhil314 contact information"}>
       <header className={clsx('hero hero--primary', "heroBanner")}>
         <div className="container">
-          <h2 className={animatingTitleStyles.animatingTitleWrapper}>
-            Get in touch with me for {" "}
-            <span aria-label={keywords[0]} className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef}>
-            </span>
-          </h2>
+          <div aria-label={`Get in touch with me for ${keywords[0]}`}>
+            <h2 className={animatingTitleStyles.animatingTitleWrapper} aria-hidden="true">
+              Get in touch with me for {" "}
+              <span className={animatingTitleStyles.animatingTitle} ref={animatingTitleRef} dangerouslySetInnerHTML={{ __html: keywords[0] }}>
+              </span>
+            </h2>
+          </div>
           <main>
             {
               formSubmitted ? <h3 className="text--normal">Thank you. I will reply you shortly.</h3> : null
