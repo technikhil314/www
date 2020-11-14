@@ -21,8 +21,6 @@ title: Introduction
 
 :clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
 
-You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
-
 ## About this package
 
 Date and time range picker for Angular v6 and above.
@@ -38,8 +36,8 @@ No offence here. These are good libraries but with modern frameworks they add mo
 ## Todos
 
 1. Get rid of moment to minimise the package [:heavy_check_mark:]
-1. Make style more robust. Use latest CSS features.
-1. Add theme support 
+1. Make style more robust. Use latest CSS features. [:heavy_check_mark:]
+1. Add theme support [:heavy_check_mark:]
 1. Make touch friendly UI for touch devices
 
 ## Playground / configuration generator
