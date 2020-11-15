@@ -6,11 +6,11 @@ title: User Events
 Subscribe to rangeSelected event as
 
 ```html
-<date-range-picker
+<daterangepicker
   [class]="'col-md-12 form-control'"
   [options]="date and time range pickerOptions"
   (rangeSelected)="rangeSelected($event)"
-></date-range-picker>
+></daterangepicker>
 ```
 
 the event listener will receive a javascript object conaining

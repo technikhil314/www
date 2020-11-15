@@ -81,15 +81,15 @@ Currently, these options are available but I will keep on developing and adding 
         </tr>
         <tr>
             <td>preDefinedRanges</td>
-            <td> Array of object shown as <a href="#custom-range">below</a>.</td>
+            <td> Array of object shown as <a href="#custom-range-options">below</a>.</td>
             <td>Custom ranges if you want to define your own ranges. This is useful only if showRanges option is set to true.</td>
-            <td>see <a href="#custom-range">below</a> for more details</td>
-            <td>see <a href="#custom-range">below</a> for more details</td>
+            <td>see <a href="#custom-range-options">below</a> for more details</td>
+            <td>see <a href="#custom-range-options">below</a> for more details</td>
         </tr>
         <tr>
             <td>noDefaultRangeSelected</td>
             <td>boolean</td>
-            <td>This option set the startDate and endDate options to blank on first render.This date range picker sets startDate and endDate to be current system date by dafault if no value is passed to startDate and endDate.</td>
+            <td>This option set the startDate and endDate options to blank on first render.This date range picker sets startDate and endDate to be current system date by default if no value is passed to startDate and endDate.</td>
             <td>false</td>
             <td>true,false</td>
         </tr>
@@ -108,6 +108,13 @@ Currently, these options are available but I will keep on developing and adding 
             <td>'left','right','center'</td>
         </tr>
         <tr>
+            <td>theme</td>
+            <td>string</td>
+            <td>theme for overall component</td>
+            <td>'light'</td>
+            <td>'light','dark'</td>
+        </tr>
+        <tr>
             <td>disabled</td>
             <td>boolean</td>
             <td>Whether to disable the main input control</td>
@@ -119,7 +126,7 @@ Currently, these options are available but I will keep on developing and adding 
             <td>object</td>
             <td>Whether to show timepicker</td>
             <td>null</td>
-            <td>Object explained as <a href="#time-picker">below</a></td>
+            <td>Object explained as <a href="#time-picker-options">below</a></td>
         </tr>
         <tr>
             <td>disableBeforeStart</td>
@@ -132,6 +139,13 @@ Currently, these options are available but I will keep on developing and adding 
             <td>alwaysOpen</td>
             <td>boolean</td>
             <td>Whether to keep the calendars always open. This option removes the main input box where range is shown</td>
+            <td>false</td>
+            <td>true,false</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>boolean</td>
+            <td>Sets required attribute to the input box (makes sense only if used inside form)</td>
             <td>false</td>
             <td>true,false</td>
         </tr>
@@ -162,10 +176,12 @@ preDefinedRanges: [
 ```
 
 All dates are supposed to be string and in format as you are passing.
-You can also 
+You can also
+
 ```ts
 import { Options } from "angular-datetimerangepicker";
 ```
+
 class for passing options to the component.
 
 ### Time Picker Options
