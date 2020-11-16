@@ -44,6 +44,7 @@ No offence here. These are good libraries but with modern frameworks they add mo
 
 You can play around with all options [here](https://angular-datetimerangepicker.surge.sh)
 
-## Demo
+## Coding examples
 
-Check the demo [here](https://angular-datetimerangepicker-demo.stackblitz.io)
+- [With predefined custom ranges](https://stackblitz.com/edit/angular-datetimerangepicker-demo) - This requires dayjs installed
+- [Without predefined custom ranges](https://stackblitz.com/edit/angular-datetimerangepicker-demo-1) - This does not require any dependency
