@@ -22,10 +22,10 @@ module.exports = {
   themeConfig: {
     image: 'img/brand.png',
     googleAnalytics: {
-      trackingID: 'UA-171436787-1',
+      trackingID: 'UA-125781207-2',
     },
     gtag: {
-      trackingID: 'UA-171436787-1',
+      trackingID: 'UA-125781207-2',
     },
     colorMode: {
       defaultMode: 'dark'
