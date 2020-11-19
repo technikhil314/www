@@ -103,7 +103,7 @@ Currently, these options are available but I will keep on developing and adding 
         <tr>
             <td>position</td>
             <td>string</td>
-            <td>position of the flyout which will open. By default it opens on left edge of input box</td>
+            <td>position of the flyout which will open. By default it opens on left edge of input box. This is intelligently overridden based on space available on left or right.</td>
             <td>'left'</td>
             <td>'left','right','center'</td>
         </tr>
