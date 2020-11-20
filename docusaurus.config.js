@@ -161,6 +161,12 @@ module.exports = {
           }
         ],
       },
+    ],
+    [
+      require.resolve('docusaurus-gtm-plugin'),
+      {
+        id: "GTM-5HBRZXW"
+      }
     ]
   ],
   presets: [
