@@ -32,28 +32,28 @@ Currently, these options are available but I will keep on developing and adding 
         </tr>
         <tr>
             <td>startDate</td>
-            <td>string</td>
+            <td>string, dayjs instance</td>
             <td>Default start date when this components is rendered for first time. Format of this date should be in line with format option's value above</td>
             <td>Current Systetm Date</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>endDate</td>
-            <td>string</td>
+            <td>string, dayjs instance</td>
             <td>Default end date when this components is rendered for first time. Format of this date should be in line with format option's value above</td>
             <td>Current Systetm Date</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>minDate</td>
-            <td>string</td>
+            <td>string, dayjs instance</td>
             <td>Default minimum date not including this date. End user will not be able select all dates before this date. Format of this date should be in line with format option's value above</td>
             <td>null</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>maxDate</td>
-            <td>string</td>
+            <td>string, dayjs instance</td>
             <td>Default maximum date not including this date. End user will not be able select all dates after this date. Format of this date should be in line with format option's value above</td>
             <td>null</td>
             <td>date string in line with format option's value above</td>
