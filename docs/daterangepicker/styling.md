@@ -38,19 +38,18 @@ The component supports two themes light and dark. See the [Options section](/doc
 
 or you can use following css variables to override the style
 
-the styles.css defines following css variables
+the styles.css defines following css variables with default values
 
 ```css
 :root {
   --drp-input-height: 33px;
   --drp-input-border-radius: 4px;
-  --drp-background: hsla(0, 0%, 98%);
-  --drp-foreground: hsla(0, 0%, 20%);
-  --drp-hover-color: hsla(0, 0%, 80%);
+  --drp-bg: hsla(0, 0%, 98%);
+  --drp-fg: hsla(0, 0%, 20%);
   --drp-shadow-color: rgba(0, 0, 0, 0.2);
-  --drp-flyout-width: 500px;
+  --drp-hover-bg: hsla(0, 0%, 80%);
+  --drp-hover-fg: hsla(0, 0%, 20%);
   --drp-outline-color: hsl(240deg, 50%, 30%);
-  --drp-flyout-single-calendar-width: 250px;
   --drp-input-border-color: #666;
   --drp-input-disabled-color: #dedede;
 }
