@@ -33,77 +33,117 @@ Currently, these options are available but I will keep on developing and adding 
         <tr>
             <td>startDate</td>
             <td>string, dayjs instance</td>
-            <td>Default start date when this components is rendered for first time. Format of this date should be in line with format option's value above</td>
+            <td>
+                Default start date when this components is rendered for first time. <br/>
+                <em>Format of this date should be in line with format option's value above</em>
+            </td>
             <td>Current Systetm Date</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>endDate</td>
             <td>string, dayjs instance</td>
-            <td>Default end date when this components is rendered for first time. Format of this date should be in line with format option's value above</td>
+            <td>
+                Default end date when this components is rendered for first time. <br/>
+                <em>Format of this date should be in line with format option's value above</em>
+            </td>
             <td>Current Systetm Date</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>minDate</td>
             <td>string, dayjs instance</td>
-            <td>Default minimum date not including this date. End user will not be able select all dates before this date. Format of this date should be in line with format option's value above</td>
+            <td>
+                Default minimum date not including this date. <br/>
+                <em>End user will not be able select all dates before this date. </em> <br/>
+                <strong>Format of this date should be in line with format option's value above</strong>
+            </td>
             <td>null</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>maxDate</td>
             <td>string, dayjs instance</td>
-            <td>Default maximum date not including this date. End user will not be able select all dates after this date. Format of this date should be in line with format option's value above</td>
+            <td>
+                Default maximum date not including this date. <br/>
+                <em>End user will not be able select all dates after this date.</em> <br/>
+                <strong>Format of this date should be in line with format option's value above</strong>
+            </td>
             <td>null</td>
             <td>date string in line with format option's value above</td>
         </tr>
         <tr>
             <td>inactiveBeforeStart</td>
             <td>boolean</td>
-            <td>Blurs all dates before selected start date. So end user can not select toDate to be before fromDate.</td>
+            <td>
+                Whether to blur dates that are before selected start date in left calendar.<br/> 
+                <em>This option applies to right calendar only</em>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>autoApply</td>
             <td>boolean</td>
-            <td>Removes apply and cancel buttons and applies as soon as user selects end date</td>
+            <td>
+                Hides apply and cancel buttons <br/>
+                <em>applies as soon as user selects end date</em>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>showRanges</td>
             <td>boolean</td>
-            <td>Predefined ranges to show to end user. So end user has ready options instead of navingating through calendars.</td>
+            <td>if true, Shows default ranges below apply and cancel button</td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>preDefinedRanges</td>
             <td> Array of object shown as <a href="#custom-range-options">below</a>.</td>
-            <td>Custom ranges if you want to define your own ranges. This is useful only if showRanges option is set to true.</td>
+            <td>
+                Custom ranges if you want to define your own ranges. <br/>
+                <em>Requires showRanges set to true to be useful</em><br/>
+                <strong>
+                    Requires dayjs installed. As custom ranges are accepted in dayjs format only.
+                </strong>
+            </td>
             <td>see <a href="#custom-range-options">below</a> for more details</td>
             <td>see <a href="#custom-range-options">below</a> for more details</td>
         </tr>
         <tr>
             <td>noDefaultRangeSelected</td>
             <td>boolean</td>
-            <td>This option set the startDate and endDate options to blank on first render.This date range picker sets startDate and endDate to be current system date by default if no value is passed to startDate and endDate.</td>
+            <td>
+                This option set the startDate and endDate options to blank on first render.
+                <em>
+                    Setting this to true will discard passed startDate and endDate
+                </em>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>singleCalendar</td>
             <td>boolean</td>
-            <td>Use only one calendar. So you do not need another datepicker for single month.</td>
+            <td>
+                Show only one calendar (left one). <br/>
+                <em>So you do not need another datepicker for single month.</em>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>position</td>
             <td>string</td>
-            <td>position of the flyout which will open. By default it opens on left edge of input box. This is intelligently overridden based on space available on left or right.</td>
+            <td>
+                position of the flyout which will open. <br/> 
+                <em>By default it opens on left edge of input box. </em> <br/>
+                <strong>
+                    This is intelligently overridden based on space available on left or right.
+                </strong>
+            </td>
             <td>'left'</td>
             <td>'left','right','center'</td>
         </tr>
@@ -131,23 +171,45 @@ Currently, these options are available but I will keep on developing and adding 
         <tr>
             <td>disableBeforeStart</td>
             <td>boolean</td>
-            <td>Whether to disable dates that ar before selected start date in right calendar. This option applies to right calendar only</td>
+            <td>
+                Whether to disable dates that are before selected start date in left calendar.<br/> 
+                <em>This option applies to right calendar only</em>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>alwaysOpen</td>
             <td>boolean</td>
-            <td>Whether to keep the calendars always open. This option removes the main input box where range is shown</td>
+            <td>
+                Whether to keep the calendars always open. <br/>
+                <em>This option removes the main input box where range is shown</em>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
         <tr>
             <td>required</td>
             <td>boolean</td>
-            <td>Sets required attribute to the input box (makes sense only if used inside form)</td>
+            <td>
+                Sets required attribute to the input box<br/>
+                <em>(makes sense only if used inside form)</em>
+            </td>
             <td>false</td>
             <td>true,false</td>
+        </tr>
+        <tr>
+            <td>weekStartsOn</td>
+            <td>number (0-6)</td>
+            <td>
+                Sets start day of week<br/>
+                <em>0 is sunday and 6 is saturday.</em><br/>
+                <strong>
+                    Absolute value is taken in case of negative values. Any value above 6 is taken modulo 7.
+                </strong>
+            </td>
+            <td>0</td>
+            <td>0-6</td>
         </tr>
     </tbody>
 </table>
