@@ -12,12 +12,12 @@ The input box automatically takes class of the daterangepicker tag
 ### Using from Unpkg
 
 Include this css file in your html
-[https://unpkg.com/angular-datetimerangepicker@2.1.5/styles/styles.css](https://unpkg.com/angular-datetimerangepicker@2.1.5/styles/styles.css)
+[https://unpkg.com/angular-datetimerangepicker/styles/styles.css](https://unpkg.com/angular-datetimerangepicker@2.1.5/styles/styles.css)
 
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/angular-datetimerangepicker@2.1.5/styles/styles.css"
+  href="https://unpkg.com/angular-datetimerangepicker/styles/styles.css"
 />
 ```
 
@@ -38,7 +38,7 @@ The component supports two themes light and dark. See the [Options section](/doc
 
 or you can use following css variables to override the style
 
-the styles.css defines following css variables with default values
+the styles.css defines following css variables with specified default values
 
 ```css
 :root {
@@ -52,5 +52,7 @@ the styles.css defines following css variables with default values
   --drp-outline-color: hsl(240deg, 50%, 30%);
   --drp-input-border-color: #666;
   --drp-input-disabled-color: #dedede;
+  --drp-flyout-width: auto;
+  --drp-flyout-single-calendar-width: auto;
 }
 ```
