@@ -95,7 +95,15 @@ Currently, these options are available but I will keep on developing and adding 
         <tr>
             <td>showRanges</td>
             <td>boolean</td>
-            <td>if true, Shows default ranges below apply and cancel button</td>
+            <td>
+                if true, Shows default ranges below apply and cancel button<br/>
+                <em>
+                    This is related to preDefinedRanges option
+                </em><br/>
+                <strong>
+                    If not preDefinedRanges is supplied default ranges are shown which includes Today, Yesterday, last 7 day, This month, Last Month
+                </strong>
+            </td>
             <td>false</td>
             <td>true,false</td>
         </tr>
@@ -116,7 +124,7 @@ Currently, these options are available but I will keep on developing and adding 
             <td>noDefaultRangeSelected</td>
             <td>boolean</td>
             <td>
-                This option set the startDate and endDate options to blank on first render.
+                This option set the startDate and endDate options to blank on first render.<br/>
                 <em>
                     Setting this to true will discard passed startDate and endDate
                 </em>
@@ -166,7 +174,10 @@ Currently, these options are available but I will keep on developing and adding 
             <td>object</td>
             <td>Whether to show timepicker</td>
             <td>null</td>
-            <td>Object explained as <a href="#time-picker-options">below</a></td>
+            <td>
+                Object explained as <a href="#time-picker-options">below</a><br />
+                <strong>Setting this to truthy will automatically set auto apply to false</strong>
+            </td>
         </tr>
         <tr>
             <td>disableBeforeStart</td>
@@ -183,7 +194,8 @@ Currently, these options are available but I will keep on developing and adding 
             <td>boolean</td>
             <td>
                 Whether to keep the calendars always open. <br/>
-                <em>This option removes the main input box where range is shown</em>
+                <em>This option removes the main input box where range is shown</em><br/>
+                <strong>Setting this to true not respect position</strong>
             </td>
             <td>false</td>
             <td>true,false</td>
