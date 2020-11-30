@@ -223,6 +223,35 @@ Currently, these options are available but I will keep on developing and adding 
             <td>0</td>
             <td>0-6</td>
         </tr>
+        <tr>
+            <td>placeholder</td>
+            <td>string</td>
+            <td>
+                Sets placeholder for main input box
+            </td>
+            <td>[Empty string]</td>
+            <td>Any string literal</td>
+        </tr>
+        <tr>
+            <td>readOnly</td>
+            <td>boolean</td>
+            <td>
+                If true, Makes the main input box read only. <br/>
+                <small><em>But keeps interactiveness of the input box.</em></small>
+            </td>
+            <td>false</td>
+            <td>true,false</td>
+        </tr>
+         <tr>
+            <td>hideControls</td>
+            <td>boolean</td>
+            <td>
+                Show/hide entire row of buttons below calendars(apply, cancel, clear) <br/>
+                <small><em>Useful if autoapply is set to true.</em></small>
+            </td>
+            <td>false</td>
+            <td>true,false</td>
+        </tr>
     </tbody>
 </table>
 
