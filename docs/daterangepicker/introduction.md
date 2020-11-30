@@ -5,7 +5,7 @@ title: Introduction
 
 ### Highly configurable, opinionated, themable, light weight (12kb) date and time range picker for angular
 
-[![Build Status](https://img.shields.io/github/workflow/status/technikhil314/angular-components/build?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/angular-components/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/technikhil314/angular-components/deploy%20to%20surge?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/angular-components/actions)
 [![version](https://img.shields.io/npm/v/angular-datetimerangepicker.svg?style=flat-square)](https://npmjs.org/angular-datetimerangepicker)
 [![min size](https://img.shields.io/bundlephobia/min/angular-datetimerangepicker)](https://bundlephobia.com/result?p=angular-datetimerangepicker)
 [![mingzip size](https://img.shields.io/bundlephobia/minzip/angular-datetimerangepicker)](https://bundlephobia.com/result?p=angular-datetimerangepicker)
@@ -15,13 +15,12 @@ title: Introduction
 [![downloads](https://img.shields.io/npm/dm/angular-datetimerangepicker)](https://npmcharts.com/compare/angular-datetimerangepicker)
 [![all contributors](https://img.shields.io/github/all-contributors/technikhil314/angular-components)](https://github.com/technikhil314/angular-components/graphs/contributors)
 [![code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/technikhil314/angular-components/blob/master/CODE_OF_CONDUCT.md)
-[![chat with community](https://img.shields.io/gitter/room/technikhil314/angular-components?color=%23007a1f)](https://gitter.im/angular-components)
 
 [![stargazers](https://img.shields.io/github/stars/technikhil314/angular-components?style=social)](https://github.com/technikhil314/angular-components/stargazers)
 [![number of forks](https://img.shields.io/github/forks/technikhil314/angular-components?style=social)](https://github.com/technikhil314/angular-components/fork)
-[![Follow technikhil314 on twiter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
+[![Follow technikhil314 on twitter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
 
-:clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
+###### :clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
 
 ## About this package
 
