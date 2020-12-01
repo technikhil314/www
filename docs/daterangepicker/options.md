@@ -5,6 +5,21 @@ title: Options
 
 Currently, these options are available but I will keep on developing and adding more and more options
 
+You can import following types for better typescript support (Although typings support is there)
+
+```ts
+import {
+  Options,
+  Timepicker,
+  DefinedDateRange,
+  DateRange,
+  Position,
+  Theme,
+} from "angular-datetimerangepicker";
+```
+
+class for passing options to the component.
+
 <table>
     <thead>
         <tr>
@@ -255,6 +270,14 @@ Currently, these options are available but I will keep on developing and adding 
     </tbody>
 </table>
 
+### Updating the options on the fly
+
+If you want to update the options after components initial render is done (i.e. after component is shown to end user)
+
+1. All options can be updated individually (except startDate, endDate, minDate, maxDate) on the fly and the component will reflect the expected behaviour.
+1. If you want to update either of startDate, endDate, minDate, maxDate then you must pass all new object of `Options` class.
+   check [this stackblitz example](https://stackblitz.com/edit/angular-datetimerangepicker-update-dates-demo) for more info on how to achieve this
+
 ### Custom Range Options
 
 For custom range, Pass options as below. For this you need to pass <a href="https://day.js.org/">dayjs</a> objects.
@@ -280,13 +303,6 @@ preDefinedRanges: [
 ```
 
 All dates are supposed to be string and in format as you are passing.
-You can also
-
-```ts
-import { Options } from "angular-datetimerangepicker";
-```
-
-class for passing options to the component.
 
 ### Time Picker Options
 
