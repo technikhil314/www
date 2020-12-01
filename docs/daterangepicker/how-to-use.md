@@ -1,14 +1,13 @@
 ---
-
 id: how-to-use
 title: How to Use
-
 ---
 
 ```ts
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { DatetimerangepickerModule } from "angular-datetimerangepicker"; <--- Add this line
+// Add this line ↓
+import { DatetimerangepickerModule } from "angular-datetimerangepicker";
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
 
@@ -16,8 +15,10 @@ import { FormsModule } from "@angular/forms";
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    DatetimerangepickerModule, <---Add this line
-    FormsModule],
+    // Add this line ↓
+    DatetimerangepickerModule,
+    FormsModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
