@@ -257,7 +257,7 @@ class for passing options to the component.
             <td>false</td>
             <td>true,false</td>
         </tr>
-         <tr>
+        <tr>
             <td>hideControls</td>
             <td>boolean</td>
             <td>
@@ -266,6 +266,37 @@ class for passing options to the component.
             </td>
             <td>false</td>
             <td>true,false</td>
+        </tr>
+        <tr>
+            <td>disableWeekEnds</td>
+            <td>boolean</td>
+            <td>
+                Disable weekends on calendars <br/>
+                <strong>Weekend is calculated based on weekStartsOn value</strong>
+            </td>
+            <td>false</td>
+            <td>true,false</td>
+        </tr>
+        <tr>
+            <td>disabledDays</td>
+            <td>number[]</td>
+            <td>
+                Disable certain weekdays on calendars
+            </td>
+            <td>null</td>
+            <td>
+                Array of max length 7 containing values from 0-6<br/>
+                <small>0 = Sunday, 6 = saturday</small>
+            </td>
+        </tr>
+        <tr>
+            <td>disabledDates</td>
+            <td>Dayjs[]</td>
+            <td>
+                Disable certain dates on calendars
+            </td>
+            <td>null</td>
+            <td>Array of dayjs objects</td>
         </tr>
     </tbody>
 </table>
