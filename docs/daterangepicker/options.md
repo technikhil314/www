@@ -274,8 +274,8 @@ class for passing options to the component.
 
 If you want to update the options after components initial render is done (i.e. after component is shown to end user)
 
-1. All options can be updated individually (except startDate, endDate, minDate, maxDate) on the fly and the component will reflect the expected behaviour.
-1. If you want to update either of startDate, endDate, minDate, maxDate then you must pass all new object of `Options` class.
+1. All options can be updated individually (except startDate, endDate, minDate, maxDate, format, displayFormat) on the fly and the component will reflect the expected behaviour.
+1. If you want to update either of startDate, endDate, minDate, maxDate, format, displayFormat then you must pass all new object of `Options` class.
    check [this stackblitz example](https://stackblitz.com/edit/angular-datetimerangepicker-update-dates-demo) for more info on how to achieve this
 
 ### Custom Range Options
