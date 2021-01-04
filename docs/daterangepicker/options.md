@@ -357,5 +357,18 @@ Timepicker options expects an object containing following keys as timepicker opt
             <td>1</td>
             <td>anything between 1 to 59. If you supply value greater or equal 60 then that value mod 60 is taken as actual value</td>
         </tr>
+        <tr>
+            <td>twentyFourHourFormat</td>
+            <td>boolean</td>
+            <td>
+                Whether to show 24 hour or 12 hour time format
+                <br/>
+                <em>There no 12 hour support in javascript. So this is just for display/convenience of end user</em>
+                <br/>
+                <strong>The programmatic communication will still happen in 24 hour format only</strong>
+            </td>
+            <td>true</td>
+            <td>true, false</td>
+        </tr>
     </tbody>
 </table>
