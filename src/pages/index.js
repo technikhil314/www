@@ -74,7 +74,7 @@ export default function () {
           <div>
             <img src="/img/avatar-sketch.png" height={200}></img>
             <h1 className="hero__title">Hi! I am Nikhil Mehta</h1>
-            <small className={clsx(pageStyles.note)}>My expertise in each of the tool is directly proportional to distance amd size of it from my avatar</small>
+            <small className={clsx(pageStyles.note)}>My expertise in each of the tool is directly proportional to distance & size of it from my avatar</small>
             <div className="hero__subtitle" aria-label={`I am a ${keywords[0]}`}>
               <p className={animatingTitleStyles.animatingTitleWrapper} aria-hidden="true">
                 I am a {" "}
