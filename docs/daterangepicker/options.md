@@ -3,6 +3,8 @@ id: configuration-options
 title: Options
 ---
 
+### Main options
+
 Currently, these options are available but I will keep on developing and adding more and more options
 
 You can import following types for better typescript support (Although typings support is there)

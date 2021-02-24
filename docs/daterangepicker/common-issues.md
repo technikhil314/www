@@ -3,7 +3,7 @@ id: common-issues
 title: Common issues / FAQs
 ---
 
-### Common issues developers face either using this package or dayjs
+#### Common issues developers face either using this package or dayjs
 
 [dayjs](https://day.js.org/) has good support for typescript, but is not mature in my opinion and it also breaks based on what version of typescript compiler one is using.
 

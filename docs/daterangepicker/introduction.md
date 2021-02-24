@@ -3,7 +3,7 @@ id: introduction
 title: Introduction
 ---
 
-### Highly configurable, opinionated, themable, light weight (12kb) date and time range picker for angular
+#### Highly configurable, opinionated, themable, light weight (12kb) date and time range picker for angular
 
 [![Build Status](https://img.shields.io/github/workflow/status/technikhil314/angular-components/deploy%20to%20surge?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/angular-components/actions)
 [![version](https://img.shields.io/npm/v/angular-datetimerangepicker.svg?style=flat-square)](https://npmjs.org/angular-datetimerangepicker)
