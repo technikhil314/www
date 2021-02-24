@@ -3,11 +3,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
-import React, { useRef } from 'react';
-import animatingTitleStyles from '../css/animatingTitle.module.css';
-import pageStyles from "./index.module.css";
-import { useAnimatingTitle } from '../hooks/animatingTitle';
+import React, { useRef, useState } from 'react';
+import { Canvas } from 'react-three-fiber';
+import { Box } from '../components/box';
 import Features from '../components/feature';
+import animatingTitleStyles from '../css/animatingTitle.module.css';
+import { useAnimatingTitle } from '../hooks/animatingTitle';
+import pageStyles from "./index.module.css";
 
 const keywords = [
   "software&nbsp;engineer",
@@ -62,6 +64,7 @@ const features = [
 
 export default function () {
   const context = useDocusaurusContext();
+  const [hover, setHover] = useState(false);
   const animatingTitleRef = useRef();
   useAnimatingTitle(animatingTitleRef, keywords);
   const { siteConfig = {} } = context;
@@ -72,7 +75,19 @@ export default function () {
       <header className={clsx('hero hero--primary', "heroBanner", pageStyles.heroWrapper)}>
         <div className={clsx('container', pageStyles.heroContainer)}>
           <div>
-            <img src="/img/avatar-sketch.png" height={200}></img>
+            <div onPointerOver={(event) => setHover(true)}
+              onPointerOut={(event) => setHover(false)}>
+              {
+                !hover ? (
+                  <Canvas style={{ height: 200 }}>
+                    <ambientLight />
+                    <pointLight position={[10, 10, 10]} />
+                    <Box position={[0, 0, 0]} />
+                    <Box position={[0, 0, 0]} />
+                  </Canvas>
+                ) : (<img src="/img/avatar-sketch.png" height={193}></img>)
+              }
+            </div>
             <h1 className="hero__title">Hi! I am Nikhil Mehta</h1>
             <small className={clsx(pageStyles.note)}>My expertise in each of the tool is directly proportional to distance & size of it from my avatar</small>
             <div className="hero__subtitle" aria-label={`I am a ${keywords[0]}`}>

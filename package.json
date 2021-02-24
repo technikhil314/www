@@ -20,7 +20,9 @@
     "docusaurus2-dotenv": "^1.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "rimraf": "^3.0.2"
+    "react-three-fiber": "^5.3.19",
+    "rimraf": "^3.0.2",
+    "three": "^0.126.0"
   },
   "browserslist": {
     "production": [
