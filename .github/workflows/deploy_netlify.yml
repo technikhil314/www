@@ -17,14 +17,21 @@ jobs:
         with:
           node-version: "12.x"
 
+      - name: Install Dependancies
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Run static analysis
+        run: |
+          npx eslint --ext .jsx,.js . --fix
+
       - name: Build
         run: |
           echo HOST_NAME=https://technikhil314.netlify.app > .env
-          yarn --frozen-lockfile
-          npm run build
+          yarn build
 
       - name: Install netlify-cli
         run: npm install netlify-cli -g
 
-      - name: Deploy to netlify
+      - name: Deploy
         run: npx netlify deploy --site 7628ad04-7b0f-4192-9c5a-5a822153f976 --dir build --auth ${{secrets.NETLIFY_AUTH_TOKEN}} --prod
