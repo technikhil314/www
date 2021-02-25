@@ -3,8 +3,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 import { Canvas } from 'react-three-fiber';
+import { TextureLoader } from "three";
+import cssImg from "../../static/img/css.png";
+import htmlImg from "../../static/img/html.png";
+import jsImg from "../../static/img/js.png";
+import nodejsImg from "../../static/img/nodejs.png";
+import reactImg from "../../static/img/react.jpg";
+import webpackImg from "../../static/img/webpack.png";
+import avatarImg from "../../static/img/avatar-sketch.png";
 import { Box } from '../components/box';
 import Features from '../components/feature';
 import animatingTitleStyles from '../css/animatingTitle.module.css';
@@ -68,6 +76,12 @@ export default function () {
   const animatingTitleRef = useRef();
   useAnimatingTitle(animatingTitleRef, keywords);
   const { siteConfig = {} } = context;
+  const htmlTexture = useMemo(() => new TextureLoader().load(htmlImg), []);
+  const jsTexture = useMemo(() => new TextureLoader().load(jsImg), []);
+  const cssTexture = useMemo(() => new TextureLoader().load(cssImg), []);
+  const reactTexture = useMemo(() => new TextureLoader().load(reactImg), []);
+  const webpackTexture = useMemo(() => new TextureLoader().load(webpackImg), []);
+  const nodejsTexture = useMemo(() => new TextureLoader().load(nodejsImg), []);
   return (
     <Layout
       title={`Home`}
@@ -82,10 +96,28 @@ export default function () {
                   <Canvas style={{ height: 200 }}>
                     <ambientLight />
                     <pointLight position={[10, 10, 10]} />
-                    <Box position={[0, 0, 0]} />
-                    <Box position={[0, 0, 0]} />
+                    <Box position={[0, 0, 0]}>
+                      <meshBasicMaterial attachArray="material" opacity={1}>
+                        <primitive attach="map" object={htmlTexture} />
+                      </meshBasicMaterial>
+                      <meshBasicMaterial attachArray="material" opacity={1}>
+                        <primitive attach="map" object={reactTexture} />
+                      </meshBasicMaterial>
+                      <meshBasicMaterial attachArray="material" opacity={1}>
+                        <primitive attach="map" object={jsTexture} />
+                      </meshBasicMaterial>
+                      <meshBasicMaterial attachArray="material" opacity={1}>
+                        <primitive attach="map" object={webpackTexture} />
+                      </meshBasicMaterial>
+                      <meshBasicMaterial attachArray="material" opacity={1}>
+                        <primitive attach="map" object={cssTexture} />
+                      </meshBasicMaterial>
+                      <meshBasicMaterial attachArray="material" opacity={1}>
+                        <primitive attach="map" object={nodejsTexture} />
+                      </meshBasicMaterial>
+                    </Box>
                   </Canvas>
-                ) : (<img src="/img/avatar-sketch.png" height={193}></img>)
+                ) : (<img src={avatarImg} height={193}></img>)
               }
             </div>
             <h1 className="hero__title">Hi! I am Nikhil Mehta</h1>
