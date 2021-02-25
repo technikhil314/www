@@ -7,7 +7,7 @@ const myopenSourceWork = [{
 }, {
   to: "carousel",
   label: "Carousel Component",
-}]
+}];
 
 module.exports = {
   title: "technikhil314",

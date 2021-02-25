@@ -21,7 +21,7 @@ function Features({ features }) {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Features;

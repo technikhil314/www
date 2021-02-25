@@ -9,12 +9,12 @@ import reactImg from "../../static/img/react.jpg";
 import webpackImg from "../../static/img/webpack.png";
 
 export function Box({ props }) {
-    const mesh = useRef()
+    const mesh = useRef();
 
     useFrame(() => {
-        mesh.current.rotation.x += 0.01
-        mesh.current.rotation.y += 0.005
-    })
+        mesh.current.rotation.x += 0.01;
+        mesh.current.rotation.y += 0.005;
+    });
 
     const htmlTexture = useMemo(() => new TextureLoader().load(htmlImg), []);
     const jsTexture = useMemo(() => new TextureLoader().load(jsImg), []);
@@ -47,5 +47,5 @@ export function Box({ props }) {
                 <primitive attach="map" object={nodejsTexture} />
             </meshBasicMaterial>
         </mesh>
-    )
+    );
 }

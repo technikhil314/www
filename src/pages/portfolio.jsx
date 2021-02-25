@@ -1,17 +1,14 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import React from 'react';
-import { Canvas } from 'react-three-fiber';
-import { Box } from '../components/box';
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import React from "react";
+import { Canvas } from "react-three-fiber";
+import { Box } from "../components/box";
 
-
-export default function () {
+export default function Portfolio() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout
-      title={`Portfolio`}
-      description={siteConfig.tagline}>
+    <Layout title={`Portfolio`} description={siteConfig.tagline}>
       <main>
         <Canvas>
           <ambientLight />
