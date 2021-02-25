@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { useFrame } from 'react-three-fiber';
 import cssImg from "../../static/img/css.png";
 import htmlImg from "../../static/img/html.png";
