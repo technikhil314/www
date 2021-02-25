@@ -1,11 +1,13 @@
 import React, { useMemo, useRef } from 'react';
 import { useFrame } from 'react-three-fiber';
+import { TextureLoader } from "three";
 import cssImg from "../../static/img/css.png";
 import htmlImg from "../../static/img/html.png";
 import jsImg from "../../static/img/js.png";
 import nodejsImg from "../../static/img/nodejs.png";
 import reactImg from "../../static/img/react.jpg";
 import webpackImg from "../../static/img/webpack.png";
+
 export function Box({ props }) {
     const mesh = useRef()
 
