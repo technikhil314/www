@@ -4,13 +4,12 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React, { useRef, useState } from "react";
-import { Canvas } from "react-three-fiber";
-import avatarImg from "../../static/img/avatar-sketch.png";
 import { Box } from "../components/box";
 import Features from "../components/feature";
 import animatingTitleStyles from "../css/animatingTitle.module.css";
 import { useAnimatingTitle } from "../hooks/animatingTitle";
 import pageStyles from "./index.module.css";
+import avatarImg from "../../static/img/avatar-sketch.png";
 
 const keywords = [
   "software&nbsp;engineer",
@@ -73,7 +72,6 @@ const features = [
 
 export default function Home() {
   const context = useDocusaurusContext();
-  const [hover, setHover] = useState(false);
   const animatingTitleRef = useRef();
   useAnimatingTitle(animatingTitleRef, keywords);
   const { siteConfig = {} } = context;
@@ -88,20 +86,7 @@ export default function Home() {
       >
         <div className={clsx("container", pageStyles.heroContainer)}>
           <div>
-            <div
-              onPointerOver={() => setHover(true)}
-              onPointerOut={() => setHover(false)}
-            >
-              {!hover ? (
-                <Canvas style={{ height: 200 }}>
-                  <ambientLight />
-                  <pointLight position={[10, 10, 10]} />
-                  <Box position={[0, 0, 0]} />
-                </Canvas>
-              ) : (
-                <img src={avatarImg} height={193} alt="avatar"></img>
-              )}
-            </div>
+            <Box />
             <h1 className="hero__title">Hi! I am Nikhil Mehta</h1>
             <small className={clsx(pageStyles.note)}>
               My expertise in each of the tool is directly proportional to
