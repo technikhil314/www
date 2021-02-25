@@ -3,13 +3,12 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Box } from "../components/box";
 import Features from "../components/feature";
 import animatingTitleStyles from "../css/animatingTitle.module.css";
 import { useAnimatingTitle } from "../hooks/animatingTitle";
 import pageStyles from "./index.module.css";
-import avatarImg from "../../static/img/avatar-sketch.png";
 
 const keywords = [
   "software&nbsp;engineer",
