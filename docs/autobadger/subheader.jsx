@@ -1,5 +1,5 @@
 import React from "react";
-export const SubHeader = (props) => {
+export const SubHeader = () => {
   return (
     <>
       <nav className="navbar sub-navbar navbar--light navbar--fixed-top">
