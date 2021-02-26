@@ -93,7 +93,6 @@ function BoxMesh({ ...props }) {
           <primitive attach="map" object={material} />
         </MeshWobbleMaterial>
       ))}
-      ))}
     </mesh>
   );
 }
