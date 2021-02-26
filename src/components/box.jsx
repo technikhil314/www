@@ -1,4 +1,4 @@
-import { OrbitControls, MeshWobbleMaterial } from "@react-three/drei";
+import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "react-three-fiber";
 import { Color, TextureLoader } from "three";
@@ -26,7 +26,6 @@ import tailwindImg from "../../static/img/tailwind.png";
 import travisImg from "../../static/img/travis.jpg";
 import webpackImg from "../../static/img/webpack.png";
 import webrtcImg from "../../static/img/webrtc.png";
-
 function BoxMesh({ ...props }) {
   const lastIndex = useRef(6);
   const allMeshMaterials = useMemo(() => {
@@ -78,17 +77,22 @@ function BoxMesh({ ...props }) {
     mesh.current.rotation.x += 0.01;
     mesh.current.rotation.y += 0.005;
   });
+
   return (
     <mesh {...props} ref={mesh}>
-      <OrbitControls enablePan={true} enableZoom={false} enableRotate={true} />
-      <boxBufferGeometry args={[4, 4, 4]} />
+      <boxBufferGeometry args={[3, 3, 3]} />
+      <OrbitControls
+        enablePan={true}
+        enableRotate={true}
+        enableZoom={false}
+        minDistance={1}
+        maxDistance={100}
+      />
       {meshMaterials.map((material, index) => (
         <MeshWobbleMaterial
           key={Date.now() + index}
           attachArray="material"
-          factor={1.2} // Strength, 0 disables the effect (default=1)
-          speed={2} // Speed (default=1)
-          transparent
+          speed={2}
         >
           <primitive attach="map" object={material} />
         </MeshWobbleMaterial>
@@ -99,11 +103,10 @@ function BoxMesh({ ...props }) {
 
 export function Box() {
   return (
-    <Canvas style={{ height: 200 }}>
-      <pointLight color={new Color(0xffffff)} position={[0, 100, 0]} />
-      <pointLight color={new Color(0xffffff)} position={[50, 100, 50]} />
-      <pointLight color={new Color(0xffffff)} position={[-50, -100, -50]} />
-      <pointLight color={new Color(0xffffff)} position={[50, 50, 50]} />
+    <Canvas style={{ height: "60vh" }}>
+      <ambientLight color={new Color(0x222222)} />
+      <pointLight color={new Color(0xdddddd)} position={[50, 50, 50]} />
+      <pointLight color={new Color(0xdddddd)} position={[-50, -50, -50]} />
       <BoxMesh position={[0, 0, 0]} />
     </Canvas>
   );

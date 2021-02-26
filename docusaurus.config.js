@@ -99,10 +99,6 @@ module.exports = {
               href: 'https://www.youtube.com/user/nikhil7868',
             },
             {
-              label: 'My Portfolio',
-              to: 'portfolio',
-            },
-            {
               label: 'Download my resume',
               href: '/Nikhil%20Mehta.pdf',
             }
