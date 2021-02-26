@@ -1,7 +1,4 @@
-import {
-    MeshWobbleMaterial,
-    OrbitControls
-} from "@react-three/drei";
+import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas } from "react-three-fiber";
 import { Color, TextureLoader } from "three";
@@ -87,6 +84,7 @@ function BoxMesh({ ...props }) {
       />
       {meshMaterials.map((material, index) => (
         <MeshWobbleMaterial
+          key={Date.now() + index}
           attachArray="material"
           speed={2}
           vertexTangents={[1, 1]}
@@ -101,7 +99,6 @@ function BoxMesh({ ...props }) {
 export function Box() {
   return (
     <Canvas style={{ height: "100vh" }}>
-      {/* <ambientLight color={new Color(255, 0, 0)} /> */}
       <pointLight color={new Color(0xffffff)} position={[50, 50, 50]} />
       <pointLight color={new Color(0xffffff)} position={[-50, -50, -50]} />
       <BoxMesh position={[0, -0.5, 0]} />
