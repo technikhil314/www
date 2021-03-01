@@ -32,6 +32,14 @@ module.exports = {
     },
     sidebarCollapsible: true,
     hideableSidebar: true,
+    announcementBar: {
+      id: 'support_us', // Any value that will identify this message.
+      content:
+        'If you like my work. Please star the repo. Also consider <a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/paypalme/technikhil314">sponsoring</a>',
+      backgroundColor: '#fafbfc', // Defaults to `#fff`.
+      textColor: '#091E42', // Defaults to `#000`.
+      isCloseable: true, // Defaults to `true`.
+    },
     navbar: {
       hideOnScroll: true,
       title: 'TechNikhil',
