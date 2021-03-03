@@ -5,7 +5,7 @@ import Layout from "@theme/Layout";
 import React from "react";
 import pageStyles from "./about.module.css";
 import ExternalLink from "../components/externalLink";
-export default function About(params) {
+export default function About() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
@@ -56,7 +56,7 @@ export default function About(params) {
             </h3>
           </header>
           <p>
-            I don't have a formal computer science degree. I did my bachelor and
+            I dont have a formal computer science degree. I did my bachelor and
             masters degree in Mathematics and applied Mathematics from{" "}
             <ExternalLink href="http://www.unipune.ac.in/">
               University of Pune
@@ -96,7 +96,7 @@ export default function About(params) {
               Github
             </ExternalLink>
             . It helps me keep updated and makes me realise that I have a long
-            way to go. So I can't stop no matter what. But all I can do is learn
+            way to go. So I can’t stop no matter what. But all I can do is learn
             and apply it over course of time.
           </p>
         </article>

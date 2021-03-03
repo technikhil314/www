@@ -18,11 +18,11 @@ const features = [
     ),
   },
   {
-    title: <>Don{`'`}t do robotic work</>,
+    title: <>Don’t do robotic work</>,
     description: (
       <>
         Adding usual badges (liscense, version, build status etc) to your mark
-        down is a robotic job don{`'`}t waste time in it.
+        down is a robotic job don’t waste time in it.
       </>
     ),
   },

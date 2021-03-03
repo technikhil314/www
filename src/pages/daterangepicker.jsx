@@ -14,7 +14,7 @@ const features = [
       <>
         This takes idea from{" "}
         <ExternalLink href="https://github.com/dangrossman">
-          dangrossman{`'`}s
+          dangrossman’s
         </ExternalLink>{" "}
         created{" "}
         <ExternalLink href="https://www.daterangepicker.com/">
