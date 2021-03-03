@@ -9,8 +9,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5em;
-  color: rgb(0, 75, 50);
   white-space: nowrap;
+  color: rgb(0, 75, 50);
   word-break: break-all;
   max-width: 100%;
 }

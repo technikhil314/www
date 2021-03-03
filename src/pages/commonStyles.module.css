@@ -9,6 +9,12 @@
   filter: invert(1) hue-rotate(180deg);
 }
 
+:global html[data-theme="light"] {
+  --ifm-color-primary: #069f8e;
+  --ifm-link-color: #0b776b;
+  --ifm-navbar-link-hover-color: #0b776b;
+}
+
 .heroBanner {
   padding: 4rem 0.5rem;
   text-align: center;
