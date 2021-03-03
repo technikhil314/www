@@ -3,6 +3,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React from "react";
+import ExternalLink from "../components/externalLink";
 import Features from "../components/feature";
 import styles from "./commonStyles.module.css";
 
@@ -12,11 +13,20 @@ const features = [
     description: (
       <>
         This takes idea from{" "}
-        <a href="https://github.com/dangrossman">dangrossman{`'`}s</a> created{" "}
-        <a href="https://www.daterangepicker.com/">daterangepicker</a> So some
-        of the options from there will work here. Making it easy to compare and
-        migrate too. But web has came a long way. Consider using alternative to{" "}
-        <a href="https://www.daterangepicker.com/">daterangepicker</a>.
+        <ExternalLink href="https://github.com/dangrossman">
+          dangrossman{`'`}s
+        </ExternalLink>{" "}
+        created{" "}
+        <ExternalLink href="https://www.daterangepicker.com/">
+          daterangepicker
+        </ExternalLink>{" "}
+        So some of the options from there will work here. Making it easy to
+        compare and migrate too. But web has came a long way. Consider using
+        alternative to{" "}
+        <ExternalLink href="https://www.daterangepicker.com/">
+          daterangepicker
+        </ExternalLink>
+        .
       </>
     ),
   },
@@ -25,17 +35,19 @@ const features = [
     description: (
       <>
         This packages uses all modern javascript libraries under it like{" "}
-        <a href="https://day.js.org/">dayjs</a> and{" "}
-        <a href="https://www.npmjs.com/package/calendarize">calendarise</a> and
-        delivers the functionality in just 12kb of javascript footprint. Check
-        here more{" "}
-        <a href="http://youmightnotneedjquery.com/">
+        <ExternalLink href="https://day.js.org/">dayjs</ExternalLink> and{" "}
+        <ExternalLink href="https://www.npmjs.com/package/calendarize">
+          calendarise
+        </ExternalLink>{" "}
+        and delivers the functionality in just 12kb of javascript footprint.
+        Check here more{" "}
+        <ExternalLink href="http://youmightnotneedjquery.com/">
           about whether you need jquery or not
-        </a>{" "}
+        </ExternalLink>{" "}
         also moment authors{" "}
-        <a href="https://momentjs.com/docs/#/-project-status/">
+        <ExternalLink href="https://momentjs.com/docs/#/-project-status/">
           ask to use other modern libraries
-        </a>
+        </ExternalLink>
       </>
     ),
   },
