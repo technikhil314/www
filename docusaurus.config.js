@@ -35,7 +35,7 @@ module.exports = {
     announcementBar: {
       id: 'support_us', // Any value that will identify this message.
       content:
-        'If you like my work. Please star the repo. Also consider <a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/paypalme/technikhil314">sponsoring</a>',
+        '<p class="padding-left--sm margin--none text--center">If you like my work. Please star the repo. Also consider <a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/paypalme/technikhil314">sponsoring</a></p>',
       backgroundColor: '#fafbfc', // Defaults to `#fff`.
       textColor: '#091E42', // Defaults to `#000`.
       isCloseable: true, // Defaults to `true`.
@@ -55,12 +55,15 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
+          to: 'about', label: 'About me', position: 'right'
+        },
+        { to: 'contactme', label: 'Contact me', position: 'right' },
+        {
           href: 'https://www.buymeacoffee.com/technikhil314',
           label: 'Buy me a coffee',
           position: 'right'
         },
         { href: '/Nikhil%20Mehta.pdf', label: 'My resume', position: 'right' },
-        { to: 'contactme', label: 'Contact me', position: 'right' }
       ],
     },
     footer: {
