@@ -46,7 +46,9 @@ export default function About() {
               react-three-fiber
             </ExternalLink>
             . See the <Link to={useBaseUrl("/")}>Home page</Link> to find out
-            how much progress I have made.
+            how much progress I have made. And also I am creating something
+            amazing using webRTC. So keep an eye on this site. I will announce
+            it some time soon.
           </p>
         </article>
         <article className="padding-bottom--md">

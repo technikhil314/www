@@ -92,7 +92,7 @@ function BoxMesh({ ...props }) {
         <MeshWobbleMaterial
           key={Date.now() + index}
           attachArray="material"
-          speed={2}
+          speed={1}
         >
           <primitive attach="map" object={material} />
         </MeshWobbleMaterial>
