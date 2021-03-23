@@ -1,6 +1,6 @@
-import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
+import { MeshWobbleMaterial, OrbitControls, Text } from "@react-three/drei";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import { Canvas, useFrame, useThree } from "react-three-fiber";
 import { Color, TextureLoader } from "three";
 import angularImg from "../../static/img/angular.png";
 import bootstrapImg from "../../static/img/bootstrap.png";
@@ -26,8 +26,31 @@ import tailwindImg from "../../static/img/tailwind.png";
 import travisImg from "../../static/img/travis.jpg";
 import webpackImg from "../../static/img/webpack.png";
 import webrtcImg from "../../static/img/webrtc.png";
+let prevX, prevY;
+const keywords = [
+  "software engineer",
+  "web developer",
+  "javascript developer",
+  "nodejs developer",
+  "freelancer",
+  "performance engineer",
+  "open source contributor",
+  "CSS enthusiast",
+  "devops person",
+  "blockchain learner",
+  "linux fan",
+  "command line lover",
+  "lefty",
+  "drummer",
+  "helper",
+  "mathematics student",
+  "worst singer",
+  "free education believer",
+  "all time learner",
+];
 function BoxMesh({ ...props }) {
   const lastIndex = useRef(6);
+  const { viewport } = useThree();
   const allMeshMaterials = useMemo(() => {
     return [
       new TextureLoader().load(jsImg),
@@ -73,9 +96,21 @@ function BoxMesh({ ...props }) {
     };
   }, []);
 
-  useFrame(() => {
-    mesh.current.rotation.x += 0.01;
-    mesh.current.rotation.y += 0.005;
+  useFrame(({ mouse }) => {
+    if (mesh && (prevX !== mouse.x || prevY !== mouse.y)) {
+      const mql = matchMedia("(hover: none)");
+      if (mql.matches) {
+        mesh.current.rotation.x += 0.01;
+        mesh.current.rotation.y += 0.01;
+      } else {
+        prevX = mouse.x;
+        prevY = mouse.y;
+        let x = mouse.x / viewport.width / 2;
+        let y = mouse.y / viewport.height / 2;
+        mesh.current.rotation.x += x;
+        mesh.current.rotation.y += y;
+      }
+    }
   });
 
   return (
@@ -93,6 +128,7 @@ function BoxMesh({ ...props }) {
           key={Date.now() + index}
           attachArray="material"
           speed={1}
+          factor={0.2}
         >
           <primitive attach="map" object={material} />
         </MeshWobbleMaterial>
@@ -101,13 +137,36 @@ function BoxMesh({ ...props }) {
   );
 }
 
+function HelloText() {
+  return (
+    <Text
+      glyphGeometryDetail={64}
+      font="https://fonts.gstatic.com/s/merriweather/v21/u-4l0qyriQwlOrhSvowK_l5-eR7NWMf8.woff"
+      fontSize={3}
+      letterSpacing={-0.05}
+      lineHeight={3}
+      position={[0, 0, 0]}
+    >
+      {"Hello I am Nikhil"}
+      <MeshWobbleMaterial attach="material" color="black" factor={0.1} />
+    </Text>
+  );
+}
 export function Box() {
   return (
-    <Canvas style={{ height: "60vh" }}>
-      <ambientLight color={new Color(0x222222)} />
-      <pointLight color={new Color(0xdddddd)} position={[50, 50, 50]} />
-      <pointLight color={new Color(0xdddddd)} position={[-50, -50, -50]} />
-      <BoxMesh position={[0, 0, 0]} />
-    </Canvas>
+    <>
+      <Canvas
+        style={{
+          height: "50vh",
+          width: "100vw",
+          marginLeft: "calc(-50vw + 50%)",
+        }}
+      >
+        <ambientLight color={new Color(0x222222)} />
+        <pointLight color={new Color(0xdddddd)} position={[50, 50, 50]} />
+        <pointLight color={new Color(0xdddddd)} position={[-50, -50, -50]} />
+        <BoxMesh position={[0, 0, 0]} />
+      </Canvas>
+    </>
   );
 }
