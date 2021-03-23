@@ -82,12 +82,10 @@ function BoxMesh({ ...props }) {
         mesh.current.rotation.x += 0.01;
         mesh.current.rotation.y += 0.01;
       } else {
+        mesh.current.rotation.x += mouse.y * 0.1;
+        mesh.current.rotation.y += mouse.x * 0.1;
         prevX = mouse.x;
         prevY = mouse.y;
-        let x = mouse.x / viewport.width / 2;
-        let y = mouse.y / viewport.height / 2;
-        mesh.current.rotation.x += x;
-        mesh.current.rotation.y += y;
       }
     }
   });
