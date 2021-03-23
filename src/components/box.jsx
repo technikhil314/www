@@ -1,4 +1,4 @@
-import { MeshWobbleMaterial, OrbitControls, Text } from "@react-three/drei";
+import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "react-three-fiber";
 import { Color, TextureLoader } from "three";
@@ -27,27 +27,6 @@ import travisImg from "../../static/img/travis.jpg";
 import webpackImg from "../../static/img/webpack.png";
 import webrtcImg from "../../static/img/webrtc.png";
 let prevX, prevY;
-const keywords = [
-  "software engineer",
-  "web developer",
-  "javascript developer",
-  "nodejs developer",
-  "freelancer",
-  "performance engineer",
-  "open source contributor",
-  "CSS enthusiast",
-  "devops person",
-  "blockchain learner",
-  "linux fan",
-  "command line lover",
-  "lefty",
-  "drummer",
-  "helper",
-  "mathematics student",
-  "worst singer",
-  "free education believer",
-  "all time learner",
-];
 function BoxMesh({ ...props }) {
   const lastIndex = useRef(6);
   const { viewport } = useThree();
@@ -137,21 +116,6 @@ function BoxMesh({ ...props }) {
   );
 }
 
-function HelloText() {
-  return (
-    <Text
-      glyphGeometryDetail={64}
-      font="https://fonts.gstatic.com/s/merriweather/v21/u-4l0qyriQwlOrhSvowK_l5-eR7NWMf8.woff"
-      fontSize={3}
-      letterSpacing={-0.05}
-      lineHeight={3}
-      position={[0, 0, 0]}
-    >
-      {"Hello I am Nikhil"}
-      <MeshWobbleMaterial attach="material" color="black" factor={0.1} />
-    </Text>
-  );
-}
 export function Box() {
   return (
     <>
