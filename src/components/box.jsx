@@ -1,6 +1,6 @@
 import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Canvas, useFrame, useThree } from "react-three-fiber";
+import { Canvas, useFrame } from "react-three-fiber";
 import { Color, TextureLoader } from "three";
 import angularImg from "../../static/img/angular.png";
 import bootstrapImg from "../../static/img/bootstrap.png";
@@ -29,7 +29,6 @@ import webrtcImg from "../../static/img/webrtc.png";
 let prevX, prevY;
 function BoxMesh({ ...props }) {
   const lastIndex = useRef(6);
-  const { viewport } = useThree();
   const allMeshMaterials = useMemo(() => {
     return [
       new TextureLoader().load(jsImg),
