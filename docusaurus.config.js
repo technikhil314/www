@@ -110,6 +110,10 @@ module.exports = {
               href: 'https://www.youtube.com/user/nikhil7868',
             },
             {
+              label: 'My Poems',
+              href: 'http://kavi-nikhil.blogspot.com',
+            },
+            {
               label: 'Download my resume',
               href: '/Nikhil%20Mehta.pdf',
             }
