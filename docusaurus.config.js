@@ -25,7 +25,7 @@ module.exports = {
       trackingID: 'UA-125781207-2',
     },
     gtag: {
-      trackingID: 'UA-125781207-2',
+      trackingID: 'GTM-5HBRZXW',
     },
     colorMode: {
       defaultMode: 'dark'
