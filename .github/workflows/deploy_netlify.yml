@@ -29,6 +29,7 @@ jobs:
         run: |
           echo HOST_NAME=https://technikhil314.netlify.app > .env
           yarn build
+          cp netlify.toml build
 
       - name: Install netlify-cli
         run: npm install netlify-cli -g
