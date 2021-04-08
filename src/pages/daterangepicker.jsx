@@ -5,6 +5,7 @@ import clsx from "clsx";
 import React from "react";
 import ExternalLink from "../components/externalLink";
 import Features from "../components/feature";
+import PageHead from "../components/head";
 import styles from "./commonStyles.module.css";
 
 const features = [
@@ -65,10 +66,11 @@ const features = [
 
 export default function DateRangePicker() {
   return (
-    <Layout
-      title="Date Range Picker"
-      description="A light weight date range picker without jquery dependancy. And it uses all advanced internationalisation features from latest browsers."
-    >
+    <Layout>
+      <PageHead
+        title="Date Range Picker"
+        description="A light weight date range picker without jquery dependancy. And it uses all advanced internationalisation features from latest browsers."
+      />
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">Date Range Picker</h1>

@@ -10,17 +10,16 @@ const myopenSourceWork = [{
 }];
 
 module.exports = {
-  title: "technikhil314",
-  tagline: "I am a self taught web developer from india. I am mathematician, drummer, failed singer who likes to work on open source projects and believe in free education. I am also a proud lefty.",
+  title: "Nikhil Mehta",
+  tagline: "Nikhil Mehta's Personal website / portfolio / blog.",
   url: 'https://technikhil314.netlify.app',
   baseUrl: '/',
-  favicon: 'img/192x192.png',
+  favicon: '/favicon.ico',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
   onBrokenLinks: 'warn',
   onDuplicateRoutes: 'error',
   themeConfig: {
-    image: 'img/brand.png',
     googleAnalytics: {
       trackingID: 'UA-125781207-2',
     },
@@ -45,7 +44,7 @@ module.exports = {
       title: 'TechNikhil',
       logo: {
         alt: 'TechNikhil314',
-        src: 'img/logo.png',
+        src: '/logo.png',
       },
       items: [
         {
@@ -69,7 +68,7 @@ module.exports = {
     footer: {
       logo: {
         alt: 'technikhil314 logo',
-        src: 'img/brand.png',
+        src: '/brand-430x495.png',
         href: '/',
       },
       links: [
@@ -163,12 +162,12 @@ module.exports = {
           {
             tagName: 'link',
             rel: 'apple-touch-icon',
-            href: '/img/180x180.png'
+            href: '/180x180.png'
           },
           {
             tagName: 'link',
             rel: 'mask-icon',
-            href: '/img/180x180.png'
+            href: '/180x180.png'
           }
         ],
       },

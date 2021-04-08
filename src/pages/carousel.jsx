@@ -4,6 +4,7 @@ import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React from "react";
 import Features from "../components/feature";
+import PageHead from "../components/head";
 import styles from "./commonStyles.module.css";
 
 const features = [
@@ -39,10 +40,11 @@ const features = [
 
 export default function Carousel() {
   return (
-    <Layout
-      title="Carousel Component"
-      description="A framework agnostic, Next Gen, light weight, touch friendly carousel compoent"
-    >
+    <Layout>
+      <PageHead
+        title="Carousel Component"
+        description="A framework agnostic, Next Gen, light weight, touch friendly carousel compoent"
+      />
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">Carousel Web Component</h1>

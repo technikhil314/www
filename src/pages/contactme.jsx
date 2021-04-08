@@ -1,6 +1,7 @@
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React, { useEffect, useRef, useState } from "react";
+import PageHead from "../components/head";
 import animatingTitleStyles from "../css/animatingTitle.module.css";
 import { useAnimatingTitle } from "../hooks/animatingTitle";
 import pageStyles from "./contactme.module.css";
@@ -34,10 +35,11 @@ export default function ContactMe() {
     }
   });
   return (
-    <Layout
-      title={`Contact me`}
-      description={"technikhil314 contact information"}
-    >
+    <Layout>
+      <PageHead
+        title={`Contact me`}
+        description={"technikhil314 contact information"}
+      />
       <header className={clsx("hero hero--primary", "heroBanner")}>
         <div className="container">
           <div aria-label={`Get in touch with me for ${keywords[0]}`}>

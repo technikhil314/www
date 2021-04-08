@@ -4,6 +4,7 @@ import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React from "react";
 import Features from "../components/feature";
+import PageHead from "../components/head";
 import styles from "./commonStyles.module.css";
 
 const features = [
@@ -43,10 +44,11 @@ const features = [
 
 export default function AutoBadger() {
   return (
-    <Layout
-      title="Git auto badger"
-      description="A node cli tool to add badges to your markdown in 2 seconds"
-    >
+    <Layout>
+      <PageHead
+        title="Git auto badger"
+        description="A node cli tool to add badges to your markdown in 2 seconds"
+      />
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">Git auto badger</h1>

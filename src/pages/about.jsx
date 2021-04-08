@@ -5,11 +5,13 @@ import Layout from "@theme/Layout";
 import React from "react";
 import pageStyles from "./about.module.css";
 import ExternalLink from "../components/externalLink";
+import PageHead from "../components/head";
 export default function About() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout title={`About me`} description={siteConfig.tagline}>
+    <Layout>
+      <PageHead title={`About me`} description={"About the author"} />
       <section className={`container ${pageStyles.about}`}>
         <h1 className="text--center">Hi! I am Nikhil</h1>
         <p className="text--center">

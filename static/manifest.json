@@ -4,12 +4,12 @@
     "description": "Nikhil Mehta's personal website",
     "icons": [
         {
-            "src": "img/192x192.png",
+            "src": "192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "img/512x512_white.png",
+            "src": "512x512_white.png",
             "type": "image/png",
             "sizes": "512x512"
         }
@@ -27,7 +27,7 @@
             "url": "/blog",
             "icons": [
                 {
-                    "src": "img/192x192.png",
+                    "src": "192x192.png",
                     "sizes": "192x192"
                 }
             ]
@@ -39,7 +39,7 @@
             "url": "/contactme",
             "icons": [
                 {
-                    "src": "img/192x192.png",
+                    "src": "192x192.png",
                     "sizes": "192x192"
                 }
             ]

@@ -1,8 +1,8 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import React, { useRef } from "react";
 import { Box } from "../components/box";
+import PageHead from "../components/head";
 import animatingTitleStyles from "../css/animatingTitle.module.css";
 import { useAnimatingTitle } from "../hooks/animatingTitle";
 import pageStyles from "./index.module.css";
@@ -29,12 +29,11 @@ const keywords = [
   "all&nbsp;time&nbsp;learner",
 ];
 export default function Portfolio() {
-  const context = useDocusaurusContext();
   const animatingTitleRef = useRef();
   useAnimatingTitle(animatingTitleRef, keywords);
-  const { siteConfig = {} } = context;
   return (
-    <Layout title={`Home`} description={siteConfig.tagline}>
+    <Layout>
+      <PageHead title={`Home`} />
       <header
         className={clsx(
           "hero hero--primary",
