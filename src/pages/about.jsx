@@ -1,14 +1,11 @@
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import React from "react";
-import pageStyles from "./about.module.css";
 import ExternalLink from "../components/externalLink";
 import PageHead from "../components/head";
+import pageStyles from "./about.module.css";
 export default function About() {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
   return (
     <Layout>
       <PageHead title={`About me`} description={"About the author"} />
