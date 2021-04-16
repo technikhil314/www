@@ -192,9 +192,10 @@ module.exports = {
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: 'all',
+            type: 'rss',
             copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta.`
-          }
+          },
+          editUrl: 'https://github.com/technikhil314/www/edit/master/',
         },
         theme: {
           customCss: [
