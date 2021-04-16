@@ -188,11 +188,12 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/technikhil314/www/edit/master/',
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: 'rss',
+            type: 'all',
             copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta.`
           },
           editUrl: 'https://github.com/technikhil314/www/edit/master/',
