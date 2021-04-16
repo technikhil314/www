@@ -1,6 +1,7 @@
 /* stylelint-disable docusaurus/copyright-header */
 @import "dark.css";
 @import "gittalk-override.css";
+
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -74,12 +75,6 @@ body {
   overflow: hidden;
 }
 
-@media screen and (min-width: 1000px) {
-  .heroBanner {
-    padding: 4rem 0;
-  }
-}
-
 .features {
   display: flex;
   align-items: center;
@@ -94,4 +89,10 @@ body {
 
 .button.button--secondary.button--outline:not(.button--active):not(:hover) {
   color: var(--ifm-color-gray-900);
+}
+
+@media screen and (min-width: 1000px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
 }
