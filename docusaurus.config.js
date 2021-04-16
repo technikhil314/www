@@ -197,6 +197,7 @@ module.exports = {
             copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta.`
           },
           editUrl: 'https://github.com/technikhil314/www/edit/master/',
+          blogPostComponent: require.resolve("./src/components/blogPostPage.jsx"),
         },
         theme: {
           customCss: [
