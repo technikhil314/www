@@ -20,6 +20,7 @@
     "clsx": "^1.1.1",
     "docusaurus-gtm-plugin": "^0.0.2",
     "docusaurus2-dotenv": "^1.4.0",
+    "gitalk": "^1.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-three-fiber": "^5.3.19",

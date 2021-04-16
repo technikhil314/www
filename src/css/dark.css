@@ -3,3 +3,8 @@ html[data-theme="dark"] .footer__logo {
   filter: invert(1) hue-rotate(180deg);
   opacity: 0.7;
 }
+
+html[data-theme="dark"] .gt-container .gt-header-comment,
+html[data-theme="dark"] .gt-container .gt-comment-content {
+  filter: invert(1) hue-rotate(180deg);
+}

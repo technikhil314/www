@@ -197,7 +197,10 @@ module.exports = {
           }
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css')
+          customCss: [
+            require.resolve('./node_modules/gitalk/dist/gitalk.css'),
+            require.resolve('./src/css/custom.css'),
+          ]
         }
       }
     ]
