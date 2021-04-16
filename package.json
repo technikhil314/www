@@ -8,7 +8,8 @@
     "build": "rimraf build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "serve": "docusaurus serve"
+    "serve": "docusaurus serve",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.70",
@@ -49,10 +50,5 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^5.1.1"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
