@@ -15,7 +15,10 @@ export default function GitTalkComments() {
                 repo: "www",
                 owner: "technikhil314",
                 admin: ["technikhil314"],
-                id: location.pathname.split("blog/")[1].substring(0, 40),
+                id: location.pathname
+                  .split("blog/")[1]
+                  .substring(0, 40)
+                  .replace(/\//g, ""),
                 distractionFreeMode: false,
               }}
             />
