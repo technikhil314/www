@@ -10,8 +10,6 @@ export default function GitTalkComments() {
           <div className="gt-container">
             <GitalkComponent
               options={{
-                clientID: "6a7ee7fe7d7cae5cd831",
-                clientSecret: "eeab5ad001eef8695cb95b3c5a487a05508045e9",
                 repo: "www",
                 owner: "technikhil314",
                 admin: ["technikhil314"],
