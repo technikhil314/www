@@ -23,13 +23,14 @@ It was a simple use case that combines user experience and accessibilty (using f
 Many of us sign up/sign in at least once a week and I personally am habitual of filling in the HTML form just by using keyboard only. And almost every sign up prompts you for accepting their terms and condition.
 And in almost every case it looks like this
 
-export const CodePen = ({codePenEmbedUrl}) => (<iframe height="500" width="100%" scrolling="no" title="" src={`${codePenEmbedUrl}?height=265&theme-id=dark&default-tab=result`} frameborder="no" allowtransparency="true" allowfullscreen="true"></iframe>);
+import { CodePen } from "../src/components/codePen";
 
 <CodePen codePenEmbedUrl="https://codepen.io/nikhil-001mehta/embed/preview/RwrZyXz"></CodePen>
 
-<br/>
-<br/>
-So if you try to fill navigate and fill the form with just keyboard (using tab key to navigate between inputs/buttons/checkboxes)
+<br />
+<br />
+So if you try to fill navigate and fill the form with just keyboard (using tab
+key to navigate between inputs/buttons/checkboxes)
 <br />
 <br />
 Following gif shows how the tabindex is working on each tab press.
@@ -48,15 +49,21 @@ So how can we solve it now?
 ### Possible solutions
 
 <ol>
-    <li>
-        Move checkbox after the I accept the terms and conditions text But then that breaks the reading flow on LTR languages
-    </li>
-    <li>
-        Add javascript to manage tabindex and focuses based on which input is focused right now some thing which I did <a href="https://codepen.io/nikhil-001mehta/pen/PoZKaBW">here</a>
-    </li>
-    <li>
-        Is there a simple solution? Yes indeed <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order">order</a> property comes to our rescue. but How?
-    </li>
+  <li>
+    Move checkbox after the I accept the terms and conditions text But then that
+    breaks the reading flow on LTR languages
+  </li>
+  <li>
+    Add javascript to manage tabindex and focuses based on which input is
+    focused right now some thing which I did{" "}
+    <a href="https://codepen.io/nikhil-001mehta/pen/PoZKaBW">here</a>
+  </li>
+  <li>
+    Is there a simple solution? Yes indeed{" "}
+    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex</a>{" "}
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order">order</a>{" "}
+    property comes to our rescue. but How?
+  </li>
 </ol>
 
 Lets look at HTML first
@@ -125,13 +132,13 @@ Please comment down below if you have any suggestions/queries.
 import GitalkComponent from "gitalk/dist/gitalk-component";
 
 <GitalkComponent
-options={{
+  options={{
     clientID: "6a7ee7fe7d7cae5cd831",
     clientSecret: "eeab5ad001eef8695cb95b3c5a487a05508045e9",
     repo: "www",
     owner: "technikhil314",
     admin: ["technikhil314"],
-    id: location.pathname.substring(0,40),
+    id: location.pathname.substring(0, 40),
     distractionFreeMode: false,
   }}
 />
