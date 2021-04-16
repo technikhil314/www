@@ -1,16 +1,18 @@
-import React from "react";
-import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
 import BlogPostPaginator from "@theme/BlogPostPaginator";
 import BlogSidebar from "@theme/BlogSidebar";
-import TOC from "@theme/TOC";
 import IconEdit from "@theme/IconEdit";
-import GitTalkComments from "./gitTalkComments";
+import Layout from "@theme/Layout";
+import TOC from "@theme/TOC";
+import React from "react";
+import Comments from "./comments";
+
 function BlogPostPage(props) {
   const { content: BlogPostContents, sidebar } = props;
   const { frontMatter, metadata } = BlogPostContents;
   const { title, description, nextItem, prevItem, editUrl } = metadata;
   const { hide_table_of_contents: hideTableOfContents } = frontMatter;
+
   return (
     <Layout
       title={title}
@@ -23,7 +25,7 @@ function BlogPostPage(props) {
             <div className="col col--2">
               <BlogSidebar sidebar={sidebar} />
             </div>
-            <main className="col col--8">
+            <main className="col col--8 position--relative">
               <BlogPostItem
                 frontMatter={frontMatter}
                 metadata={metadata}
@@ -39,12 +41,12 @@ function BlogPostPage(props) {
                   </a>
                 )}
               </div>
-              <GitTalkComments />
               {(nextItem || prevItem) && (
                 <div className="margin-vert--xl">
                   <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
                 </div>
               )}
+              <Comments />
             </main>
             {!hideTableOfContents && BlogPostContents.toc && (
               <div className="col col--2">
