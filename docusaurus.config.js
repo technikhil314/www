@@ -204,6 +204,11 @@ module.exports = {
             require.resolve('./node_modules/gitalk/dist/gitalk.css'),
             require.resolve('./src/css/custom.css'),
           ]
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          trailingSlash: false,
         }
       }
     ]
