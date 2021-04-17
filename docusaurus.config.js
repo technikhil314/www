@@ -65,7 +65,7 @@ module.exports = {
           label: 'Buy me a coffee',
           position: 'right'
         },
-        { href: `${process.env.HOST_NAME}/Nikhil%20Mehta.pdf`, label: 'My resume', position: 'right' },
+        { href: `https://technikhil314.netlify.app/Nikhil_Mehta.pdf`, label: 'My resume', position: 'right' },
       ],
     },
     footer: {
