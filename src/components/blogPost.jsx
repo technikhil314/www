@@ -8,7 +8,7 @@ import BackTo from "./backTo";
 import Comments from "./comments";
 
 function BlogPostPage(props) {
-  const { content: BlogPostContents, sidebar } = props;
+  const { content: BlogPostContents } = props;
   const { frontMatter, metadata } = BlogPostContents;
   const { title, description, nextItem, prevItem, editUrl } = metadata;
   const { hide_table_of_contents: hideTableOfContents } = frontMatter;
