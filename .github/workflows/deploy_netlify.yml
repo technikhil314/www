@@ -27,6 +27,7 @@ jobs:
 
       - name: Build
         run: |
+          export HOST_NAME=https://technikhil314.netlify.app
           echo HOST_NAME=https://technikhil314.netlify.app > .env
           yarn build
           cp netlify.toml build
