@@ -12,10 +12,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.70",
-    "@docusaurus/plugin-google-gtag": "^2.0.0-alpha.72",
-    "@docusaurus/plugin-pwa": "^2.0.0-alpha.70",
-    "@docusaurus/preset-classic": "*2.0.0-alpha.70",
+    "@docusaurus/core": "^2.0.0-alpha.73",
+    "@docusaurus/plugin-google-gtag": "^2.0.0-alpha.73",
+    "@docusaurus/plugin-pwa": "^2.0.0-alpha.73",
+    "@docusaurus/preset-classic": "*2.0.0-alpha.73",
     "@mdx-js/react": "^1.5.8",
     "@react-three/drei": "^3.8.6",
     "clsx": "^1.1.1",
