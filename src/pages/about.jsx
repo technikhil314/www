@@ -8,7 +8,7 @@ import pageStyles from "./about.module.css";
 export default function About() {
   return (
     <Layout>
-      <PageHead title={`About me`} description={"About the author"} />
+      <PageHead title={`About Nikhil Mehta`} description={"About the author"} />
       <section className={`container ${pageStyles.about}`}>
         <h1 className="text--center">Hi! I am Nikhil</h1>
         <p className="text--center">

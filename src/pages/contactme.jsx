@@ -38,7 +38,7 @@ export default function ContactMe() {
     <Layout>
       <PageHead
         title={`Contact me`}
-        description={"technikhil314 contact information"}
+        description={"Get in touch with Nikhil Mehta"}
       />
       <header className={clsx("hero hero--primary", "heroBanner")}>
         <div className="container">
