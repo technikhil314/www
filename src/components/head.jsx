@@ -28,7 +28,7 @@ export default function PageHead({ title, description = null }) {
       <link rel="apple-touch-icon" sizes="180x180" href="/180x180.png" />
       <meta name="twitter:title" content={title} />
       <meta name="og:title" property="og:title" content={title} />
-      <meta property="og:type" name="og:description" content="website" />
+      <meta property="og:type" name="og:type" content="website" />
       <meta name="description" content={desc} />
       <meta property="og:description" name="og:description" content={desc} />
       <meta name="twitter:description" content={desc} />
