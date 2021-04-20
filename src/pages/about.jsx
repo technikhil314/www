@@ -2,20 +2,43 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Layout from "@theme/Layout";
 import React from "react";
+import GitHubCalendar from "react-github-calendar";
+import ReactTooltip from "react-tooltip";
 import ExternalLink from "../components/externalLink";
 import PageHead from "../components/head";
 import pageStyles from "./about.module.css";
+
+const exampleTheme = {
+  background: "transparent",
+  text: "#000",
+  grade4: "hsl(338, 78%, 30%)",
+  grade3: "hsl(338, 78%, 44%)",
+  grade2: "hsl(338, 78%, 58%)",
+  grade1: "hsl(338, 78%, 72%)",
+  grade0: "#eee",
+};
 export default function About() {
   return (
     <Layout>
       <PageHead title={`About Nikhil Mehta`} description={"About the author"} />
       <section className={`container ${pageStyles.about}`}>
         <h1 className="text--center">Hi! I am Nikhil</h1>
+        <div className="mx-auto text--center">
+          <h5 className="text--center margin-bottom--none">
+            My github contributions
+          </h5>
+          <GitHubCalendar
+            username="technikhil314"
+            theme={exampleTheme}
+            blockSize={15}
+            blockMargin={3}
+          >
+            <ReactTooltip delayShow={50} html />
+          </GitHubCalendar>
+        </div>
         <p className="text--center">
-          <small>
-            When some one wants to know me. They mostly ask following set of
-            questions.
-          </small>
+          When some one wants to know me. They mostly ask following set of
+          questions.
         </p>
         <article className="padding-bottom--md">
           <header>
