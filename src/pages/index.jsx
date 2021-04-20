@@ -63,6 +63,14 @@ export default function Portfolio() {
             I primarily work in web technologies and nodejs. <br /> I am fond of
             CSS, command line tools and web + media integration.
           </p>
+          <div className="margin-vert--lg">
+            <a
+              href="https://www.getrevue.co/profile/technikhil314"
+              class="button button--info button--lg"
+            >
+              Subscribe to my newsletter
+            </a>
+          </div>
         </div>
       </header>
     </Layout>

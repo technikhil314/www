@@ -50,11 +50,12 @@
 
   .heroContainer {
     z-index: 1;
+    margin-bottom: 20px;
   }
   .heroContainer > p {
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px hsl(0deg 0% 0% / 10%);
     max-width: 70%;
-    margin: 0 auto 20px;
+    margin: 0 auto;
   }
 }
