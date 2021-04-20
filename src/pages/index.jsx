@@ -63,13 +63,16 @@ export default function Portfolio() {
             I primarily work in web technologies and nodejs. <br /> I am fond of
             CSS, command line tools and web + media integration.
           </p>
-          <div className="margin-vert--lg">
-            <a
-              href="https://www.getrevue.co/profile/technikhil314"
-              class="button button--info button--lg"
+          <div className="margin-vert--md">
+            <button
+              onClick={() =>
+                (window.location.href =
+                  "https://www.getrevue.co/profile/technikhil314")
+              }
+              className={`${pageStyles.subscribeButton} button button--primary button--lg item shadow--lw`}
             >
               Subscribe to my newsletter
-            </a>
+            </button>
           </div>
         </div>
       </header>

@@ -56,10 +56,10 @@ module.exports = {
           items: myopenSourceWork
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        { href: 'https://www.getrevue.co/profile/technikhil314', label: 'Newsletter', position: "left" },
         {
           to: 'about', label: 'About me', position: 'right'
         },
-        { href: 'https://www.getrevue.co/profile/technikhil314', label: 'Subscribe', position: 'right' },
         { to: 'contactme', label: 'Contact me', position: 'right' },
         { href: `${process.env.HOST_NAME}/Nikhil_Mehta.pdf`, label: 'My resume', position: 'right' },
       ],
@@ -108,7 +108,7 @@ module.exports = {
               to: '/about',
             },
             {
-              label: 'Subscribe',
+              label: 'Newsletter',
               href: 'https://www.getrevue.co/profile/technikhil314',
             },
             {
