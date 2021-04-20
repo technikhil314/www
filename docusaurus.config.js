@@ -59,12 +59,8 @@ module.exports = {
         {
           to: 'about', label: 'About me', position: 'right'
         },
+        { href: 'https://www.getrevue.co/profile/technikhil314', label: 'Subscribe', position: 'right' },
         { to: 'contactme', label: 'Contact me', position: 'right' },
-        {
-          href: 'https://www.buymeacoffee.com/technikhil314',
-          label: 'Buy me a coffee',
-          position: 'right'
-        },
         { href: `${process.env.HOST_NAME}/Nikhil_Mehta.pdf`, label: 'My resume', position: 'right' },
       ],
     },
@@ -101,33 +97,37 @@ module.exports = {
           ],
         },
         {
-          title: 'More',
+          title: 'Navigation',
           items: [
             {
               label: 'Blog',
               to: 'blog',
             },
             {
-              label: 'My Music Work',
-              href: 'https://www.youtube.com/user/nikhil7868',
+              label: 'About me',
+              to: '/about',
             },
             {
-              label: 'My Poems',
-              href: 'http://kavi-nikhil.blogspot.com',
+              label: 'Subscribe',
+              href: 'https://www.getrevue.co/profile/technikhil314',
             },
             {
-              label: 'Download my resume',
-              href: '/Nikhil%20Mehta.pdf',
+              label: 'Contact me',
+              href: '/mailto:nikhil.001mehta@gmail.com'
             }
           ],
         },
         {
-          title: 'Contact me',
+          title: 'Sponsor me',
           items: [
             {
-              label: 'Email',
-              href: 'mailto:nikhil.001mehta@gmail.com',
+              href: 'https://www.buymeacoffee.com/technikhil314',
+              label: 'Buy me a coffee',
             },
+            {
+              href: "https://paypal.me/technikhil314",
+              label: "PayPal",
+            }
           ],
         },
       ],

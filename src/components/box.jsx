@@ -118,7 +118,7 @@ export function Box() {
     <>
       <Canvas
         style={{
-          height: "50vh",
+          height: "30vh",
           width: "100vw",
           marginLeft: "calc(-50vw + 50%)",
         }}

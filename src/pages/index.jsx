@@ -59,6 +59,10 @@ export default function Portfolio() {
               ></span>
             </p>
           </div>
+          <p>
+            I primarily work in web technologies and nodejs. <br /> I am fond of
+            CSS, command line tools and web + media integration.
+          </p>
         </div>
       </header>
     </Layout>
