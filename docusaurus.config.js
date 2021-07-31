@@ -17,6 +17,7 @@ module.exports = {
   tagline: "Nikhil Mehta's Personal website / portfolio / blog.",
   url: 'https://technikhil314.netlify.app',
   baseUrl: '/',
+  trailingSlash: false,
   favicon: '/favicon.ico',
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
@@ -32,7 +33,6 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark'
     },
-    sidebarCollapsible: true,
     hideableSidebar: true,
     announcementBar: {
       id: 'support_us', // Any value that will identify this message.
@@ -198,6 +198,8 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/technikhil314/www/edit/master/',
+          sidebarCollapsible: true,
+          sidebarCollapsed: false
         },
         blog: {
           showReadingTime: true,
@@ -216,8 +218,7 @@ module.exports = {
         },
         sitemap: {
           changefreq: 'weekly',
-          priority: 0.5,
-          trailingSlash: false,
+          priority: 0.5
         }
       }
     ]
