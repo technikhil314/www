@@ -58,6 +58,11 @@ module.exports = {
         { to: 'blog', label: 'Blog', position: 'left' },
         { href: 'https://www.getrevue.co/profile/technikhil314', label: 'Newsletter', position: "left" },
         {
+          label: 'Youtube',
+          href: 'https://www.youtube.com/channel/UCgwTt4Vw5Azo8yCr2HUvbYQ',
+          position: 'right'
+        },
+        {
           to: 'about', label: 'About me', position: 'right'
         },
         { to: 'contactme', label: 'Contact me', position: 'right' },
@@ -110,6 +115,10 @@ module.exports = {
             {
               label: 'Newsletter',
               href: 'https://www.getrevue.co/profile/technikhil314',
+            },
+            {
+              label: 'Youtube',
+              href: 'https://www.youtube.com/channel/UCgwTt4Vw5Azo8yCr2HUvbYQ',
             },
             {
               label: 'Contact me',
