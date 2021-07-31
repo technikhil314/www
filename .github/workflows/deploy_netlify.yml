@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Dependancies
         run: |
-          yarn --frozen-lockfile
+          npm ci
 
       - name: Run static analysis
         run: |
@@ -29,7 +29,7 @@ jobs:
         run: |
           export HOST_NAME=https://technikhil314.netlify.app
           echo HOST_NAME=https://technikhil314.netlify.app > .env
-          yarn build
+          npm run build
           cp netlify.toml build
 
       - name: Install netlify-cli
