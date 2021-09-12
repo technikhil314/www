@@ -10,6 +10,9 @@ const myopenSourceWork = [{
 }, {
   href: "https://openrtc.vercel.app/",
   label: "OpenRTC",
+}, {
+  href: "https://verifyemail.vercel.app/",
+  label: "Verify email - Open API"
 }];
 
 module.exports = {
