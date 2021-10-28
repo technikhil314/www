@@ -19,6 +19,11 @@
     "display": "standalone",
     "scope": "/",
     "theme_color": "#58C3A0",
+    "url_handlers": [
+        {
+            "origin": "https://technikhil314.netlify.app"
+        }
+    ],
     "shortcuts": [
         {
             "name": "Blog",
