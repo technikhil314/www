@@ -13,6 +13,9 @@ const myopenSourceWork = [{
 }, {
   href: "https://verifyemail.vercel.app/",
   label: "Verify email - Open API"
+}, {
+  href: "https://diffviewer.vercel.app/",
+  label: "Diff viewer"
 }];
 
 module.exports = {
