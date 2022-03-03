@@ -9,7 +9,7 @@ import Comments from "./comments";
 
 function BlogPostPage(props) {
   const { content: BlogPostContents } = props;
-  const { frontMatter, metadata } = BlogPostContents;
+  const { frontMatter, metadata, ...restContent } = BlogPostContents;
   const { title, description, nextItem, prevItem, editUrl } = metadata;
   const { hide_table_of_contents: hideTableOfContents } = frontMatter;
 
@@ -28,6 +28,7 @@ function BlogPostPage(props) {
                 frontMatter={frontMatter}
                 metadata={metadata}
                 isBlogPostPage
+                {...restContent}
               >
                 <BlogPostContents />
               </BlogPostItem>

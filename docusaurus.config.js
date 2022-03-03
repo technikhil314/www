@@ -30,12 +30,6 @@ module.exports = {
   onBrokenLinks: 'warn',
   onDuplicateRoutes: 'error',
   themeConfig: {
-    googleAnalytics: {
-      trackingID: 'UA-125781207-2',
-    },
-    gtag: {
-      trackingID: 'GTM-5HBRZXW',
-    },
     colorMode: {
       defaultMode: 'dark'
     },
@@ -151,6 +145,7 @@ module.exports = {
   },
   plugins: [
     'docusaurus2-dotenv',
+    "@docusaurus/plugin-debug",
     [
       '@docusaurus/plugin-pwa',
       {
@@ -190,17 +185,20 @@ module.exports = {
         ],
       },
     ],
-    [
-      require.resolve('docusaurus-gtm-plugin'),
-      {
-        id: "GTM-5HBRZXW"
-      }
-    ]
   ],
   presets: [
     [
       '@docusaurus/preset-classic',
       {
+        // debug: true,
+        gtag: {
+          trackingID: 'GTM-5HBRZXW',
+          anonymizeIP: true,
+        },
+        googleAnalytics: {
+          trackingID: 'UA-125781207-2',
+          anonymizeIP: true,
+        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/technikhil314/www/edit/master/',

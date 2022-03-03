@@ -1,9 +1,9 @@
-import useThemeContext from "@theme/hooks/useThemeContext";
+import { useColorMode } from "@docusaurus/theme-common";
 import React, { useEffect, useRef } from "react";
 
 export default function Comments() {
   const blogWrapperRef = useRef();
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useColorMode();
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://utteranc.es/client.js";
