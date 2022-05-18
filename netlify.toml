@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/resume"
+  to = "/Nikhil_Mehta.pdf"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
