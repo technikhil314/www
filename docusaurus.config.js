@@ -35,9 +35,9 @@ module.exports = {
     },
     hideableSidebar: true,
     announcementBar: {
-      id: 'support_us', // Any value that will identify this message.
+      id: 'currently_working', // Any value that will identify this message.
       content:
-        '<p class="padding-left--sm margin--none text--center">If you like my work. Please star the repo. Also consider <a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/paypalme/technikhil314">sponsoring</a></p>',
+        'Currently I am building a no server & privacy focused <a href="https://diffviewer.vercel.app/">text diff viewer</a>. Please check it out <a href="https://github.com/technikhil314/offline-diff-viewer/stargazers">star</a> & share it. You can find the motivation behind this tool <a href="https://github.com/technikhil314/offline-diff-viewer#motivation">here<a/>',
       backgroundColor: '#fafbfc', // Defaults to `#fff`.
       textColor: '#091E42', // Defaults to `#000`.
       isCloseable: true, // Defaults to `true`.
@@ -145,7 +145,6 @@ module.exports = {
   },
   plugins: [
     'docusaurus2-dotenv',
-    "@docusaurus/plugin-debug",
     [
       '@docusaurus/plugin-pwa',
       {
