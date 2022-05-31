@@ -33,7 +33,6 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark'
     },
-    hideableSidebar: true,
     announcementBar: {
       id: 'currently_working', // Any value that will identify this message.
       content:
