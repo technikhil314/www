@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Dependancies
         run: |
-          npm ci
+          npm ci --legacy-peer-deps
 
       - name: Run static analysis
         run: |
