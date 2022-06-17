@@ -148,7 +148,7 @@ export default function DateRangePicker() {
             </li>
             <ol type="1">
               {developerTools.map((x) => (
-                <li className="padding-bottom--sm">
+                <li className="padding-bottom--sm" key={x.name}>
                   <span>
                     <a href={x.link} className={usesStyles.link}>
                       {x.name}
@@ -165,7 +165,7 @@ export default function DateRangePicker() {
             </li>
             <ol>
               {commandLineTools.map((x) => (
-                <li className="padding-bottom--sm">
+                <li className="padding-bottom--sm" key={x.name}>
                   <span>
                     <a href={x.link} className={usesStyles.link}>
                       {x.name}
@@ -182,7 +182,7 @@ export default function DateRangePicker() {
             </li>
             <ol>
               {productivityTools.map((x) => (
-                <li className="padding-bottom--sm">
+                <li className="padding-bottom--sm" key={x.name}>
                   <span>
                     <a href={x.link} className={usesStyles.link}>
                       {x.name}
