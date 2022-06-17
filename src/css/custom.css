@@ -120,3 +120,15 @@ body {
 .align-items-center {
   align-items: center;
 }
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-position: under;
+  text-decoration-style: dashed;
+}
+
+a:focus {
+  border: 1ps solid currentColor;
+  border-style: dotted;
+}

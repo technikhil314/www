@@ -62,6 +62,9 @@ module.exports = {
           position: 'right'
         },
         {
+          to: 'uses', label: 'Uses', position: 'right'
+        },
+        {
           to: 'about', label: 'About me', position: 'right'
         },
         { to: 'contactme', label: 'Contact me', position: 'right' },

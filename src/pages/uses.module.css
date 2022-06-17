@@ -1,0 +1,14 @@
+.link {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-line: underline;
+  text-underline-position: under;
+}
+
+.link:hover {
+  text-decoration-style: wavy;
+}
+
+ul ol {
+  list-style-type: auto;
+}
