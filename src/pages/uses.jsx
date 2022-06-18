@@ -22,9 +22,29 @@ const developerTools = [
     link: "https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH",
   },
   {
+    name: "oh-my-zsh",
+    for: "the zsh plugin and customization framework",
+    link: "https://ohmyz.sh/",
+  },
+  {
+    name: "starship",
+    for: "a cross shell fast shell prompt",
+    link: "https://starship.rs/",
+  },
+  {
     name: "nush",
     for: "another shell (trying out)",
     link: "https://github.com/nushell/nushell",
+  },
+  {
+    name: "vscode (stable version)",
+    for: "The primary editor for all development related tasks",
+    link: "https://code.visualstudio.com/",
+  },
+  {
+    name: "git",
+    for: "the de-facto source control management tool",
+    link: "https://git-scm.com/",
   },
 ];
 const commandLineTools = [
@@ -32,6 +52,11 @@ const commandLineTools = [
     name: "imagemagick",
     for: "Provides the <code>convert</code>/<code>magick</code> command for converting images from one format to another",
     link: "https://imagemagick.org/script/convert.php",
+  },
+  {
+    name: "imagemin-cli",
+    for: "to optimize images for web development optimization purpose",
+    link: "https://github.com/imagemin/imagemin-cli",
   },
   {
     name: "tig",
@@ -43,7 +68,33 @@ const commandLineTools = [
     for: "A pluggable and awesome all in one version manager for nodejs, java, golang and many more",
     link: "https://asdf-vm.com/",
   },
+  {
+    name: "jwt",
+    for: "encoding and decoding jwt tokens right in your terminal",
+    link: "https://github.com/mike-engel/jwt-cli",
+  },
+  {
+    name: "acsiinema",
+    for: "for recording terminals as lightweight casts",
+    link: "https://asciinema.org/",
+  },
+  {
+    name: "svg-term-cli",
+    for: "to convert asciicasts to animated svgs",
+    link: "https://github.com/marionebl/svg-term-cli",
+  },
+  {
+    name: "terminalizer",
+    for: "a command line tool to record terminal session and render them as gif",
+    link: "https://github.com/faressoft/terminalizer",
+  },
+  {
+    name: "curl",
+    for: "the de-facto command to HTTP related things",
+    link: "https://curl.se/",
+  },
 ];
+
 const productivityTools = [
   {
     name: "espanso",
@@ -122,6 +173,62 @@ const productivityTools = [
     link: "https://openrtc.vercel.app/",
   },
 ];
+const others = [
+  {
+    name: "vlc media player",
+    for: "the best in class media player",
+    link: "https://www.videolan.org/",
+  },
+  {
+    name: "discord",
+    for: "for community connect and for queries related to specific topics",
+    link: "https://discord.com/",
+  },
+];
+const officialTools = [
+  {
+    name: "slack",
+    for: "official communication channel at organization",
+    link: "https://www.slack.com/",
+  },
+  {
+    name: "microsoft outlook",
+    for: "official email client",
+    link: "https://www.microsoft.com/en-in/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+  },
+  {
+    name: "microsoft team",
+    for: "official conferencing client",
+    link: "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+  },
+];
+const onlineTools = [];
+const chromePlugins = [];
+const zshPlugins = [];
+const vimPlugins = [];
+const electronics = [
+  {
+    name: "Monitor",
+    for: "Lenovo ThinkVision P24h-2L 60.4cms (23.8) QHD Natural Low Blue Light Monitor",
+    link: "https://www.lenovo.com/in/en/accessories-and-monitors/monitors/professional/P24h-2LA19238QP123-8-inch-Monitor-HDMI/p/62B2GAR1WW",
+  },
+  {
+    name: "Laptop",
+    for: "MacBook Pro (16-inch, 2019) 2.4 GHz 8-Core Intel Core i9 64 GB 2667 MHz DDR4 Intel UHD Graphics 630 1536 MB",
+    link: "https://www.apple.com/in/macbook-pro/",
+  },
+  {
+    name: "Headphones",
+    for: "One plus nord buds True wireles headphones",
+    link: "https://www.amazon.in/gp/product/B09ZHPN8W5/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1",
+  },
+  {
+    name: "Mobile",
+    for: "Redmi note 7 pro",
+    link: "https://www.mi.com/in/redmi-note-7-pro/",
+  },
+];
+const otherPhysicals = [];
 export default function DateRangePicker() {
   return (
     <Layout>
@@ -193,6 +300,150 @@ export default function DateRangePicker() {
                 </li>
               ))}
             </ol>
+            <br />
+            <li>
+              <h3>Other tools</h3>
+            </li>
+            <ol type="1">
+              {others.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
+            <li>
+              <h3>Official Tools</h3>
+            </li>
+            <ol type="1">
+              {officialTools.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
+            <li>
+              <h3>Chrome Extentions</h3>
+            </li>
+            <ol type="1">
+              {chromePlugins.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
+            <li>
+              <h3>Vim Plugins</h3>
+            </li>
+            <ol type="1">
+              {vimPlugins.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
+            <li>
+              <h3>Zsh Plugins</h3>
+            </li>
+            <ol type="1">
+              {zshPlugins.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
+            <li>
+              <h3>Online tools</h3>
+            </li>
+            <ol type="1">
+              {onlineTools.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+          </ul>
+        </article>
+        <br />
+        <article>
+          <header>
+            <h2>Hardwares</h2>
+          </header>
+          <ul>
+            <li>
+              <h3>Electronics</h3>
+            </li>
+            <ol type="1">
+              {electronics.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
+            <li>
+              <h3>Other physicals</h3>
+            </li>
+            <ol type="1">
+              {otherPhysicals.map((x) => (
+                <li className="padding-bottom--sm" key={x.name}>
+                  <span>
+                    <a href={x.link} className={usesStyles.link}>
+                      {x.name}
+                    </a>
+                  </span>
+                  <span>&nbsp;-&nbsp;</span>
+                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                </li>
+              ))}
+            </ol>
+            <br />
           </ul>
         </article>
       </main>
