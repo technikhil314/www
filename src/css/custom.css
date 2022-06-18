@@ -132,3 +132,9 @@ a:focus {
   border: 1ps solid currentColor;
   border-style: dotted;
 }
+
+.navbar__link--active {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-position: under;
+}
