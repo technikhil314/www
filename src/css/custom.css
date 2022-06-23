@@ -15,10 +15,8 @@
 body,
 html {
   scrollbar-width: 5px;
-}
-
-body {
   scroll-padding-top: 88px !important;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

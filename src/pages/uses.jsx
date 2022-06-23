@@ -4,6 +4,7 @@ import PageHead from "../components/head";
 import styles from "./commonStyles.module.css";
 import React from "react";
 import usesStyles from "./uses.module.css";
+import { camelToSentenseCase } from "../helpers/utils";
 
 const developerTools = [
   {
@@ -175,6 +176,11 @@ const productivityTools = [
 ];
 const others = [
   {
+    name: "jetbrains mono Font (with ligatures support)",
+    for: "For all coding purposes",
+    link: "https://www.nerdfonts.com",
+  },
+  {
     name: "vlc media player",
     for: "the best in class media player",
     link: "https://www.videolan.org/",
@@ -203,13 +209,19 @@ const officialTools = [
   },
 ];
 const onlineTools = [];
-const chromePlugins = [];
+const chromePlugins = [
+  {
+    name: "",
+    for: "",
+    link: "",
+  },
+];
 const zshPlugins = [];
 const vimPlugins = [];
 const electronics = [
   {
     name: "Monitor",
-    for: "Lenovo ThinkVision P24h-2L 60.4cms (23.8) QHD Natural Low Blue Light Monitor",
+    for: "Lenovo ThinkVision P24h-2L 60.4cms (23.8) QHD Natural Low Blue Light Monitor with USB C support and daisy chain support",
     link: "https://www.lenovo.com/in/en/accessories-and-monitors/monitors/professional/P24h-2LA19238QP123-8-inch-Monitor-HDMI/p/62B2GAR1WW",
   },
   {
@@ -227,8 +239,36 @@ const electronics = [
     for: "Redmi note 7 pro",
     link: "https://www.mi.com/in/redmi-note-7-pro/",
   },
+  {
+    name: "Keyboard",
+    for: "Redgear invador MK881 Mechanical Wired Gaming Keyboard with Kailh Brown switches",
+    link: "",
+  },
+  {
+    name: "Dell type C adaptor for Mac book pro",
+    for: "For connecting monitor and other USB A devices to Mac Book pro",
+    link: "",
+  },
 ];
 const otherPhysicals = [];
+const vsCodeExtensions = [];
+
+const softwares = {
+  developerTools,
+  commandLineTools,
+  productivityTools,
+  others,
+  officialTools,
+  vsCodeExtensions,
+  chromePlugins,
+  vimPlugins,
+  zshPlugins,
+  onlineTools,
+};
+const hardwares = {
+  electronics,
+  otherPhysicals,
+};
 export default function DateRangePicker() {
   return (
     <Layout>
@@ -250,158 +290,29 @@ export default function DateRangePicker() {
             <h2>Softwares</h2>
           </header>
           <ul>
-            <li>
-              <h3>Developer tools</h3>
-            </li>
-            <ol type="1">
-              {developerTools.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+            {Object.keys(softwares).map((category) => (
+              <React.Fragment key={category}>
+                <li>
+                  <h3>
+                    <a href={`#${category}`}>{camelToSentenseCase(category)}</a>
+                  </h3>
                 </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Commnad line tools</h3>
-            </li>
-            <ol>
-              {commandLineTools.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Productivity tools</h3>
-            </li>
-            <ol>
-              {productivityTools.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Other tools</h3>
-            </li>
-            <ol type="1">
-              {others.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Official Tools</h3>
-            </li>
-            <ol type="1">
-              {officialTools.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Chrome Extentions</h3>
-            </li>
-            <ol type="1">
-              {chromePlugins.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Vim Plugins</h3>
-            </li>
-            <ol type="1">
-              {vimPlugins.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Zsh Plugins</h3>
-            </li>
-            <ol type="1">
-              {zshPlugins.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Online tools</h3>
-            </li>
-            <ol type="1">
-              {onlineTools.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
+                <ol type="1" id={category}>
+                  {softwares[category].map((x) => (
+                    <li className="padding-bottom--sm" key={x.name}>
+                      <span>
+                        <a href={x.link} className={usesStyles.link}>
+                          {x.name}
+                        </a>
+                      </span>
+                      <span>&nbsp;-&nbsp;</span>
+                      <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                    </li>
+                  ))}
+                </ol>
+                <br />
+              </React.Fragment>
+            ))}
           </ul>
         </article>
         <br />
@@ -410,40 +321,29 @@ export default function DateRangePicker() {
             <h2>Hardwares</h2>
           </header>
           <ul>
-            <li>
-              <h3>Electronics</h3>
-            </li>
-            <ol type="1">
-              {electronics.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+            {Object.keys(hardwares).map((category) => (
+              <React.Fragment key={category}>
+                <li>
+                  <h3>
+                    <a href={`#${category}`}>{camelToSentenseCase(category)}</a>
+                  </h3>
                 </li>
-              ))}
-            </ol>
-            <br />
-            <li>
-              <h3>Other physicals</h3>
-            </li>
-            <ol type="1">
-              {otherPhysicals.map((x) => (
-                <li className="padding-bottom--sm" key={x.name}>
-                  <span>
-                    <a href={x.link} className={usesStyles.link}>
-                      {x.name}
-                    </a>
-                  </span>
-                  <span>&nbsp;-&nbsp;</span>
-                  <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
-                </li>
-              ))}
-            </ol>
-            <br />
+                <ol type="1" id={category}>
+                  {hardwares[category].map((x) => (
+                    <li className="padding-bottom--sm" key={x.name}>
+                      <span>
+                        <a href={x.link} className={usesStyles.link}>
+                          {x.name}
+                        </a>
+                      </span>
+                      <span>&nbsp;-&nbsp;</span>
+                      <span dangerouslySetInnerHTML={{ __html: x.for }}></span>
+                    </li>
+                  ))}
+                </ol>
+                <br />
+              </React.Fragment>
+            ))}
           </ul>
         </article>
       </main>
