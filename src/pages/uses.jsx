@@ -230,9 +230,14 @@ const electronics = [
     link: "https://www.apple.com/in/macbook-pro/",
   },
   {
+    name: "Mouse",
+    for: "Apple magic mouse 2",
+    link: "https://www.amazon.in/Apple-Magic-MLA02ZM-Mouse-White/dp/B016UPAVDE?&_encoding=UTF8&tag=technikhil314-21&linkCode=ur2&linkId=0d94105723d8904ea3e25221d48d720f&camp=3638&creative=24630",
+  },
+  {
     name: "Headphones",
     for: "One plus nord buds True wireles headphones",
-    link: "https://www.amazon.in/gp/product/B09ZHPN8W5/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1",
+    link: "https://www.amazon.in/gp/product/B09ZHPN8W5/?&_encoding=UTF8&tag=technikhil314-21&linkCode=ur2&linkId=7265cf0cf89eeccbe92538ae47a1cf8a&camp=3638&creative=24630",
   },
   {
     name: "Mobile",
@@ -242,15 +247,26 @@ const electronics = [
   {
     name: "Keyboard",
     for: "Redgear invador MK881 Mechanical Wired Gaming Keyboard with Kailh Brown switches",
-    link: "",
+    link: "https://www.amazon.in/gp/product/B07989JYRS/?&_encoding=UTF8&tag=technikhil314-21&linkCode=ur2&linkId=dcf2a9a7e963973999e3276ed00b5aae&camp=3638&creative=24630",
   },
   {
     name: "Dell type C adaptor for Mac book pro",
     for: "For connecting monitor and other USB A devices to Mac Book pro",
-    link: "",
+    link: "https://www.amazon.in/Dell-1960034-Da200-USB-C-Multi-Adapter/dp/B012DT6KW2?&_encoding=UTF8&tag=technikhil314-21&linkCode=ur2&linkId=94d2526eef2d1fb35155fb10a3f6d616&camp=3638&creative=24630",
   },
 ];
-const otherPhysicals = [];
+const otherPhysicals = [
+  {
+    name: "Lapcare laptop cooling pad",
+    for: "For cooling my intel mac",
+    link: "https://www.amazon.in/Lapcare-ChillMate-DCX-A101-Laptop-Cooler/dp/B074C8C6F4?&_encoding=UTF8&tag=technikhil314-21&linkCode=ur2&linkId=3c83f2ef0135918dceab2d81edd853f7&camp=3638&creative=24630",
+  },
+  {
+    name: "HP v236w 64GB USB 2.0 Pen Drive",
+    for: "USB drive",
+    link: "https://www.amazon.in/gp/product/B01L8ZNWN2?&_encoding=UTF8&tag=technikhil314-21&linkCode=ur2&linkId=3f1f6c3e1712a4b5aba58d8131c1cbb8&camp=3638&creative=24630",
+  },
+];
 const vsCodeExtensions = [];
 
 const softwares = {
