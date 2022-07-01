@@ -158,6 +158,17 @@ export default function About() {
             it forward over email.
           </p>
         </article>
+        <article className="padding-bottom--md">
+          <header>
+            <h3 className="text--primary">
+              What all softwares/hardwares do you use?
+            </h3>
+          </header>
+          <p>
+            You can find most of the things are use on{" "}
+            <Link to={useBaseUrl("uses")}>this page</Link>.
+          </p>
+        </article>
       </section>
     </Layout>
   );

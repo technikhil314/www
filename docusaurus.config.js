@@ -1,4 +1,4 @@
-const myopenSourceWork = [{
+const myopenSourceWorkItems = [{
   to: "autobadger",
   label: "Auto Badger",
 }, {
@@ -17,6 +17,44 @@ const myopenSourceWork = [{
   href: "https://diffviewer.vercel.app/",
   label: "Diff viewer"
 }];
+
+const sponsorMeItems = [
+  {
+    href: 'https://www.buymeacoffee.com/technikhil314',
+    label: 'Buy me a coffee',
+  },
+  {
+    href: "https://paypal.me/technikhil314",
+    label: "PayPal",
+  },
+  {
+    href: "https://github.com/sponsors/technikhil314",
+    label: "Github"
+  }
+]
+
+const followMeItems = [
+  {
+    label: 'Github',
+    href: 'https://github.com/technikhil314',
+  },
+  {
+    label: 'Stack Overflow',
+    href: 'https://stackoverflow.com/users/2503826/nikhil-mehta',
+  },
+  {
+    label: 'Twitter',
+    href: 'https://twitter.com/technikhil314',
+  },
+  {
+    label: 'Linkedin',
+    href: 'https://www.linkedin.com/in/technikhil314/',
+  },
+  {
+    label: 'Youtube',
+    href: 'https://www.youtube.com/channel/UCgwTt4Vw5Azo8yCr2HUvbYQ',
+  },
+]
 
 module.exports = {
   title: "Nikhil Mehta",
@@ -52,22 +90,24 @@ module.exports = {
         {
           label: 'My Work',
           position: 'left',
-          items: myopenSourceWork
+          items: myopenSourceWorkItems
         },
         { to: 'blog', label: 'Blog', position: 'left' },
-        { href: 'https://www.getrevue.co/profile/technikhil314', label: 'Newsletter', position: "left" },
         {
-          label: 'Youtube',
-          href: 'https://www.youtube.com/channel/UCgwTt4Vw5Azo8yCr2HUvbYQ',
-          position: 'right'
+          to: 'about', label: 'About me', position: 'left'
+        },
+        { to: 'contactme', label: 'Contact me', position: 'left' },
+        { href: 'https://www.getrevue.co/profile/technikhil314', label: 'Newsletter', position: "right" },
+        {
+          label: "Sponsor me",
+          position: 'right',
+          items: sponsorMeItems
         },
         {
-          to: 'uses', label: 'Uses', position: 'right'
+          label: "Follow me",
+          position: 'right',
+          items: followMeItems
         },
-        {
-          to: 'about', label: 'About me', position: 'right'
-        },
-        { to: 'contactme', label: 'Contact me', position: 'right' },
         { href: `${process.env.HOST_NAME}/Nikhil_Mehta.pdf`, label: 'My resume', position: 'right' },
       ],
     },
@@ -80,28 +120,7 @@ module.exports = {
       links: [
         {
           title: 'My Work',
-          items: myopenSourceWork
-        },
-        {
-          title: 'Follow me',
-          items: [
-            {
-              label: 'Github',
-              href: 'https://github.com/technikhil314',
-            },
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/users/2503826/nikhil-mehta',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/technikhil314',
-            },
-            {
-              label: 'Linkedin',
-              href: 'https://www.linkedin.com/in/technikhil314/',
-            }
-          ],
+          items: myopenSourceWorkItems
         },
         {
           title: 'Navigation',
@@ -119,27 +138,18 @@ module.exports = {
               href: 'https://www.getrevue.co/profile/technikhil314',
             },
             {
-              label: 'Youtube',
-              href: 'https://www.youtube.com/channel/UCgwTt4Vw5Azo8yCr2HUvbYQ',
-            },
-            {
               label: 'Contact me',
               href: '/mailto:nikhil.001mehta@gmail.com'
             }
           ],
         },
         {
+          title: 'Follow me',
+          items: followMeItems
+        },
+        {
           title: 'Sponsor me',
-          items: [
-            {
-              href: 'https://www.buymeacoffee.com/technikhil314',
-              label: 'Buy me a coffee',
-            },
-            {
-              href: "https://paypal.me/technikhil314",
-              label: "PayPal",
-            }
-          ],
+          items: sponsorMeItems,
         },
       ],
       copyright: `Copyright © 2020${new Date().getFullYear() === 2020 ? '' : `-${new Date().getFullYear()}`} Nikhil Mehta.`
