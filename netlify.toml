@@ -4,6 +4,18 @@
   status = 200
 
 [[redirects]]
+  from = "/meet/me"
+  to = "https://meet.google.com/snd-nkbb-pnw"
+  status = 307
+  force = true
+
+[[redirects]]
+  from = "/book/meeting"
+  to = "https://cal.com/technikhil314"
+  status = 307
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  headers = { X-Frame-Options = "DENY", X-XSS-Protection = "1; mode=block" }
