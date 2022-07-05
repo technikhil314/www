@@ -4,14 +4,15 @@
   status = 200
 
 [[redirects]]
-  from = "/meet/me"
+  from = "/meeting/me"
   to = "https://meet.google.com/snd-nkbb-pnw"
   status = 307
   force = true
 
 [[redirects]]
-  from = "/book/meeting"
-  to = "https://cal.com/technikhil314"
+  from = "/meeting/book"
+  to = "https://calendly.com/technikhil314"
+  force = true
   status = 307
 
 [[redirects]]
