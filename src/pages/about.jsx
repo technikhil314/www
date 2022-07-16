@@ -1,5 +1,6 @@
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import { useColorMode } from "@docusaurus/theme-common";
 import Layout from "@theme/Layout";
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
@@ -11,11 +12,26 @@ import pageStyles from "./about.module.css";
 const exampleTheme = {
   background: "transparent",
   text: "#000",
-  grade4: "hsl(338, 78%, 30%)",
-  grade3: "hsl(338, 78%, 44%)",
-  grade2: "hsl(338, 78%, 58%)",
-  grade1: "hsl(338, 78%, 72%)",
+  grade4: "hsl(78, 68%, 34%)",
+  grade3: "hsl(78, 68%, 48%)",
+  grade2: "hsl(78, 68%, 62%)",
+  grade1: "hsl(78, 68%, 78%)",
   grade0: "#eee",
+};
+
+const GithubContributionsHeatMap = () => {
+  const { isDarkTheme } = useColorMode();
+  exampleTheme.grade0 = isDarkTheme ? "#333" : "#eee";
+  return (
+    <GitHubCalendar
+      username="technikhil314"
+      theme={exampleTheme}
+      blockSize={15}
+      blockMargin={2}
+    >
+      <ReactTooltip delayShow={50} html />
+    </GitHubCalendar>
+  );
 };
 export default function About() {
   return (
@@ -27,14 +43,7 @@ export default function About() {
           <h5 className="text--center margin-bottom--none">
             My github contributions
           </h5>
-          <GitHubCalendar
-            username="technikhil314"
-            theme={exampleTheme}
-            blockSize={15}
-            blockMargin={3}
-          >
-            <ReactTooltip delayShow={50} html />
-          </GitHubCalendar>
+          <GithubContributionsHeatMap />
         </div>
         <p className="text--center">
           When some one wants to know me. They mostly ask following set of
@@ -46,19 +55,16 @@ export default function About() {
           </header>
           <p>
             I am a software engineer by profession and I work on web
-            technologies and nodejs primarily. Currently I work with a startup
-            called{" "}
-            <ExternalLink href="https://noustek.com/">
-              Noustek Labs LLC.
-            </ExternalLink>{" "}
-            situated in{" "}
+            technologies and nodejs primarily. Currently I work with{" "}
+            <ExternalLink href="https://paypal.com/">Paypal</ExternalLink> from
             <ExternalLink href="https://en.wikipedia.org/wiki/Pune">
               Pune India
             </ExternalLink>
             . I started my career as a full stack developer in 2014 soon to
             realise that I have more interest in UI, CSS, and cryptography. In
             my free time I manage my own open source projects and I play around
-            with css,animations. Currently I am learning{" "}
+            with css,animations and try out different tools. Currently I am
+            learning{" "}
             <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">
               WebGL
             </ExternalLink>{" "}
@@ -111,7 +117,7 @@ export default function About() {
             </h3>
           </header>
           <p>
-            I follow a lot (and I mean a lot) people on{" "}
+            I follow a lot people on{" "}
             <ExternalLink href="https://twitter.com/technikhil314">
               Twitter
             </ExternalLink>{" "}
@@ -155,7 +161,10 @@ export default function About() {
           <p>
             Simply fill in <Link to={useBaseUrl("contactme")}>this form</Link>.
             And it will send me an email with all your details. then we can take
-            it forward over email.
+            it forward over email. <br /> If you are a recuiter you can find my
+            resume
+            <Link to={useBaseUrl("resume")}>here</Link> which has my contact
+            details as well.
           </p>
         </article>
         <article className="padding-bottom--md">

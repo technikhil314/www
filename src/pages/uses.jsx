@@ -298,6 +298,12 @@ export default function DateRangePicker() {
           <p className="hero__subtitle">
             List of all tools, electronics, softwares I use in my daily life
           </p>
+          <p>
+            <small>
+              I am still compiling the list. So you may see some issues on the
+              list or incomplete lists.
+            </small>
+          </p>
         </div>
       </header>
       <main className={`container padding--lg usesContainer`}>
