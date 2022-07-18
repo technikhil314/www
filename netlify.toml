@@ -4,6 +4,12 @@
   status = 200
 
 [[redirects]]
+  from = "/meet/me/pesto"
+  to = "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDczMTFjNTUtYTc0YS00N2Q0LThhYWEtZjg1OGI5MzNmY2Y0%40thread.v2/0?context=%7b%22Tid%22%3a%2266ae0165-839c-4fc8-9bca-4d6e2e7e3b75%22%2c%22Oid%22%3a%22e2133e92-b142-43bb-97db-a45b3831123b%22%7d"
+  status = 307
+  force = true
+
+[[redirects]]
   from = "/meet/me"
   to = "https://room.sh/go/meet-with-nikhil"
   status = 307
