@@ -45,7 +45,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --fix",
-    "*.{css}": "stylelint"
+    "*.{css}": "stylelint",
+    "*": "prettier --write"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
