@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export const CodePen = ({ codePenEmbedUrl }) => (
   <iframe
     height="500"
@@ -6,8 +6,7 @@ export const CodePen = ({ codePenEmbedUrl }) => (
     scrolling="no"
     title=""
     src={`${codePenEmbedUrl}?height=265&theme-id=dark&default-tab=result`}
-    frameborder="no"
+    frameBorder="no"
     allowtransparency="true"
-    allowfullscreen="true"
   ></iframe>
 );

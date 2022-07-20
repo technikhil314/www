@@ -31,7 +31,7 @@ const sponsorMeItems = [
     href: "https://github.com/sponsors/technikhil314",
     label: "Github"
   }
-]
+];
 
 const followMeItems = [
   {
@@ -54,7 +54,7 @@ const followMeItems = [
     label: 'Youtube',
     href: 'https://www.youtube.com/channel/UCgwTt4Vw5Azo8yCr2HUvbYQ',
   },
-]
+];
 
 module.exports = {
   title: "Nikhil Mehta",
@@ -66,7 +66,7 @@ module.exports = {
   organizationName: 'technikhil314', // Usually your GitHub org/user name.
   projectName: 'Portfolio for technikhil314', // Usually your repo name.
   onBrokenLinks: 'warn',
-  onDuplicateRoutes: 'error',
+  onDuplicateRoutes: 'throw',
   themeConfig: {
     colorMode: {
       defaultMode: 'dark'

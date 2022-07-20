@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 
 export default function Comments() {
   const blogWrapperRef = useRef();
-  const { isDarkTheme } = useColorMode();
+  const isDarkTheme = useColorMode().colorMode === "dark";
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://utteranc.es/client.js";

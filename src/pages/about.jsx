@@ -20,7 +20,7 @@ const exampleTheme = {
 };
 
 const GithubContributionsHeatMap = () => {
-  const { isDarkTheme } = useColorMode();
+  const isDarkTheme = useColorMode().colorMode === "dark";
   exampleTheme.grade0 = isDarkTheme ? "#333" : "#eee";
   return (
     <GitHubCalendar
