@@ -1,8 +1,5 @@
 import React from "react";
-import Layout from "@theme/Layout";
-import clsx from "clsx";
 import PageHead from "../components/head";
-import pageStyles from "./resume.module.css";
 export default function Portfolio() {
   return (
     <>
