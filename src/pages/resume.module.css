@@ -1,0 +1,13 @@
+:global .resume .header {
+  display: flex;
+  align-items: stretch;
+}
+
+:global .resume ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 0;
+}

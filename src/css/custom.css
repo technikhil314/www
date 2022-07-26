@@ -1,4 +1,6 @@
 /* stylelint-disable docusaurus/copyright-header */
+@tailwind components;
+@tailwind utilities;
 @import "dark.css";
 
 :root {

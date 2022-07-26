@@ -1,0 +1,60 @@
+---
+slug: debounce-and-throttle-simplified
+title: Debounce and throttle simplified
+tags: [js, webdev]
+hide_table_of_contents: true
+---
+
+I was trying to create my own implementation of debounce and throttle. Yes just for fun.
+and I came up with very simplified implementation that anyone can follow just by taking a look at the code.
+
+You can play with the [demo here](https://debounce-throttle.surge.sh/)
+
+<!--truncate-->
+
+Hope you like it.
+
+## Throttle
+
+```js
+function throttle(fun, timeduration) {
+  let shouldCall = true;
+  return (...args) => {
+    if (shouldCall) {
+      shouldCall = false;
+      fun(...args);
+      setTimeout(() => {
+        shouldCall = true;
+      }, timeduration);
+    }
+  };
+}
+```
+
+## Debounce
+
+```js
+function debounce(fun, timeduration) {
+  let lastTimeoutId = 0;
+  return (...args) => {
+    if (lastTimeoutId) {
+      clearTimeout(lastTimeoutId);
+    }
+    lastTimeoutId = setTimeout(() => {
+      fun(...args);
+    }, timeduration);
+  };
+}
+```
+
+## How to use it
+
+```js
+function showValue(val) {
+  console.log(val);
+}
+
+const throttleInput = throttle(showValue, 500);
+
+const debouncedInput = debounce(showValue, 500);
+```
