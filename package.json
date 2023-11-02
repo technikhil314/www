@@ -11,6 +11,9 @@
     "serve": "docusaurus serve",
     "prepare": "husky install"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "dependencies": {
     "@docusaurus/core": "^2.0.1",
     "@docusaurus/plugin-debug": "^2.0.1",
@@ -18,7 +21,6 @@
     "@docusaurus/plugin-pwa": "^2.0.1",
     "@docusaurus/preset-classic": "^2.0.1",
     "@mdx-js/react": "^1.5.8",
-    "@react-three/drei": "^3.8.6",
     "autoprefixer": "^10.4.7",
     "clsx": "^1.1.1",
     "docusaurus-gtm-plugin": "^0.0.2",
