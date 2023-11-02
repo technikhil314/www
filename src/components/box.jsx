@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+
 import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "react-three-fiber";
