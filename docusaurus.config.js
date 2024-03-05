@@ -157,7 +157,7 @@ module.exports = {
             },
             {
               label: "Contact me",
-              href: "/mailto:nikhil.001mehta@gmail.com",
+              href: "mailto:nikhil.001mehta@gmail.com",
             },
           ],
         },

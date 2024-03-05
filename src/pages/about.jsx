@@ -161,10 +161,9 @@ export default function About() {
           <p>
             Simply fill in <Link to={useBaseUrl("contactme")}>this form</Link>.
             And it will send me an email with all your details. then we can take
-            it forward over email. <br /> If you are a recuiter you can find my
-            resume
-            <Link to={useBaseUrl("resume")}>here</Link> which has my contact
-            details as well.
+            it forward over email. <br /> If you are a recruiter you can find my
+            resume <Link to={useBaseUrl("resume")}>here</Link> which has my
+            contact details as well.
           </p>
         </article>
         <article className="padding-bottom--md">
