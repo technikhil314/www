@@ -1,50 +1,17 @@
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { useColorMode } from "@docusaurus/theme-common";
 import Layout from "@theme/Layout";
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
-import ReactTooltip from "react-tooltip";
 import ExternalLink from "../components/externalLink";
 import PageHead from "../components/head";
 import pageStyles from "./about.module.css";
 
-const exampleTheme = {
-  background: "transparent",
-  text: "#000",
-  grade4: "hsl(78, 68%, 34%)",
-  grade3: "hsl(78, 68%, 48%)",
-  grade2: "hsl(78, 68%, 62%)",
-  grade1: "hsl(78, 68%, 78%)",
-  grade0: "#eee",
-};
-
-const GithubContributionsHeatMap = () => {
-  const isDarkTheme = useColorMode().colorMode === "dark";
-  exampleTheme.grade0 = isDarkTheme ? "#333" : "#eee";
-  return (
-    <GitHubCalendar
-      username="technikhil314"
-      theme={exampleTheme}
-      blockSize={15}
-      blockMargin={2}
-    >
-      <ReactTooltip delayShow={50} html />
-    </GitHubCalendar>
-  );
-};
 export default function About() {
   return (
     <Layout>
       <PageHead title={`About Nikhil Mehta`} description={"About the author"} />
       <section className={`container ${pageStyles.about}`}>
         <h1 className="text--center">Hi! I am Nikhil</h1>
-        <div className="mx-auto text--center">
-          <h5 className="text--center margin-bottom--none">
-            My github contributions
-          </h5>
-          <GithubContributionsHeatMap />
-        </div>
         <p className="text--center">
           When some one wants to know me. They mostly ask following set of
           questions.
