@@ -15,6 +15,7 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@docusaurus/core": "^3.1.1",
     "@docusaurus/plugin-debug": "^3.1.1",
     "@docusaurus/plugin-google-gtag": "^3.1.1",
