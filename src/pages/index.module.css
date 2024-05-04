@@ -6,6 +6,7 @@
 .heroContainer {
   padding: 0;
 }
+
 .subscribeButton {
   border-radius: 23px !important;
   background: #24b091 !important;
@@ -19,7 +20,7 @@
   box-shadow: inset 5px 5px 10px #1d8f75, inset -5px -5px 10px #2bd1ad !important;
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (width >= 1100px) {
   .heroWrapper {
     position: relative;
   }
@@ -35,13 +36,10 @@
   .heroWrapper::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     opacity: 0.3;
     background-image: url("/img/bg.png"),
-      linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, transparent);
+      linear-gradient(to top, rgb(0 0 0 / 70%) 10%, transparent);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -51,19 +49,20 @@
     filter: blur(2px);
   }
 
-  html[data-theme="light"] .heroWrapper::before {
-    background-image: url("/img/bg.png"),
-      linear-gradient(to top, rgba(0, 0, 0, 0.2) 10%, transparent);
-  }
-
   .heroWrapper:hover::before {
     filter: blur(3px);
+  }
+
+  html[data-theme="light"] .heroWrapper::before {
+    background-image: url("/img/bg.png"),
+      linear-gradient(to top, rgb(0 0 0 / 20%) 10%, transparent);
   }
 
   .heroContainer {
     z-index: 1;
     margin-bottom: 20px;
   }
+
   .heroContainer > p {
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px hsl(0deg 0% 0% / 10%);

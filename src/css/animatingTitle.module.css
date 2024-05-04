@@ -10,15 +10,16 @@
   text-overflow: ellipsis;
   line-height: 1.5em;
   white-space: nowrap;
-  color: rgb(0, 75, 50);
+  color: rgb(0 75 50);
   word-break: break-all;
   max-width: 100%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (width >= 800px) {
   .animatingTitleWrapper {
     max-height: 1.5em;
   }
+
   .animatingTitle {
     max-height: 1.5em;
     vertical-align: bottom;
