@@ -1,3 +1,5 @@
+import tailwindPlugin from "./plugins/tailwind.cjs";
+
 const myopenSourceWorkItems = [
   {
     to: "autobadger",
@@ -176,6 +178,7 @@ module.exports = {
     },
   },
   plugins: [
+    tailwindPlugin,
     "docusaurus2-dotenv",
     [
       "@docusaurus/plugin-content-blog",
