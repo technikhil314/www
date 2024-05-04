@@ -12,7 +12,7 @@ export function AuthButton() {
         returnTo: window ? window.location.origin : "/",
       },
     });
-  const { user, isAuthenticated, loginWithPopup, logout, isLoading, error } =
+  const { user, isAuthenticated, loginWithRedirect, logout, isLoading, error } =
     useAuth0();
   if (error) {
     console.error(error);
@@ -29,7 +29,7 @@ export function AuthButton() {
         )}
         onClick={() => {
           try {
-            loginWithPopup();
+            loginWithRedirect();
           } catch (err) {
             console.error(err);
           }
@@ -77,11 +77,11 @@ export function AuthButton() {
 export default function AuthButtonWrapper() {
   const onRedirectCallback = (appState) => {
     if (appState && appState.returnTo) {
-      history.push(appState.returnTo);
+      history.pushState(null, null, appState.returnTo);
     } else if (window) {
-      history.push(window.location.pathname);
+      history.pushState(null, null, window.location.pathname);
     } else {
-      history.push("/");
+      history.pushState(null, null, "/");
     }
   };
 
