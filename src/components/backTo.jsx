@@ -5,7 +5,7 @@ export default function BackTo({ url, text }) {
   return (
     <Link
       to={url}
-      className="col col--12 padding-left--none margin-bottom--lg inline-flex align-items-center"
+      className="items-center block col col--12 padding-left--none margin-bottom--lg"
     >
       <svg
         className="margin-right--sm"

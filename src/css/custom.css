@@ -97,29 +97,8 @@ html {
   }
 }
 
-.position--relative {
-  position: relative;
-}
-
 .max-w-blog {
   max-width: 80ch !important;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.inline-flex {
-  display: block;
-}
-
-.align-items-center {
-  align-items: center;
 }
 
 a:hover {

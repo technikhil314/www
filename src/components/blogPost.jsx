@@ -21,8 +21,8 @@ function BlogPostPage(props) {
       <BlogPostProvider content={props.content} isBlogPostPage>
         {BlogPostContents && (
           <div className="container margin-vert--lg">
-            <div className="row justify-center">
-              <main className="col position--relative max-w-blog">
+            <div className="justify-center row">
+              <main className="relative col max-w-blog">
                 <BackTo url="/blog" text="Back to blog list"></BackTo>
                 <BlogPostItem
                   frontMatter={frontMatter}

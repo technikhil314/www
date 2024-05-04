@@ -1,0 +1,9 @@
+.customDropDown + .dropdown__menu {
+  min-width: max-content;
+  max-width: max-content;
+}
+
+.customDropDown::after {
+  display: none !important;
+  content: none;
+}
