@@ -3,6 +3,7 @@ import DropdownNavbarItem from "@theme-original/NavbarItem/DropdownNavbarItem";
 import clsx from "clsx";
 import React from "react";
 import "../css/authButtonWrapper.css";
+import LoadingUserImage from "./LoadingUserImage";
 
 export function AuthButton() {
   const logoutWithRedirect = () =>
@@ -17,13 +18,7 @@ export function AuthButton() {
     console.error(error);
   }
   if (isLoading) {
-    return (
-      <div className="max-w-sm px-4 mx-auto border border-blue-300 rounded-md shadow">
-        <div className="flex space-x-4 animate-pulse">
-          <div className="w-8 h-8 rounded-full bg-slate-700"></div>
-        </div>
-      </div>
-    );
+    return <LoadingUserImage />;
   }
   if (!isAuthenticated) {
     return (
