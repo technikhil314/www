@@ -110,11 +110,6 @@ module.exports = {
         { to: "contactme", label: "Contact me", position: "left" },
         { to: "poems", label: "Poems", position: "right" },
         {
-          href: "https://www.getrevue.co/profile/technikhil314",
-          label: "Newsletter",
-          position: "right",
-        },
-        {
           label: "Sponsor me",
           position: "right",
           items: sponsorMeItems,
@@ -152,10 +147,6 @@ module.exports = {
             {
               label: "About me",
               to: "/about",
-            },
-            {
-              label: "Newsletter",
-              href: "https://www.getrevue.co/profile/technikhil314",
             },
             {
               label: "Contact me",
