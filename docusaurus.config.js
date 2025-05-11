@@ -120,7 +120,7 @@ module.exports = {
           items: followMeItems,
         },
         {
-          href: `/Nikhil_Mehta.pdf`,
+          href: `https://technikhil314.netlify.app/Nikhil_Mehta.pdf`,
           label: "My resume",
           position: "right",
         },
