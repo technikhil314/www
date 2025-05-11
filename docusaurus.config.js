@@ -120,7 +120,7 @@ module.exports = {
           items: followMeItems,
         },
         {
-          href: `${process.env.HOST_NAME}/Nikhil_Mehta.pdf`,
+          href: `/Nikhil_Mehta.pdf`,
           label: "My resume",
           position: "right",
         },
